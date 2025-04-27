@@ -50,7 +50,7 @@ namespace TravelEase
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -65,7 +65,7 @@ namespace TravelEase
             this.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.PasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.Location = new System.Drawing.Point(20, 269);
-            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordTextBox.Multiline = true;
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
@@ -116,7 +116,7 @@ namespace TravelEase
             // 
             // Login_Button
             // 
-            this.Login_Button.BackColor = System.Drawing.Color.DarkBlue;
+            this.Login_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Login_Button.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.Login_Button.FlatAppearance.BorderSize = 0;
             this.Login_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
@@ -180,9 +180,9 @@ namespace TravelEase
             this.groupBox1.Controls.Add(this.PasswordTextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(363, 74);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(457, 525);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -194,7 +194,7 @@ namespace TravelEase
             this.UsernameTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.UsernameTextBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.Location = new System.Drawing.Point(20, 162);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameTextBox.Multiline = true;
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(421, 36);
@@ -213,7 +213,7 @@ namespace TravelEase
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
