@@ -124,7 +124,7 @@ namespace TravelEase
             this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Button.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Login_Button.ForeColor = System.Drawing.SystemColors.Window;
-            this.Login_Button.Location = new System.Drawing.Point(96, 373);
+            this.Login_Button.Location = new System.Drawing.Point(113, 368);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.Size = new System.Drawing.Size(235, 48);
             this.Login_Button.TabIndex = 9;
