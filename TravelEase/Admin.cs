@@ -41,5 +41,25 @@ namespace TravelEase
         {
 
         }
+
+        private void Dashboard_btn_MouseLeave(object sender, EventArgs e)
+        {
+            Dashboard_btn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void Users_btn_MouseLeave(object sender, EventArgs e)
+        {
+            Users_btn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            Trips_btn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void Reviews_btn_MouseLeave(object sender, EventArgs e)
+        {
+            Reviews_btn.BackColor = Color.FromArgb(24, 30, 54);
+        }
     }
 }

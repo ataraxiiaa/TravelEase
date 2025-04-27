@@ -30,10 +30,9 @@ namespace TravelEase
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.Username_Label = new System.Windows.Forms.Label();
             this.Password_Label = new System.Windows.Forms.Label();
             this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
@@ -41,17 +40,25 @@ namespace TravelEase
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1152, 683);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.label1.Location = new System.Drawing.Point(11, 15);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(13, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(395, 51);
@@ -73,18 +80,11 @@ namespace TravelEase
             this.PasswordTextBox.TabIndex = 3;
             this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_Checked);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1152, 683);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 4;
-            // 
             // Username_Label
             // 
             this.Username_Label.AutoSize = true;
             this.Username_Label.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username_Label.ForeColor = System.Drawing.SystemColors.Window;
             this.Username_Label.Location = new System.Drawing.Point(16, 116);
             this.Username_Label.Name = "Username_Label";
             this.Username_Label.Size = new System.Drawing.Size(117, 32);
@@ -96,6 +96,7 @@ namespace TravelEase
             // 
             this.Password_Label.AutoSize = true;
             this.Password_Label.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Label.ForeColor = System.Drawing.SystemColors.Window;
             this.Password_Label.Location = new System.Drawing.Point(16, 226);
             this.Password_Label.Name = "Password_Label";
             this.Password_Label.Size = new System.Drawing.Size(111, 32);
@@ -106,6 +107,7 @@ namespace TravelEase
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.SystemColors.Window;
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(328, 310);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(118, 21);
@@ -116,13 +118,12 @@ namespace TravelEase
             // 
             // Login_Button
             // 
-            this.Login_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Login_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.Login_Button.FlatAppearance.BorderColor = System.Drawing.Color.DarkBlue;
             this.Login_Button.FlatAppearance.BorderSize = 0;
-            this.Login_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumBlue;
             this.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login_Button.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login_Button.ForeColor = System.Drawing.Color.Bisque;
+            this.Login_Button.ForeColor = System.Drawing.SystemColors.Window;
             this.Login_Button.Location = new System.Drawing.Point(96, 373);
             this.Login_Button.Name = "Login_Button";
             this.Login_Button.Size = new System.Drawing.Size(235, 48);
@@ -130,11 +131,13 @@ namespace TravelEase
             this.Login_Button.Text = "LOGIN";
             this.Login_Button.UseVisualStyleBackColor = false;
             this.Login_Button.Click += new System.EventHandler(this.button1_Click);
+            this.Login_Button.MouseLeave += new System.EventHandler(this.Login_Button_MouseLeave_1);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(145, 440);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 17);
@@ -145,7 +148,7 @@ namespace TravelEase
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.DarkSlateBlue;
+            this.linkLabel1.LinkColor = System.Drawing.Color.MediumSlateBlue;
             this.linkLabel1.Location = new System.Drawing.Point(159, 459);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(120, 20);
@@ -158,35 +161,15 @@ namespace TravelEase
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.DarkSlateBlue;
+            this.linkLabel2.ForeColor = System.Drawing.Color.Blue;
+            this.linkLabel2.LinkColor = System.Drawing.Color.MediumSlateBlue;
             this.linkLabel2.Location = new System.Drawing.Point(281, 335);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(169, 21);
             this.linkLabel2.TabIndex = 12;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Forgot Your Password?";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.UsernameTextBox);
-            this.groupBox1.Controls.Add(this.linkLabel2);
-            this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Login_Button);
-            this.groupBox1.Controls.Add(this.ShowPasswordCheckBox);
-            this.groupBox1.Controls.Add(this.Password_Label);
-            this.groupBox1.Controls.Add(this.Username_Label);
-            this.groupBox1.Controls.Add(this.PasswordTextBox);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(363, 74);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(457, 525);
-            this.groupBox1.TabIndex = 13;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // UsernameTextBox
             // 
@@ -201,13 +184,36 @@ namespace TravelEase
             this.UsernameTextBox.TabIndex = 13;
             this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.groupBox1.Controls.Add(this.UsernameTextBox);
+            this.groupBox1.Controls.Add(this.linkLabel2);
+            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.Login_Button);
+            this.groupBox1.Controls.Add(this.ShowPasswordCheckBox);
+            this.groupBox1.Controls.Add(this.Password_Label);
+            this.groupBox1.Controls.Add(this.Username_Label);
+            this.groupBox1.Controls.Add(this.PasswordTextBox);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(363, 74);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(457, 525);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
             // Login
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::TravelEase.Properties.Resources.van_silhouettes_night_244244_1600x900;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1186, 693);
             this.Controls.Add(this.groupBox1);
@@ -219,7 +225,6 @@ namespace TravelEase
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Start_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -228,9 +233,9 @@ namespace TravelEase
         }
 
         #endregion
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Username_Label;
         private System.Windows.Forms.Label Password_Label;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
@@ -238,8 +243,8 @@ namespace TravelEase
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

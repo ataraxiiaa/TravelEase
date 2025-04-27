@@ -88,10 +88,10 @@ namespace TravelEase
             regForm.Location = this.Location;
             regForm.Show();
         }
-        private void Login_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawImage(this.BackgroundImage, -100, 0); 
-        }
+        //private void Login_Paint(object sender, PaintEventArgs e)
+        //{
+        //    e.Graphics.DrawImage(this.BackgroundImage, -100, 0); 
+        //}
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -106,6 +106,21 @@ namespace TravelEase
         private void UsernameTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Admin adminForm = new Admin();
+            adminForm.StartPosition = FormStartPosition.Manual;
+            adminForm.Location = this.Location;
+            adminForm.Show();
+        }
+
+
+        private void Login_Button_MouseLeave_1(object sender, EventArgs e)
+        {
+            Login_Button.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }
