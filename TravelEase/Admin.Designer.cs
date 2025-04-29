@@ -31,14 +31,15 @@ namespace TravelEase
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Reviews_btn = new System.Windows.Forms.Button();
             this.Trips_btn = new System.Windows.Forms.Button();
             this.Users_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,6 +60,36 @@ namespace TravelEase
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 693);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(220, 148);
+            this.panel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(64, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hi, Welcome!";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TravelEase.Properties.Resources.icons8_male_user_100;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 101);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button5
             // 
@@ -93,6 +124,7 @@ namespace TravelEase
             this.Reviews_btn.Text = "Manage Reviews";
             this.Reviews_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Reviews_btn.UseVisualStyleBackColor = true;
+            this.Reviews_btn.Click += new System.EventHandler(this.Reviews_btn_Click);
             this.Reviews_btn.MouseLeave += new System.EventHandler(this.Reviews_btn_MouseLeave);
             // 
             // Trips_btn
@@ -111,6 +143,7 @@ namespace TravelEase
             this.Trips_btn.Text = "Manage Trips";
             this.Trips_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Trips_btn.UseVisualStyleBackColor = true;
+            this.Trips_btn.Click += new System.EventHandler(this.Trips_btn_Click);
             this.Trips_btn.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // Users_btn
@@ -151,48 +184,28 @@ namespace TravelEase
             this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
             this.Dashboard_btn.MouseLeave += new System.EventHandler(this.Dashboard_btn_MouseLeave);
             // 
-            // panel2
+            // panelMain
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 148);
-            this.panel2.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TravelEase.Properties.Resources.icons8_male_user_100;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 101);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 125);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hi, Welcome!";
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(220, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1221, 693);
+            this.panelMain.TabIndex = 1;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // Admin
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1384, 693);
+            this.ClientSize = new System.Drawing.Size(1441, 693);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin";
@@ -217,5 +230,6 @@ namespace TravelEase
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

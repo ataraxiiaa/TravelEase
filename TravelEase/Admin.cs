@@ -16,20 +16,28 @@ namespace TravelEase
         {
             InitializeComponent();
         }
+        private void LoadView(UserControl view)
+        {
+            panelMain.Controls.Clear();
+            view.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(view);
+            view.BringToFront();
+        }
 
         private void Admin_Load(object sender, EventArgs e)
         {
+             LoadView(new A_Dashboard()); 
 
         }
 
         private void Users_btn_Click(object sender, EventArgs e)
         {
-
+            LoadView(new A_ManageUsers());
         }
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
-
+            LoadView(new A_Dashboard());
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -60,6 +68,21 @@ namespace TravelEase
         private void Reviews_btn_MouseLeave(object sender, EventArgs e)
         {
             Reviews_btn.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Trips_btn_Click(object sender, EventArgs e)
+        {
+            LoadView(new A_ManageTrips());
+        }
+
+        private void Reviews_btn_Click(object sender, EventArgs e)
+        {
+            LoadView(new A_Reviews());
         }
     }
 }

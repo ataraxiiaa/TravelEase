@@ -52,6 +52,30 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Dashboard.Designer.cs">
+      <DependentUpon>A_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_ManageTrips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_ManageTrips.Designer.cs">
+      <DependentUpon>A_ManageTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_ManageUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_ManageUsers.Designer.cs">
+      <DependentUpon>A_ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Reviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Reviews.Designer.cs">
+      <DependentUpon>A_Reviews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +93,15 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Dashboard.resx">
+      <DependentUpon>A_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_ManageUsers.resx">
+      <DependentUpon>A_ManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Reviews.resx">
+      <DependentUpon>A_Reviews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-male-user-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-google-web-search-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
