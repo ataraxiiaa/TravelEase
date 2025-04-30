@@ -58,7 +58,7 @@ namespace TravelEase
         }
         private void searchTextBox_GotFocus(object sender, EventArgs e)
         {
-            if (searchTextbox.Text == "Search for users...")
+            if (searchTextbox.Text == "Search for Reviews...")
             {
                 searchTextbox.Text = "";
                 searchTextbox.ForeColor = System.Drawing.Color.Black;
@@ -69,7 +69,7 @@ namespace TravelEase
         {
             if (string.IsNullOrWhiteSpace(searchTextbox.Text))
             {
-                searchTextbox.Text = "Search for users...";
+                searchTextbox.Text = "Search for Reviews...";
                 searchTextbox.ForeColor = System.Drawing.Color.Gray;
             }
         }

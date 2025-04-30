@@ -76,6 +76,12 @@
     <Compile Include="A_Reviews.Designer.cs">
       <DependentUpon>A_Reviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Settings.Designer.cs">
+      <DependentUpon>A_Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="A_Reviews.resx">
       <DependentUpon>A_Reviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Settings.resx">
+      <DependentUpon>A_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

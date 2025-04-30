@@ -107,7 +107,7 @@ namespace TravelEase
             this.searchTextbox.Name = "searchTextbox";
             this.searchTextbox.Size = new System.Drawing.Size(300, 22);
             this.searchTextbox.TabIndex = 7;
-            this.searchTextbox.Text = "Search for users...";
+            this.searchTextbox.Text = "Search for Reviews";
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             this.searchTextbox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
             this.searchTextbox.LostFocus += new System.EventHandler(this.searchTextBox_LostFocus);

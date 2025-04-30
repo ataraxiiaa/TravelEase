@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class A_Dashboard : UserControl
+    public partial class A_Settings : UserControl
     {
-        public A_Dashboard()
+        public A_Settings()
         {
             InitializeComponent();
         }
 
-        private void A_Dashboard_Load(object sender, EventArgs e)
+        private void A_Settings_Load(object sender, EventArgs e)
         {
 
         }
 
         private void Dasboard_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void A_Dashboard_Load_1(object sender, EventArgs e)
         {
 
         }

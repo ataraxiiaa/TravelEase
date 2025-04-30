@@ -84,5 +84,10 @@ namespace TravelEase
         {
             LoadView(new A_Reviews());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoadView(new A_Settings());
+        }
     }
 }

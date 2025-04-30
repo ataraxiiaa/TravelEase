@@ -41,9 +41,10 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(299, 46);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(291, 45);
             this.Dasboard_lbl.TabIndex = 0;
             this.Dasboard_lbl.Text = "Admin Dashboard";
+            this.Dasboard_lbl.Click += new System.EventHandler(this.Dasboard_lbl_Click);
             // 
             // panel1
             // 
@@ -73,6 +74,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "A_Dashboard";
             this.Size = new System.Drawing.Size(1441, 693);
+            this.Load += new System.EventHandler(this.A_Dashboard_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
