@@ -30,9 +30,9 @@
         {
             this.settings_lbl = new System.Windows.Forms.Label();
             this.AdminPanelInfo = new System.Windows.Forms.Panel();
-            this.Name_lbl = new System.Windows.Forms.Label();
-            this.Email_lbl = new System.Windows.Forms.Label();
             this.ID_lbl = new System.Windows.Forms.Label();
+            this.Email_lbl = new System.Windows.Forms.Label();
+            this.Name_lbl = new System.Windows.Forms.Label();
             this.AdminPanelInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,16 +59,16 @@
             this.AdminPanelInfo.Size = new System.Drawing.Size(427, 168);
             this.AdminPanelInfo.TabIndex = 2;
             // 
-            // Name_lbl
+            // ID_lbl
             // 
-            this.Name_lbl.AutoSize = true;
-            this.Name_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name_lbl.ForeColor = System.Drawing.Color.White;
-            this.Name_lbl.Location = new System.Drawing.Point(28, 30);
-            this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(103, 39);
-            this.Name_lbl.TabIndex = 0;
-            this.Name_lbl.Text = "Name:";
+            this.ID_lbl.AutoSize = true;
+            this.ID_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID_lbl.ForeColor = System.Drawing.Color.White;
+            this.ID_lbl.Location = new System.Drawing.Point(28, 111);
+            this.ID_lbl.Name = "ID_lbl";
+            this.ID_lbl.Size = new System.Drawing.Size(44, 31);
+            this.ID_lbl.TabIndex = 0;
+            this.ID_lbl.Text = "ID:";
             // 
             // Email_lbl
             // 
@@ -81,16 +81,16 @@
             this.Email_lbl.TabIndex = 0;
             this.Email_lbl.Text = "Email:";
             // 
-            // ID_lbl
+            // Name_lbl
             // 
-            this.ID_lbl.AutoSize = true;
-            this.ID_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_lbl.ForeColor = System.Drawing.Color.White;
-            this.ID_lbl.Location = new System.Drawing.Point(28, 111);
-            this.ID_lbl.Name = "ID_lbl";
-            this.ID_lbl.Size = new System.Drawing.Size(44, 31);
-            this.ID_lbl.TabIndex = 0;
-            this.ID_lbl.Text = "ID:";
+            this.Name_lbl.AutoSize = true;
+            this.Name_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_lbl.ForeColor = System.Drawing.Color.White;
+            this.Name_lbl.Location = new System.Drawing.Point(28, 30);
+            this.Name_lbl.Name = "Name_lbl";
+            this.Name_lbl.Size = new System.Drawing.Size(82, 31);
+            this.Name_lbl.TabIndex = 0;
+            this.Name_lbl.Text = "Name:";
             // 
             // A_Settings
             // 
