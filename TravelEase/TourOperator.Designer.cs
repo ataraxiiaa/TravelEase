@@ -1,8 +1,6 @@
-﻿using TravelEase.Properties;
-
-namespace TravelEase
+﻿namespace TravelEase
 {
-    partial class Admin
+    partial class TourOperator
     {
         /// <summary>
         /// Required designer variable.
@@ -32,46 +30,57 @@ namespace TravelEase
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.Reviews_btn = new System.Windows.Forms.Button();
             this.Trips_btn = new System.Windows.Forms.Button();
             this.Users_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.username_lbl = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.Reviews_btn);
-            this.panel1.Controls.Add(this.Trips_btn);
-            this.panel1.Controls.Add(this.Users_btn);
-            this.panel1.Controls.Add(this.Dashboard_btn);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 693);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(1441, 693);
+            this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.username_lbl);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.Trips_btn);
+            this.panel2.Controls.Add(this.Users_btn);
+            this.panel2.Controls.Add(this.Dashboard_btn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 148);
-            this.panel2.TabIndex = 3;
+            this.panel2.Size = new System.Drawing.Size(220, 693);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(220, 148);
+            this.panel3.TabIndex = 3;
             // 
             // label1
             // 
@@ -79,10 +88,9 @@ namespace TravelEase
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(64, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hi, ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Hi, Welcome!";
             // 
             // pictureBox1
             // 
@@ -92,7 +100,6 @@ namespace TravelEase
             this.pictureBox1.Size = new System.Drawing.Size(104, 101);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button5
             // 
@@ -110,26 +117,6 @@ namespace TravelEase
             this.button5.Text = "Settings";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // Reviews_btn
-            // 
-            this.Reviews_btn.FlatAppearance.BorderSize = 0;
-            this.Reviews_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reviews_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reviews_btn.ForeColor = System.Drawing.Color.White;
-            this.Reviews_btn.Image = global::TravelEase.Properties.Resources.icons8_filter_25;
-            this.Reviews_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Reviews_btn.Location = new System.Drawing.Point(0, 298);
-            this.Reviews_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Reviews_btn.Name = "Reviews_btn";
-            this.Reviews_btn.Size = new System.Drawing.Size(220, 42);
-            this.Reviews_btn.TabIndex = 2;
-            this.Reviews_btn.Text = "Manage Reviews";
-            this.Reviews_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.Reviews_btn.UseVisualStyleBackColor = true;
-            this.Reviews_btn.Click += new System.EventHandler(this.Reviews_btn_Click);
-            this.Reviews_btn.MouseLeave += new System.EventHandler(this.Reviews_btn_MouseLeave);
             // 
             // Trips_btn
             // 
@@ -148,7 +135,6 @@ namespace TravelEase
             this.Trips_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Trips_btn.UseVisualStyleBackColor = true;
             this.Trips_btn.Click += new System.EventHandler(this.Trips_btn_Click);
-            this.Trips_btn.MouseLeave += new System.EventHandler(this.button3_MouseLeave);
             // 
             // Users_btn
             // 
@@ -156,18 +142,17 @@ namespace TravelEase
             this.Users_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Users_btn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Users_btn.ForeColor = System.Drawing.Color.White;
-            this.Users_btn.Image = global::TravelEase.Properties.Resources.icons8_user_30;
+            this.Users_btn.Image = global::TravelEase.Properties.Resources.icons8_seo_text_30__1_;
             this.Users_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Users_btn.Location = new System.Drawing.Point(0, 202);
             this.Users_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Users_btn.Name = "Users_btn";
             this.Users_btn.Size = new System.Drawing.Size(220, 42);
             this.Users_btn.TabIndex = 2;
-            this.Users_btn.Text = "Manage Users";
+            this.Users_btn.Text = "Queries";
             this.Users_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Users_btn.UseVisualStyleBackColor = true;
             this.Users_btn.Click += new System.EventHandler(this.Users_btn_Click);
-            this.Users_btn.MouseLeave += new System.EventHandler(this.Users_btn_MouseLeave);
             // 
             // Dashboard_btn
             // 
@@ -186,28 +171,26 @@ namespace TravelEase
             this.Dashboard_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Dashboard_btn.UseVisualStyleBackColor = true;
             this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
-            this.Dashboard_btn.MouseLeave += new System.EventHandler(this.Dashboard_btn_MouseLeave);
             // 
             // panelMain
             // 
+            this.panelMain.Controls.Add(this.panel1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(220, 0);
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1221, 693);
-            this.panelMain.TabIndex = 1;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            this.panelMain.Size = new System.Drawing.Size(1441, 693);
+            this.panelMain.TabIndex = 2;
             // 
-            // username_lbl
+            // panel4
             // 
-            this.username_lbl.AutoSize = true;
-            this.username_lbl.ForeColor = System.Drawing.Color.White;
-            this.username_lbl.Location = new System.Drawing.Point(88, 125);
-            this.username_lbl.Name = "username_lbl";
-            this.username_lbl.Size = new System.Drawing.Size(79, 17);
-            this.username_lbl.TabIndex = 2;
-            this.username_lbl.Text = "username";
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(220, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1221, 693);
+            this.panel4.TabIndex = 2;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // Admin
+            // TourOperator
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -216,19 +199,20 @@ namespace TravelEase
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1441, 693);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Admin";
-            this.Text = "Admin";
-            this.Load += new System.EventHandler(this.Admin_Load);
+            this.Name = "TourOperator";
+            this.Text = "Tour operator";
+            this.Load += new System.EventHandler(this.TourOperator_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,15 +220,15 @@ namespace TravelEase
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Dashboard_btn;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button Reviews_btn;
         private System.Windows.Forms.Button Trips_btn;
         private System.Windows.Forms.Button Users_btn;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Label username_lbl;
+        private System.Windows.Forms.Button Dashboard_btn;
+        private System.Windows.Forms.Panel panel4;
     }
 }

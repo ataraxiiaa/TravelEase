@@ -34,8 +34,9 @@
             this.editUserButton = new System.Windows.Forms.Button();
             this.deleteUserButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.filterComboBox = new System.Windows.Forms.ComboBox();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@
             this.addUserButton.TabIndex = 3;
             this.addUserButton.Text = "Add User";
             this.addUserButton.UseVisualStyleBackColor = false;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
             // 
             // editUserButton
             // 
@@ -108,37 +110,51 @@
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
             // 
-            // searchTextBox
-            // 
-            this.searchTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.searchTextBox.Location = new System.Drawing.Point(20, 70);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(300, 23);
-            this.searchTextBox.TabIndex = 7;
-            this.searchTextBox.Text = "Search for users...";
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
-            this.searchTextBox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
-            this.searchTextBox.LostFocus += new System.EventHandler(this.searchTextBox_LostFocus);
-            // 
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(326, 68);
+            this.searchButton.Location = new System.Drawing.Point(357, 68);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(104, 25);
             this.searchButton.TabIndex = 8;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
             // 
+            // filterComboBox
+            // 
+            this.filterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.filterComboBox.Items.AddRange(new object[] {
+            "Username",
+            "Name",
+            "ID",
+            "Account Status"});
+            this.filterComboBox.Location = new System.Drawing.Point(248, 68);
+            this.filterComboBox.Name = "filterComboBox";
+            this.filterComboBox.Size = new System.Drawing.Size(103, 25);
+            this.filterComboBox.TabIndex = 9;
+            this.filterComboBox.SelectedIndexChanged += new System.EventHandler(this.filterComboBox_SelectedIndexChanged);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(20, 70);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(222, 23);
+            this.searchTextBox.TabIndex = 10;
+            this.searchTextBox.Text = "Search for users...";
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            this.searchTextBox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
+            this.searchTextBox.LostFocus += new System.EventHandler(this.searchTextBox_LostFocus);
+            // 
             // A_ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchTextBox);
+            this.Controls.Add(this.filterComboBox);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.deleteUserButton);
             this.Controls.Add(this.editUserButton);
@@ -149,6 +165,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "A_ManageUsers";
             this.Size = new System.Drawing.Size(1375, 693);
+            this.Load += new System.EventHandler(this.A_ManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,7 +182,8 @@
         private System.Windows.Forms.Button editUserButton;
         private System.Windows.Forms.Button deleteUserButton;
         private System.Windows.Forms.Button refreshButton;
-        private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.ComboBox filterComboBox;
+        private System.Windows.Forms.TextBox searchTextBox;
     }
 }

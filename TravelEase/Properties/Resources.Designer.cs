@@ -63,9 +63,70 @@ namespace TravelEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_19_76e2eafa_7981_4598_a8b9_ea90b9e31149_FinalOrganogramofcommissionarates_page_001 {
+            get {
+                object obj = ResourceManager.GetObject("1-19-76e2eafa-7981-4598-a8b9-ea90b9e31149-FinalOrganogramofcommissionarates-page-" +
+                        "001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_airplane_landing_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-airplane-landing-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_booking_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-booking-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_booking_30__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-booking-30 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_booking_30__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-booking-30 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_booking_301 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-booking-301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_booking_302 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-booking-302", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +197,26 @@ namespace TravelEase.Properties {
         internal static System.Drawing.Bitmap icons8_male_user_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-male-user-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_seo_text_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-seo-text-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_seo_text_30__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-seo-text-30 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

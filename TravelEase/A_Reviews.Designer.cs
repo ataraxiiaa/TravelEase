@@ -43,7 +43,7 @@ namespace TravelEase
             this.Reviews_lbl.ForeColor = System.Drawing.Color.White;
             this.Reviews_lbl.Location = new System.Drawing.Point(3, 0);
             this.Reviews_lbl.Name = "Reviews_lbl";
-            this.Reviews_lbl.Size = new System.Drawing.Size(309, 51);
+            this.Reviews_lbl.Size = new System.Drawing.Size(247, 41);
             this.Reviews_lbl.TabIndex = 0;
             this.Reviews_lbl.Text = "Manage Reviews";
             // 

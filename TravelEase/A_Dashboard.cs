@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,19 +16,40 @@ namespace TravelEase
         public A_Dashboard()
         {
             InitializeComponent();
+            this.Load += A_Dashboard_Load;
         }
 
         private void A_Dashboard_Load(object sender, EventArgs e)
         {
+            string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
 
+            string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
+            SqlConnection conn = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string modID = reader["ModID"].ToString();
+                string username = reader["MUsername"].ToString();
+                lblAdminID.Text = modID;
+                lblName.Text = username;
+            }
+            else
+            {
+                lblAdminID.Text = "Admin ID: Not found";
+                lblName.Text = "Name: Not found";
+            }
+            reader.Close();
+            conn.Close();
         }
-
         private void Dasboard_lbl_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void A_Dashboard_Load_1(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

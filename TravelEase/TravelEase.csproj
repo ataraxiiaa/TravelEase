@@ -82,6 +82,12 @@
     <Compile Include="A_Settings.Designer.cs">
       <DependentUpon>A_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="TourOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TourOperator.Designer.cs">
+      <DependentUpon>TourOperator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,24 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <Compile Include="TO_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TO_Dashboard.Designer.cs">
+      <DependentUpon>TO_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TO_ManageTrips.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TO_ManageTrips.Designer.cs">
+      <DependentUpon>TO_ManageTrips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TO_Queries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TO_Queries.Designer.cs">
+      <DependentUpon>TO_Queries.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +151,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TourOperator.resx">
+      <DependentUpon>TourOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TO_Dashboard.resx">
+      <DependentUpon>TO_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TO_Queries.resx">
+      <DependentUpon>TO_Queries.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -182,6 +215,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-google-web-search-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1-19-76e2eafa-7981-4598-a8b9-ea90b9e31149-FinalOrganogramofcommissionarates-page-001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-seo-text-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-booking-30 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-seo-text-30 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

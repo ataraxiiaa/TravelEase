@@ -1,6 +1,6 @@
 ﻿namespace TravelEase
 {
-    partial class A_Dashboard
+    partial class TO_Dashboard
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,8 +30,6 @@
         {
             this.Dasboard_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAdminID = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -45,45 +43,19 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(291, 45);
-            this.Dasboard_lbl.TabIndex = 0;
-            this.Dasboard_lbl.Text = "Admin Dashboard";
-            this.Dasboard_lbl.Click += new System.EventHandler(this.Dasboard_lbl_Click);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(403, 45);
+            this.Dasboard_lbl.TabIndex = 1;
+            this.Dasboard_lbl.Text = "Tour Operator Dashboard";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.lblAdminID);
-            this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(54, 130);
+            this.panel1.Location = new System.Drawing.Point(60, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1113, 226);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lblAdminID
-            // 
-            this.lblAdminID.AutoSize = true;
-            this.lblAdminID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminID.ForeColor = System.Drawing.Color.White;
-            this.lblAdminID.Location = new System.Drawing.Point(179, 117);
-            this.lblAdminID.Name = "lblAdminID";
-            this.lblAdminID.Size = new System.Drawing.Size(130, 29);
-            this.lblAdminID.TabIndex = 4;
-            this.lblAdminID.Text = "lblAdminID";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(146, 62);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(104, 29);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "lblName";
+            this.panel1.TabIndex = 2;
             // 
             // label2
             // 
@@ -92,9 +64,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(59, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 29);
+            this.label2.Size = new System.Drawing.Size(212, 29);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Admin ID:";
+            this.label2.Text = "Company Name: ";
             // 
             // label1
             // 
@@ -107,7 +79,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name: ";
             // 
-            // A_Dashboard
+            // TO_Dashboard
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -118,9 +90,9 @@
             this.Controls.Add(this.Dasboard_lbl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "A_Dashboard";
-            this.Size = new System.Drawing.Size(1152, 554);
-            this.Load += new System.EventHandler(this.A_Dashboard_Load);
+            this.Name = "TO_Dashboard";
+            this.Size = new System.Drawing.Size(1441, 693);
+            this.Load += new System.EventHandler(this.TO_Dashboard_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -132,8 +104,6 @@
 
         private System.Windows.Forms.Label Dasboard_lbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblAdminID;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
