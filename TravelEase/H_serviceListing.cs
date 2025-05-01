@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class A_Settings : UserControl
+    public partial class H_serviceListing : UserControl
     {
-        public A_Settings()
+        public H_serviceListing()
         {
             InitializeComponent();
         }
 
-        private void A_Settings_Load(object sender, EventArgs e)
+        private void H_serviceListing_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Dasboard_lbl_Click(object sender, EventArgs e)
+        private void managerReservationsHeader_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void AdminPanelInfo_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

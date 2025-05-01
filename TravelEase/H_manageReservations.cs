@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class A_Settings : UserControl
+    public partial class H_manageReservations : UserControl
     {
-        public A_Settings()
+        public H_manageReservations()
         {
             InitializeComponent();
+            this.Load += H_manageReservations_Load;
         }
 
-        private void A_Settings_Load(object sender, EventArgs e)
+        private void H_manageReservations_Load(object sender, EventArgs e)
         {
 
         }
@@ -27,7 +28,7 @@ namespace TravelEase
 
         }
 
-        private void AdminPanelInfo_Paint(object sender, PaintEventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

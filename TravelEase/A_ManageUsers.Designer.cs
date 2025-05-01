@@ -60,6 +60,7 @@
             this.usersDataGridView.RowHeadersWidth = 51;
             this.usersDataGridView.Size = new System.Drawing.Size(966, 400);
             this.usersDataGridView.TabIndex = 2;
+            this.usersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridView_CellContentClick);
             // 
             // addUserButton
             // 

@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // A_ManageTrips
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "A_ManageTrips";
+            this.Load += new System.EventHandler(this.A_ManageTrips_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

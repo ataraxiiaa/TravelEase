@@ -32,6 +32,9 @@ namespace TravelEase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Password_Text_Box = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,9 +43,6 @@ namespace TravelEase
             this.Password_Label = new System.Windows.Forms.Label();
             this.Username_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Password_Text_Box = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,43 @@ namespace TravelEase
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(26, 295);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(560, 43);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Password_Text_Box
+            // 
+            this.Password_Text_Box.BackColor = System.Drawing.Color.Gainsboro;
+            this.Password_Text_Box.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Password_Text_Box.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password_Text_Box.Location = new System.Drawing.Point(26, 408);
+            this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Password_Text_Box.Multiline = true;
+            this.Password_Text_Box.Name = "Password_Text_Box";
+            this.Password_Text_Box.PasswordChar = '*';
+            this.Password_Text_Box.Size = new System.Drawing.Size(560, 43);
+            this.Password_Text_Box.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 355);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 41);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Password";
             // 
             // UsernameTextBox
             // 
@@ -152,7 +189,7 @@ namespace TravelEase
             this.Username_Label.Location = new System.Drawing.Point(21, 116);
             this.Username_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Username_Label.Name = "Username_Label";
-            this.Username_Label.Size = new System.Drawing.Size(119, 51);
+            this.Username_Label.Size = new System.Drawing.Size(95, 41);
             this.Username_Label.TabIndex = 5;
             this.Username_Label.Text = "Name";
             this.Username_Label.Click += new System.EventHandler(this.Username_Label_Click);
@@ -169,55 +206,19 @@ namespace TravelEase
             this.label1.Text = "Get Started";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 355);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 51);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Password";
-            // 
-            // Password_Text_Box
-            // 
-            this.Password_Text_Box.BackColor = System.Drawing.Color.Gainsboro;
-            this.Password_Text_Box.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Password_Text_Box.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_Text_Box.Location = new System.Drawing.Point(26, 408);
-            this.Password_Text_Box.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Password_Text_Box.Multiline = true;
-            this.Password_Text_Box.Name = "Password_Text_Box";
-            this.Password_Text_Box.PasswordChar = '*';
-            this.Password_Text_Box.Size = new System.Drawing.Size(560, 43);
-            this.Password_Text_Box.TabIndex = 15;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 295);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(560, 43);
-            this.textBox1.TabIndex = 16;
-            // 
             // Register
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1581, 853);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
             this.Text = "Register";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

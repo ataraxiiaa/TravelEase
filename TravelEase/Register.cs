@@ -69,5 +69,10 @@ namespace TravelEase
             loginForm.Location = this.Location;  
             loginForm.Show();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

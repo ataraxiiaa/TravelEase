@@ -77,5 +77,10 @@ namespace TravelEase
         {
 
         }
+
+        private void tripReviewsDataGridView_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

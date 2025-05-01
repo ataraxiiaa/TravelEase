@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class A_Settings : UserControl
+    public partial class H_analysisView : UserControl
     {
-        public A_Settings()
+        public H_analysisView()
         {
             InitializeComponent();
         }
 
-        private void A_Settings_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Dasboard_lbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminPanelInfo_Paint(object sender, PaintEventArgs e)
+        private void H_analysisView_Load(object sender, EventArgs e)
         {
 
         }

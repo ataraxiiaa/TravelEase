@@ -78,6 +78,7 @@ namespace TravelEase
             this.tripReviewsDataGridView.RowHeadersWidth = 51;
             this.tripReviewsDataGridView.Size = new System.Drawing.Size(886, 318);
             this.tripReviewsDataGridView.TabIndex = 0;
+            this.tripReviewsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tripReviewsDataGridView_CellContentClick_2);
             // 
             // serviceReviewsTab
             // 

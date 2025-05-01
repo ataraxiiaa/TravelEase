@@ -58,6 +58,7 @@
             this.AdminPanelInfo.Name = "AdminPanelInfo";
             this.AdminPanelInfo.Size = new System.Drawing.Size(427, 168);
             this.AdminPanelInfo.TabIndex = 2;
+            this.AdminPanelInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.AdminPanelInfo_Paint);
             // 
             // ID_lbl
             // 

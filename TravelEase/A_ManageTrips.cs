@@ -16,5 +16,10 @@ namespace TravelEase
         {
             InitializeComponent();
         }
+
+        private void A_ManageTrips_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
