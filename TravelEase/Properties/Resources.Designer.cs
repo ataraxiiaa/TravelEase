@@ -74,6 +74,76 @@ namespace TravelEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_and_white__1_ {
+            get {
+                object obj = ResourceManager.GetObject("black-and-white (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_3__2025__02_08_31_AM__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 3, 2025, 02_08_31 AM (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_3__2025__02_08_54_AM__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 3, 2025, 02_08_54 AM (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_3__2025__02_08_54_AM__2_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 3, 2025, 02_08_54 AM (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_3__2025__02_08_54_AM__3_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 3, 2025, 02_08_54 AM (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_3__2025__02_08_54_AM__3___2_ {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 3, 2025, 02_08_54 AM (3) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_white {
+            get {
+                object obj = ResourceManager.GetObject("full-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_airplane_landing_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-airplane-landing-30", resourceCulture);
@@ -267,6 +337,26 @@ namespace TravelEase.Properties {
         internal static System.Drawing.Bitmap icons8_user_64__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-64 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading {
+            get {
+                object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loading__2_ {
+            get {
+                object obj = ResourceManager.GetObject("loading (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -52,6 +52,42 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_CancelTrip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_CancelTrip.Designer.cs">
+      <DependentUpon>A_CancelTrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_GuideRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_GuideRating.Designer.cs">
+      <DependentUpon>A_GuideRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Passes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Passes.Designer.cs">
+      <DependentUpon>A_Passes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Profile.Designer.cs">
+      <DependentUpon>A_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Review_A_Hotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Review_A_Hotel.Designer.cs">
+      <DependentUpon>A_Review_A_Hotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_Review_A_Trip.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_Review_A_Trip.Designer.cs">
+      <DependentUpon>A_Review_A_Trip.cs</DependentUpon>
+    </Compile>
     <Compile Include="A_Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -82,6 +118,30 @@
     <Compile Include="A_Settings.Designer.cs">
       <DependentUpon>A_Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_TransportRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_TransportRating.Designer.cs">
+      <DependentUpon>A_TransportRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_TripDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_TripDashboard.Designer.cs">
+      <DependentUpon>A_TripDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_TripRating.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_TripRating.Designer.cs">
+      <DependentUpon>A_TripRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="A_TripSearchBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="A_TripSearchBook.Designer.cs">
+      <DependentUpon>A_TripSearchBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hotel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +165,12 @@
     </Compile>
     <Compile Include="H_serviceListing.Designer.cs">
       <DependentUpon>H_serviceListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Touristcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Touristcs.Designer.cs">
+      <DependentUpon>Touristcs.cs</DependentUpon>
     </Compile>
     <Compile Include="TourOperator.cs">
       <SubType>Form</SubType>
@@ -148,6 +214,24 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="A_CancelTrip.resx">
+      <DependentUpon>A_CancelTrip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_GuideRating.resx">
+      <DependentUpon>A_GuideRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Passes.resx">
+      <DependentUpon>A_Passes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Profile.resx">
+      <DependentUpon>A_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Review_A_Hotel.resx">
+      <DependentUpon>A_Review_A_Hotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_Review_A_Trip.resx">
+      <DependentUpon>A_Review_A_Trip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="A_Dashboard.resx">
       <DependentUpon>A_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +246,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="A_Settings.resx">
       <DependentUpon>A_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_TransportRating.resx">
+      <DependentUpon>A_TransportRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_TripDashboard.resx">
+      <DependentUpon>A_TripDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_TripRating.resx">
+      <DependentUpon>A_TripRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_TripSearchBook.resx">
+      <DependentUpon>A_TripSearchBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel.resx">
       <DependentUpon>Hotel.cs</DependentUpon>
@@ -190,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Touristcs.resx">
+      <DependentUpon>Touristcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TourOperator.resx">
       <DependentUpon>TourOperator.cs</DependentUpon>
@@ -278,6 +377,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-seo-text-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-and-white %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 3, 2025, 02_08_54 AM %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 3, 2025, 02_08_54 AM %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 3, 2025, 02_08_31 AM %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 3, 2025, 02_08_54 AM %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 3, 2025, 02_08_54 AM %283%29 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

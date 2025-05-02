@@ -82,5 +82,10 @@ namespace TravelEase
         {
 
         }
+
+        private void Reviews_lbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

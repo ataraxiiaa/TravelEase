@@ -46,7 +46,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(333, 56);
+            this.titleLabel.Size = new System.Drawing.Size(266, 45);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Manage Queries";
             // 

@@ -19,7 +19,6 @@ namespace TravelEase
 
         private void InitializeComponent()
         {
-            this.Reviews_lbl = new System.Windows.Forms.Label();
             this.reviewsTabControl = new System.Windows.Forms.TabControl();
             this.tripReviewsTab = new System.Windows.Forms.TabPage();
             this.tripReviewsDataGridView = new System.Windows.Forms.DataGridView();
@@ -29,23 +28,13 @@ namespace TravelEase
             this.searchButton = new System.Windows.Forms.Button();
             this.approveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.Reviews_lbl = new System.Windows.Forms.Label();
             this.reviewsTabControl.SuspendLayout();
             this.tripReviewsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tripReviewsDataGridView)).BeginInit();
             this.serviceReviewsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviceReviewsDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Reviews_lbl
-            // 
-            this.Reviews_lbl.AutoSize = true;
-            this.Reviews_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reviews_lbl.ForeColor = System.Drawing.Color.White;
-            this.Reviews_lbl.Location = new System.Drawing.Point(3, 0);
-            this.Reviews_lbl.Name = "Reviews_lbl";
-            this.Reviews_lbl.Size = new System.Drawing.Size(247, 41);
-            this.Reviews_lbl.TabIndex = 0;
-            this.Reviews_lbl.Text = "Manage Reviews";
             // 
             // reviewsTabControl
             // 
@@ -155,6 +144,17 @@ namespace TravelEase
             this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
+            // Reviews_lbl
+            // 
+            this.Reviews_lbl.AutoSize = true;
+            this.Reviews_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reviews_lbl.ForeColor = System.Drawing.Color.White;
+            this.Reviews_lbl.Location = new System.Drawing.Point(3, 0);
+            this.Reviews_lbl.Name = "Reviews_lbl";
+            this.Reviews_lbl.Size = new System.Drawing.Size(247, 41);
+            this.Reviews_lbl.TabIndex = 0;
+            this.Reviews_lbl.Text = "Manage Reviews";
+            // 
             // A_Reviews
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
@@ -178,8 +178,6 @@ namespace TravelEase
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Reviews_lbl;
         private System.Windows.Forms.TabControl reviewsTabControl;
         private System.Windows.Forms.TabPage tripReviewsTab;
         private System.Windows.Forms.TabPage serviceReviewsTab;
@@ -189,5 +187,6 @@ namespace TravelEase
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button approveButton;
         private System.Windows.Forms.Button deleteButton;
+        private Label Reviews_lbl;
     }
 }
