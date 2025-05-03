@@ -97,20 +97,22 @@ namespace TravelEase
                 return;
             }
 
-            string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo WHERE ";
+            string query = "";
             SqlCommand cmd = new SqlCommand();
 
             switch (filter)
             {
                 case "Username":
-                    query += "UName LIKE @search";
+                    query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo WHERE UName LIKE @search";
                     cmd.Parameters.AddWithValue("@search", "%" + searchValue + "%");
                     break;
 
-                case "UserID":
-                    query += "UserID = @search";
+                case "ID":
                     if (int.TryParse(searchValue, out int userID))
+                    {
+                        query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo WHERE UserID = @search";
                         cmd.Parameters.AddWithValue("@search", userID);
+                    }
                     else
                     {
                         MessageBox.Show("Invalid User ID.");
@@ -119,7 +121,7 @@ namespace TravelEase
                     break;
 
                 case "Account Status":
-                    query += "UAccountStatus = @search";
+                    query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo WHERE UAccountStatus = @search";
                     if (searchValue.Equals("active", StringComparison.OrdinalIgnoreCase))
                         cmd.Parameters.AddWithValue("@search", 1);
                     else if (searchValue.Equals("inactive", StringComparison.OrdinalIgnoreCase))
@@ -130,6 +132,10 @@ namespace TravelEase
                         return;
                     }
                     break;
+
+                default:
+                    MessageBox.Show("Invalid filter selected.");
+                    return;
             }
 
             cmd.CommandText = query;
@@ -152,6 +158,7 @@ namespace TravelEase
                 }
             }
         }
+
 
     }
 }
