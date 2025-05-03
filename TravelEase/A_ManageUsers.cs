@@ -50,6 +50,48 @@ namespace TravelEase
 
         private void addUserButton_Click(object sender, EventArgs e)
         {
+            if(usersDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a user to add.");
+                return;
+            }
+            DataGridViewRow selectedRow = usersDataGridView.SelectedRows[0];
+            int id = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
+            bool isActive = Convert.ToBoolean(selectedRow.Cells["UAccountStatus"].Value);
+
+            if(isActive)
+            {
+                MessageBox.Show("User is already active.");
+                return;
+            }
+            string query = "UPDATE UserInfo SET UAccountStatus = 1 WHERE UserID = @UserID";
+
+            using(SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            {
+               using(SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", id);
+                    try
+                    {
+                        conn.Open();
+                        int n = cmd.ExecuteNonQuery();
+                        
+                        if(n > 0)
+                        {
+                            MessageBox.Show("User added successfully.");
+                            refreshButton.PerformClick();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to add user.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
 
         }
 
