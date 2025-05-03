@@ -26,7 +26,6 @@ namespace TravelEase
             this.serviceReviewsDataGridView = new System.Windows.Forms.DataGridView();
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.approveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.Reviews_lbl = new System.Windows.Forms.Label();
             this.reviewsTabControl.SuspendLayout();
@@ -116,27 +115,13 @@ namespace TravelEase
             this.searchButton.UseVisualStyleBackColor = false;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // approveButton
-            // 
-            this.approveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.approveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.approveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.approveButton.ForeColor = System.Drawing.Color.White;
-            this.approveButton.Location = new System.Drawing.Point(950, 142);
-            this.approveButton.Name = "approveButton";
-            this.approveButton.Size = new System.Drawing.Size(150, 40);
-            this.approveButton.TabIndex = 5;
-            this.approveButton.Text = "Approve";
-            this.approveButton.UseVisualStyleBackColor = false;
-            this.approveButton.Click += new System.EventHandler(this.approveButton_Click);
-            // 
             // deleteButton
             // 
             this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.deleteButton.ForeColor = System.Drawing.Color.White;
-            this.deleteButton.Location = new System.Drawing.Point(950, 191);
+            this.deleteButton.Location = new System.Drawing.Point(949, 142);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 40);
             this.deleteButton.TabIndex = 6;
@@ -162,7 +147,6 @@ namespace TravelEase
             this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.reviewsTabControl);
-            this.Controls.Add(this.approveButton);
             this.Controls.Add(this.deleteButton);
             this.Name = "A_Reviews";
             this.Size = new System.Drawing.Size(1150, 500);
@@ -185,7 +169,6 @@ namespace TravelEase
         private System.Windows.Forms.DataGridView serviceReviewsDataGridView;
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Button approveButton;
         private System.Windows.Forms.Button deleteButton;
         private Label Reviews_lbl;
     }

@@ -44,7 +44,7 @@
             this.settings_lbl.ForeColor = System.Drawing.Color.White;
             this.settings_lbl.Location = new System.Drawing.Point(0, 0);
             this.settings_lbl.Name = "settings_lbl";
-            this.settings_lbl.Size = new System.Drawing.Size(117, 37);
+            this.settings_lbl.Size = new System.Drawing.Size(142, 45);
             this.settings_lbl.TabIndex = 1;
             this.settings_lbl.Text = "Settings";
             // 
@@ -67,7 +67,7 @@
             this.ID_lbl.ForeColor = System.Drawing.Color.White;
             this.ID_lbl.Location = new System.Drawing.Point(28, 111);
             this.ID_lbl.Name = "ID_lbl";
-            this.ID_lbl.Size = new System.Drawing.Size(37, 25);
+            this.ID_lbl.Size = new System.Drawing.Size(44, 31);
             this.ID_lbl.TabIndex = 0;
             this.ID_lbl.Text = "ID:";
             // 
@@ -78,7 +78,7 @@
             this.Email_lbl.ForeColor = System.Drawing.Color.White;
             this.Email_lbl.Location = new System.Drawing.Point(28, 69);
             this.Email_lbl.Name = "Email_lbl";
-            this.Email_lbl.Size = new System.Drawing.Size(64, 25);
+            this.Email_lbl.Size = new System.Drawing.Size(76, 31);
             this.Email_lbl.TabIndex = 0;
             this.Email_lbl.Text = "Email:";
             // 
@@ -89,14 +89,14 @@
             this.Name_lbl.ForeColor = System.Drawing.Color.White;
             this.Name_lbl.Location = new System.Drawing.Point(28, 30);
             this.Name_lbl.Name = "Name_lbl";
-            this.Name_lbl.Size = new System.Drawing.Size(69, 25);
+            this.Name_lbl.Size = new System.Drawing.Size(82, 31);
             this.Name_lbl.TabIndex = 0;
             this.Name_lbl.Text = "Name:";
             // 
             // A_Settings
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

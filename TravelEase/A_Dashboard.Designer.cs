@@ -45,7 +45,7 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(238, 37);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(291, 45);
             this.Dasboard_lbl.TabIndex = 0;
             this.Dasboard_lbl.Text = "Admin Dashboard";
             this.Dasboard_lbl.Click += new System.EventHandler(this.Dasboard_lbl_Click);
@@ -70,7 +70,7 @@
             this.lblAdminID.ForeColor = System.Drawing.Color.White;
             this.lblAdminID.Location = new System.Drawing.Point(179, 117);
             this.lblAdminID.Name = "lblAdminID";
-            this.lblAdminID.Size = new System.Drawing.Size(101, 24);
+            this.lblAdminID.Size = new System.Drawing.Size(130, 29);
             this.lblAdminID.TabIndex = 4;
             this.lblAdminID.Text = "lblAdminID";
             // 
@@ -81,7 +81,7 @@
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(146, 62);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(80, 24);
+            this.lblName.Size = new System.Drawing.Size(104, 29);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "lblName";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -93,7 +93,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(59, 117);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 24);
+            this.label2.Size = new System.Drawing.Size(125, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Admin ID:";
             // 
@@ -104,14 +104,14 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(59, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
+            this.label1.Size = new System.Drawing.Size(96, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name: ";
             // 
             // A_Dashboard
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
