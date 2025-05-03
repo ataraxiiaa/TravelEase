@@ -39,6 +39,7 @@ namespace TravelEase
             this.searchButton = new System.Windows.Forms.Button();
             this.filterComboBox = new System.Windows.Forms.ComboBox();
             this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.saveBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,12 +84,13 @@ namespace TravelEase
             this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editUserButton.ForeColor = System.Drawing.Color.White;
-            this.editUserButton.Location = new System.Drawing.Point(1012, 181);
+            this.editUserButton.Location = new System.Drawing.Point(1013, 181);
             this.editUserButton.Name = "editUserButton";
             this.editUserButton.Size = new System.Drawing.Size(172, 43);
             this.editUserButton.TabIndex = 4;
             this.editUserButton.Text = "Edit User";
             this.editUserButton.UseVisualStyleBackColor = false;
+            this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
             // 
             // deleteUserButton
             // 
@@ -153,11 +155,26 @@ namespace TravelEase
             this.searchTextBox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
             this.searchTextBox.LostFocus += new System.EventHandler(this.searchTextBox_LostFocus);
             // 
+            // saveBtn
+            // 
+            this.saveBtn.BackColor = System.Drawing.Color.DarkGreen;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(814, 537);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(172, 43);
+            this.saveBtn.TabIndex = 11;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Visible = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
             // A_ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.filterComboBox);
             this.Controls.Add(this.searchButton);
@@ -191,5 +208,6 @@ namespace TravelEase
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.ComboBox filterComboBox;
         private System.Windows.Forms.TextBox searchTextBox;
+        private Button saveBtn;
     }
 }

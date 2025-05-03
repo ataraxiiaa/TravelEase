@@ -267,5 +267,61 @@ namespace TravelEase
                 }
             }
         }
+
+        private void editUserButton_Click(object sender, EventArgs e)
+        {
+            if (usersDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a user to edit.");
+                return;
+            }
+
+            DataGridViewRow selectedRow = usersDataGridView.SelectedRows[0];
+            int userId = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
+
+            usersDataGridView.ReadOnly = false; 
+
+            usersDataGridView.CurrentCell = selectedRow.Cells["UName"];
+            usersDataGridView.BeginEdit(true);
+
+            saveBtn.Visible = true;
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in usersDataGridView.SelectedRows)
+            {
+                int userId = Convert.ToInt32(row.Cells["UserID"].Value);
+                string newUsername = row.Cells["UName"].Value.ToString();
+                string newEmail = row.Cells["UEmail"].Value.ToString();
+                bool newAccountStatus = Convert.ToBoolean(row.Cells["UAccountStatus"].Value);
+
+                string updateQuery = "UPDATE UserInfo SET UName = @UName, UEmail = @UEmail, UAccountStatus = @UAccountStatus WHERE UserID = @UserID";
+
+                string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+                using (SqlConnection conn = new SqlConnection(connection))
+                {
+                    SqlCommand cmd = new SqlCommand(updateQuery, conn);
+                    cmd.Parameters.AddWithValue("@UName", newUsername);
+                    cmd.Parameters.AddWithValue("@UEmail", newEmail);
+                    cmd.Parameters.AddWithValue("@UAccountStatus", newAccountStatus ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+
+                    conn.Open();
+                    int n = cmd.ExecuteNonQuery();
+
+                    if (n > 0)
+                    {
+                        MessageBox.Show("User details updated successfully.");
+                        refreshButton.PerformClick();  
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update user details.");
+                    }
+                }
+            }
+            saveBtn.Visible = false;
+        }
     }
 }
