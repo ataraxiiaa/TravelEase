@@ -50,17 +50,18 @@ namespace TravelEase
 
         private void deleteUserButton_Click(object sender, EventArgs e)
         {
+
             if(usersDataGridView.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a user to delete.");
                 return;
             }
-
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             DataGridViewRow row = usersDataGridView.SelectedRows[0];
             int id = Convert.ToInt32(row.Cells["UserID"].Value);
             string query = "DELETE FROM UserInfo WHERE UserID = @UserID";
 
-            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            using (SqlConnection conn = new SqlConnection(connection))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -94,6 +95,7 @@ namespace TravelEase
                 MessageBox.Show("Please select a user to add.");
                 return;
             }
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             DataGridViewRow selectedRow = usersDataGridView.SelectedRows[0];
             int id = Convert.ToInt32(selectedRow.Cells["UserID"].Value);
             bool isActive = Convert.ToBoolean(selectedRow.Cells["UAccountStatus"].Value);
@@ -105,7 +107,7 @@ namespace TravelEase
             }
             string query = "UPDATE UserInfo SET UAccountStatus = 1 WHERE UserID = @UserID";
 
-            using(SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            using(SqlConnection conn = new SqlConnection(connection))
             {
                using(SqlCommand cmd = new SqlCommand(query, conn))
                 {

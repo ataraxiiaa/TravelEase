@@ -39,8 +39,8 @@ namespace TravelEase
             }
             else
             {
-                lblAdminID.Text = "Admin ID: Not found";
-                lblName.Text = "Name: Not found";
+                lblAdminID.Text = "ERROR: 909";
+                lblName.Text = "ERROR: 910";
             }
             reader.Close();
             conn.Close();
