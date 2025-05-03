@@ -19,9 +19,22 @@ namespace TravelEase
 
         private void StartScreen_Load(object sender, EventArgs e)
         {
-
+            WireHoverEvents(touristPanel);
+            WireHoverEvents(adminPanel);
+            WireHoverEvents(serviceProviderPanel);
+            WireHoverEvents(tourOperatorPanel);
         }
+        private void WireHoverEvents(Panel panel)
+        {
+            panel.MouseEnter += panel_HoverEnter;
+            panel.MouseLeave += panel_HoverLeave;
 
+            foreach (Control ctrl in panel.Controls)
+            {
+                ctrl.MouseEnter += (s, e) => panel_HoverEnter(panel, e);
+                ctrl.MouseLeave += (s, e) => panel_HoverLeave(panel, e);
+            }
+        }
         private void title_lbl_Click(object sender, EventArgs e)
         {
 
@@ -91,6 +104,11 @@ namespace TravelEase
         private void panel3_MouseClick(object sender, MouseEventArgs e)
         {
             OpenLoginForm(1);
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
