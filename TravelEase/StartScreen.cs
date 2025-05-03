@@ -93,12 +93,12 @@ namespace TravelEase
 
         private void panel5_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenLoginForm(3);
+            OpenLoginForm(2);
         }
 
         private void panel4_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenLoginForm(2);
+            OpenLoginForm(3);
         }
 
         private void panel3_MouseClick(object sender, MouseEventArgs e)

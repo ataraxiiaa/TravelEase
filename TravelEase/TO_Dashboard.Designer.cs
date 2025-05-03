@@ -30,8 +30,8 @@
         {
             this.Dasboard_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.companyname_lbl = new System.Windows.Forms.Label();
+            this.name_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,34 +50,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.companyname_lbl);
+            this.panel1.Controls.Add(this.name_lbl);
             this.panel1.Location = new System.Drawing.Point(60, 122);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1113, 226);
             this.panel1.TabIndex = 2;
             // 
-            // label2
+            // companyname_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(59, 117);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Company Name: ";
+            this.companyname_lbl.AutoSize = true;
+            this.companyname_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyname_lbl.ForeColor = System.Drawing.Color.White;
+            this.companyname_lbl.Location = new System.Drawing.Point(59, 117);
+            this.companyname_lbl.Name = "companyname_lbl";
+            this.companyname_lbl.Size = new System.Drawing.Size(232, 32);
+            this.companyname_lbl.TabIndex = 1;
+            this.companyname_lbl.Text = "Company Name: ";
             // 
-            // label1
+            // name_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name: ";
+            this.name_lbl.AutoSize = true;
+            this.name_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lbl.ForeColor = System.Drawing.Color.White;
+            this.name_lbl.Location = new System.Drawing.Point(59, 62);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(104, 32);
+            this.name_lbl.TabIndex = 0;
+            this.name_lbl.Text = "Name: ";
             // 
             // TO_Dashboard
             // 
@@ -92,7 +92,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TO_Dashboard";
             this.Size = new System.Drawing.Size(1441, 693);
-            this.Load += new System.EventHandler(this.TO_Dashboard_Load_1);
+            this.Load += new System.EventHandler(this.TO_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -104,7 +104,7 @@
 
         private System.Windows.Forms.Label Dasboard_lbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label companyname_lbl;
+        private System.Windows.Forms.Label name_lbl;
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,12 +21,14 @@ namespace TravelEase
 
         private void TO_Dashboard_Load(object sender, EventArgs e)
         {
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            string query = "SELECT TOP 1 TourOperatorID, MUsername FROM Moderator"; // change later
 
-        }
 
-        private void TO_Dashboard_Load_1(object sender, EventArgs e)
-        {
+            SqlConnection conn = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand(query, conn);
 
+            
         }
     }
 }
