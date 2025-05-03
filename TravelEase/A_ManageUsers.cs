@@ -159,6 +159,31 @@ namespace TravelEase
             }
         }
 
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo";
+
+            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+
+                try
+                {
+                    conn.Open();
+                    adapter.Fill(dt);
+                    usersDataGridView.DataSource = dt;
+                    filterComboBox.SelectedIndex = 0;
+                    searchTextBox.Text = "Search for users...";
+                    searchTextBox.ForeColor = Color.Gray;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
 
     }
 }

@@ -113,6 +113,7 @@ namespace TravelEase
             this.refreshButton.TabIndex = 6;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // searchButton
             // 
