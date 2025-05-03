@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace TravelEase
 {
@@ -183,11 +184,11 @@ namespace TravelEase
             this.UsernameTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.UsernameTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.UsernameTextBox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(27, 199);
+            this.UsernameTextBox.Location = new System.Drawing.Point(26, 203);
             this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameTextBox.Multiline = true;
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(560, 43);
+            this.UsernameTextBox.Size = new System.Drawing.Size(561, 43);
             this.UsernameTextBox.TabIndex = 13;
             this.UsernameTextBox.TextChanged += new System.EventHandler(this.UsernameTextBox_TextChanged);
             // 
