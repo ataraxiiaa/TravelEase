@@ -132,7 +132,6 @@ namespace TravelEase
             this.filterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterComboBox.Items.AddRange(new object[] {
             "Username",
-            "Name",
             "ID",
             "Account Status"});
             this.filterComboBox.Location = new System.Drawing.Point(248, 68);
