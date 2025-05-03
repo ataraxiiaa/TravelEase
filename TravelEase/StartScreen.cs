@@ -31,10 +31,66 @@ namespace TravelEase
         {
 
         }
+        private void panel_HoverEnter(object sender, EventArgs e)
+        {
+            Panel hoveredPanel = sender as Panel;
+            if (hoveredPanel != null)
+                hoveredPanel.BackColor = Color.FromArgb(40, 50, 90); 
+        }
+
+        private void panel_HoverLeave(object sender, EventArgs e)
+        {
+            Panel hoveredPanel = sender as Panel;
+            if (hoveredPanel != null)
+                hoveredPanel.BackColor = Color.FromArgb(24, 30, 65); 
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void OpenLoginForm(int userType)
+        {
+            this.Hide();
+            Login loginForm = new Login(userType);
+            loginForm.StartPosition = FormStartPosition.Manual;
+            loginForm.Location = this.Location;
+            loginForm.Show();
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+           OpenLoginForm(0);
+        }
+
+        private void panel5_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenLoginForm(3);
+        }
+
+        private void panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenLoginForm(2);
+        }
+
+        private void panel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenLoginForm(1);
         }
     }
 }

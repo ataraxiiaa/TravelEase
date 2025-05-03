@@ -64,10 +64,10 @@ namespace TravelEase
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Close();
-            Login loginForm = new Login();
-            loginForm.StartPosition = FormStartPosition.Manual;
-            loginForm.Location = this.Location;  
-            loginForm.Show();
+            StartScreen start = new StartScreen();
+            start.StartPosition = FormStartPosition.Manual;
+            start.Location = this.Location;
+            start.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
