@@ -1,4 +1,6 @@
-﻿namespace TravelEase
+﻿using System.Windows.Forms;
+
+namespace TravelEase
 {
     partial class A_ManageUsers
     {
@@ -48,12 +50,13 @@
             this.Users_lbl.ForeColor = System.Drawing.Color.White;
             this.Users_lbl.Location = new System.Drawing.Point(0, 0);
             this.Users_lbl.Name = "Users_lbl";
-            this.Users_lbl.Size = new System.Drawing.Size(232, 45);
+            this.Users_lbl.Size = new System.Drawing.Size(190, 37);
             this.Users_lbl.TabIndex = 1;
             this.Users_lbl.Text = "Manage Users";
             // 
             // usersDataGridView
             // 
+            this.usersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.usersDataGridView.Location = new System.Drawing.Point(20, 120);
             this.usersDataGridView.Name = "usersDataGridView";
@@ -122,6 +125,7 @@
             this.searchButton.TabIndex = 8;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // filterComboBox
             // 
@@ -133,7 +137,7 @@
             "Account Status"});
             this.filterComboBox.Location = new System.Drawing.Point(248, 68);
             this.filterComboBox.Name = "filterComboBox";
-            this.filterComboBox.Size = new System.Drawing.Size(103, 25);
+            this.filterComboBox.Size = new System.Drawing.Size(103, 21);
             this.filterComboBox.TabIndex = 9;
             this.filterComboBox.SelectedIndexChanged += new System.EventHandler(this.filterComboBox_SelectedIndexChanged);
             // 
@@ -141,7 +145,7 @@
             // 
             this.searchTextBox.Location = new System.Drawing.Point(20, 70);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(222, 23);
+            this.searchTextBox.Size = new System.Drawing.Size(222, 20);
             this.searchTextBox.TabIndex = 10;
             this.searchTextBox.Text = "Search for users...";
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
@@ -150,7 +154,7 @@
             // 
             // A_ManageUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.searchTextBox);

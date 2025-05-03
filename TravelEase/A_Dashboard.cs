@@ -21,8 +21,8 @@ namespace TravelEase
 
         private void A_Dashboard_Load(object sender, EventArgs e)
         {
-            //string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
-            string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
+            string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
+            // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
             SqlConnection conn = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand(query, conn);
@@ -50,6 +50,11 @@ namespace TravelEase
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
         {
 
         }

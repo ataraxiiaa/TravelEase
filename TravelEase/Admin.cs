@@ -28,8 +28,8 @@ namespace TravelEase
         private void Admin_Load(object sender, EventArgs e)
         {
              LoadView(new A_Dashboard());
-            //string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
-            string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
+            string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
+            // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
             SqlConnection conn = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand(query, conn);
