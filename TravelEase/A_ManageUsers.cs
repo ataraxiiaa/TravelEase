@@ -47,7 +47,45 @@ namespace TravelEase
         {
         }
 
+        private void deleteUserButton_Click(object sender, EventArgs e)
+        {
+            if(usersDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a user to delete.");
+                return;
+            }
 
+            DataGridViewRow row = usersDataGridView.SelectedRows[0];
+            int id = Convert.ToInt32(row.Cells["UserID"].Value);
+            string query = "DELETE FROM UserInfo WHERE UserID = @UserID";
+
+            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@UserID", id);
+                    try
+                    {
+                        conn.Open();
+                        int n = cmd.ExecuteNonQuery();
+                        if (n > 0)
+                        {
+                            MessageBox.Show("User deleted successfully.");
+                            refreshButton.PerformClick();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Failed to delete user.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
+            }
+
+        }
         private void addUserButton_Click(object sender, EventArgs e)
         {
             if(usersDataGridView.SelectedRows.Count == 0)
@@ -108,8 +146,8 @@ namespace TravelEase
         private void LoadAllUsers()
         {
             string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo";
-
-            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            string connection = ConnectionHelper.GetConnectionString();
+            using (SqlConnection conn = new SqlConnection(connection))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -181,8 +219,8 @@ namespace TravelEase
             }
 
             cmd.CommandText = query;
-
-            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            string connection = ConnectionHelper.GetConnectionString();
+            using (SqlConnection conn = new SqlConnection(connection))
             {
                 cmd.Connection = conn;
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -204,8 +242,8 @@ namespace TravelEase
         private void refreshButton_Click(object sender, EventArgs e)
         {
             string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo";
-
-            using (SqlConnection conn = new SqlConnection("Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True"))
+            string connection = ConnectionHelper.GetConnectionString();
+            using (SqlConnection conn = new SqlConnection(connection))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -226,6 +264,5 @@ namespace TravelEase
                 }
             }
         }
-
     }
 }

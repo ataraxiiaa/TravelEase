@@ -21,7 +21,7 @@ namespace TravelEase
 
         private void A_Dashboard_Load(object sender, EventArgs e)
         {
-            string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
+            string connection = ConnectionHelper.GetConnectionString();
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
             SqlConnection conn = new SqlConnection(connection);

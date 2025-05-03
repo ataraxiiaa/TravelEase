@@ -101,6 +101,7 @@ namespace TravelEase
             this.deleteUserButton.TabIndex = 5;
             this.deleteUserButton.Text = "Delete User";
             this.deleteUserButton.UseVisualStyleBackColor = false;
+            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
             // 
             // refreshButton
             // 

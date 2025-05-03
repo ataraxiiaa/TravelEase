@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TravelEase;
 
 namespace TravelEase
 {
@@ -28,7 +29,7 @@ namespace TravelEase
         private void Admin_Load(object sender, EventArgs e)
         {
              LoadView(new A_Dashboard());
-            string connection = "Data Source=ALI\\SQLEXPRESS;Initial Catalog=tourismDatabase;Integrated Security=True";
+            string connection = ConnectionHelper.GetConnectionString();
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
             SqlConnection conn = new SqlConnection(connection);
