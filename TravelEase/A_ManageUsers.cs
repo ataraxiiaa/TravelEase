@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace TravelEase
 {
@@ -146,7 +147,7 @@ namespace TravelEase
         private void LoadAllUsers()
         {
             string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo";
-            string connection = ConnectionHelper.GetConnectionString();
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -219,7 +220,7 @@ namespace TravelEase
             }
 
             cmd.CommandText = query;
-            string connection = ConnectionHelper.GetConnectionString();
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 cmd.Connection = conn;
@@ -242,7 +243,7 @@ namespace TravelEase
         private void refreshButton_Click(object sender, EventArgs e)
         {
             string query = "SELECT UserID, UName, UEmail, UAccountStatus, URegisterDate FROM UserInfo";
-            string connection = ConnectionHelper.GetConnectionString();
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connection))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);

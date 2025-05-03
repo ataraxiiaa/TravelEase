@@ -150,7 +150,6 @@
     <Compile Include="A_TripSearchBook.Designer.cs">
       <DependentUpon>A_TripSearchBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConnectionHelper.cs" />
     <Compile Include="Hotel.cs">
       <SubType>Form</SubType>
     </Compile>

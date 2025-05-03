@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -21,7 +22,7 @@ namespace TravelEase
 
         private void A_Dashboard_Load(object sender, EventArgs e)
         {
-            string connection = ConnectionHelper.GetConnectionString();
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
             SqlConnection conn = new SqlConnection(connection);

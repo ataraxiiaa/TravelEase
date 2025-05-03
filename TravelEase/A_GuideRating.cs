@@ -28,5 +28,9 @@ namespace TravelEase
             }
         }
 
+        private void A_GuideRating_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

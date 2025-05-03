@@ -41,9 +41,10 @@
             this.approveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.approveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.approveButton.ForeColor = System.Drawing.Color.White;
-            this.approveButton.Location = new System.Drawing.Point(446, 479);
+            this.approveButton.Location = new System.Drawing.Point(334, 389);
+            this.approveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.approveButton.Name = "approveButton";
-            this.approveButton.Size = new System.Drawing.Size(150, 40);
+            this.approveButton.Size = new System.Drawing.Size(112, 32);
             this.approveButton.TabIndex = 26;
             this.approveButton.Text = "Submit";
             this.approveButton.UseVisualStyleBackColor = false;
@@ -51,10 +52,11 @@
             // textBox1
             // 
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(336, 157);
+            this.textBox1.Location = new System.Drawing.Point(252, 128);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 298);
+            this.textBox1.Size = new System.Drawing.Size(270, 243);
             this.textBox1.TabIndex = 25;
             // 
             // Reviews_lbl
@@ -62,9 +64,10 @@
             this.Reviews_lbl.AutoSize = true;
             this.Reviews_lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reviews_lbl.ForeColor = System.Drawing.Color.White;
-            this.Reviews_lbl.Location = new System.Drawing.Point(421, 33);
+            this.Reviews_lbl.Location = new System.Drawing.Point(316, 27);
+            this.Reviews_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Reviews_lbl.Name = "Reviews_lbl";
-            this.Reviews_lbl.Size = new System.Drawing.Size(203, 41);
+            this.Reviews_lbl.Size = new System.Drawing.Size(161, 32);
             this.Reviews_lbl.TabIndex = 22;
             this.Reviews_lbl.Text = "Review Guide";
             // 
@@ -72,14 +75,13 @@
             // 
             this.searchTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchTextbox.ForeColor = System.Drawing.Color.Gray;
-            this.searchTextbox.Location = new System.Drawing.Point(324, 110);
+            this.searchTextbox.Location = new System.Drawing.Point(243, 89);
+            this.searchTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(300, 28);
+            this.searchTextbox.Size = new System.Drawing.Size(226, 24);
             this.searchTextbox.TabIndex = 24;
             this.searchTextbox.Text = "Search for Reviews";
             this.searchTextbox.Enter += new System.EventHandler(this.searchTextbox_Enter);
-
-            //this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // searchButton
             // 
@@ -87,16 +89,17 @@
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchButton.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(646, 110);
+            this.searchButton.Location = new System.Drawing.Point(484, 89);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(106, 30);
+            this.searchButton.Size = new System.Drawing.Size(80, 24);
             this.searchButton.TabIndex = 23;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
             // 
             // A_GuideRating
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.approveButton);
@@ -104,8 +107,10 @@
             this.Controls.Add(this.Reviews_lbl);
             this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.searchButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "A_GuideRating";
-            this.Size = new System.Drawing.Size(1045, 561);
+            this.Size = new System.Drawing.Size(784, 456);
+            this.Load += new System.EventHandler(this.A_GuideRating_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,5 +26,10 @@ namespace TravelEase
         {
 
         }
+
+        private void TO_Queries_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

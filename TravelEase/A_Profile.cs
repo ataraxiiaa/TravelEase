@@ -28,5 +28,9 @@ namespace TravelEase
             }
         }
 
+        private void travelHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

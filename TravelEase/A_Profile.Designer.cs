@@ -39,14 +39,13 @@
             // 
             this.searchPreference.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchPreference.ForeColor = System.Drawing.Color.Gray;
-            this.searchPreference.Location = new System.Drawing.Point(260, 61);
+            this.searchPreference.Location = new System.Drawing.Point(195, 50);
+            this.searchPreference.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchPreference.Name = "searchPreference";
-            this.searchPreference.Size = new System.Drawing.Size(300, 34);
+            this.searchPreference.Size = new System.Drawing.Size(226, 28);
             this.searchPreference.TabIndex = 13;
             this.searchPreference.Text = "Update Preferences";
             this.searchPreference.Enter += new System.EventHandler(this.searchPreference_Enter);
-
-            //this.searchPreference.TextChanged += new System.EventHandler(this.searchPreference_TextChanged);
             // 
             // approveButton
             // 
@@ -54,9 +53,10 @@
             this.approveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.approveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.approveButton.ForeColor = System.Drawing.Color.White;
-            this.approveButton.Location = new System.Drawing.Point(671, 61);
+            this.approveButton.Location = new System.Drawing.Point(503, 50);
+            this.approveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.approveButton.Name = "approveButton";
-            this.approveButton.Size = new System.Drawing.Size(150, 40);
+            this.approveButton.Size = new System.Drawing.Size(112, 32);
             this.approveButton.TabIndex = 16;
             this.approveButton.Text = "Submit";
             this.approveButton.UseVisualStyleBackColor = false;
@@ -67,9 +67,10 @@
             this.history.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.history.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.history.ForeColor = System.Drawing.Color.White;
-            this.history.Location = new System.Drawing.Point(420, 135);
+            this.history.Location = new System.Drawing.Point(315, 110);
+            this.history.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.history.Name = "history";
-            this.history.Size = new System.Drawing.Size(216, 40);
+            this.history.Size = new System.Drawing.Size(162, 32);
             this.history.TabIndex = 17;
             this.history.Text = " View Travel History";
             this.history.UseVisualStyleBackColor = false;
@@ -77,23 +78,26 @@
             // travelHistory
             // 
             this.travelHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.travelHistory.Location = new System.Drawing.Point(97, 209);
+            this.travelHistory.Location = new System.Drawing.Point(73, 170);
+            this.travelHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.travelHistory.Name = "travelHistory";
             this.travelHistory.RowHeadersWidth = 51;
-            this.travelHistory.Size = new System.Drawing.Size(878, 281);
+            this.travelHistory.Size = new System.Drawing.Size(658, 228);
             this.travelHistory.TabIndex = 18;
+            this.travelHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.travelHistory_CellContentClick);
             // 
             // A_Profile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.travelHistory);
             this.Controls.Add(this.history);
             this.Controls.Add(this.approveButton);
             this.Controls.Add(this.searchPreference);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "A_Profile";
-            this.Size = new System.Drawing.Size(1033, 519);
+            this.Size = new System.Drawing.Size(775, 422);
             ((System.ComponentModel.ISupportInitialize)(this.travelHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
