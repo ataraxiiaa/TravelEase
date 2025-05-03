@@ -74,6 +74,36 @@ namespace TravelEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adventurer {
+            get {
+                object obj = ResourceManager.GetObject("adventurer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adventurer__1_ {
+            get {
+                object obj = ResourceManager.GetObject("adventurer (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adventurer__2_ {
+            get {
+                object obj = ResourceManager.GetObject("adventurer (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_and_white__1_ {
             get {
                 object obj = ResourceManager.GetObject("black-and-white (1)", resourceCulture);
@@ -137,6 +167,36 @@ namespace TravelEase.Properties {
         internal static System.Drawing.Bitmap full_white {
             get {
                 object obj = ResourceManager.GetObject("full-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_5_star_hotel_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-5-star-hotel-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrator-male-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_adventure_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-adventure-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -274,6 +334,16 @@ namespace TravelEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_online_support_skin_type_3_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-online-support-skin-type-3-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_seo_text_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-seo-text-30", resourceCulture);
@@ -357,6 +427,16 @@ namespace TravelEase.Properties {
         internal static System.Drawing.Bitmap loading__2_ {
             get {
                 object obj = ResourceManager.GetObject("loading (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com {
+            get {
+                object obj = ResourceManager.GetObject("pngwing.com", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

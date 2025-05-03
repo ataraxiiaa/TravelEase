@@ -32,8 +32,8 @@ namespace TravelEase
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                string modID = reader["ModID"].ToString();
-                string username = reader["MUsername"].ToString();
+                string modID = "Admin ID: " + reader["ModID"].ToString();
+                string username = "Name: " + reader["MUsername"].ToString();
                 lblAdminID.Text = modID;
                 lblName.Text = username;
             }
