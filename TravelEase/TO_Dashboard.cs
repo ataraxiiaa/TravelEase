@@ -14,6 +14,7 @@ namespace TravelEase
 {
     public partial class TO_Dashboard : UserControl
     {
+        private int id;
         public TO_Dashboard()
         {
             InitializeComponent();
