@@ -32,5 +32,10 @@ namespace TravelEase
         {
 
         }
+
+        private void history_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

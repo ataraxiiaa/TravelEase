@@ -48,7 +48,7 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(220, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1361, 853);
+            this.panelMain.Size = new System.Drawing.Size(1221, 693);
             this.panelMain.TabIndex = 1;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -64,7 +64,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 853);
+            this.panel2.Size = new System.Drawing.Size(220, 693);
             this.panel2.TabIndex = 2;
             // 
             // panel3
@@ -105,7 +105,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::TravelEase.Properties.Resources.icons8_settings_30;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(0, 651);
+            this.button5.Location = new System.Drawing.Point(-7, 648);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 42);
@@ -127,7 +127,7 @@
             this.manageReservationsButton.Name = "manageReservationsButton";
             this.manageReservationsButton.Size = new System.Drawing.Size(220, 42);
             this.manageReservationsButton.TabIndex = 2;
-            this.manageReservationsButton.Text = "Manage Reservations";
+            this.manageReservationsButton.Text = "Reservations";
             this.manageReservationsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.manageReservationsButton.UseVisualStyleBackColor = true;
             this.manageReservationsButton.Click += new System.EventHandler(this.manageReservationsButton_Click);
@@ -174,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.ClientSize = new System.Drawing.Size(1581, 853);
+            this.ClientSize = new System.Drawing.Size(1441, 693);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

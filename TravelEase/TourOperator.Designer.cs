@@ -39,6 +39,7 @@
             this.Users_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -69,6 +70,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.Trips_btn);
@@ -191,6 +193,17 @@
             this.panelMain.Size = new System.Drawing.Size(1441, 693);
             this.panelMain.TabIndex = 2;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(104, 538);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 17);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // TourOperator
             // 
             this.AccessibleName = "";
@@ -210,6 +223,7 @@
             this.Load += new System.EventHandler(this.TourOperator_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -231,5 +245,6 @@
         private System.Windows.Forms.Button Users_btn;
         private System.Windows.Forms.Button Dashboard_btn;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
