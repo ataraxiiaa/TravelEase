@@ -106,6 +106,7 @@
             this.approveButton.TabIndex = 15;
             this.approveButton.Text = "Submit";
             this.approveButton.UseVisualStyleBackColor = false;
+            this.approveButton.Click += new System.EventHandler(this.approveButton_Click);
             // 
             // deleteButton
             // 

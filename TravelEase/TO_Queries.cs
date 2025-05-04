@@ -76,5 +76,10 @@ namespace TravelEase
         {
 
         }
+
+        private void approveButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

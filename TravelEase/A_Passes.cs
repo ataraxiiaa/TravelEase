@@ -16,5 +16,10 @@ namespace TravelEase
         {
             InitializeComponent();
         }
+
+        private void ETickets_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -62,5 +62,13 @@ namespace TravelEase
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Hotel hotel = new Hotel();
+            hotel.Activate();
+            hotel.Show();
+        }
     }
 }

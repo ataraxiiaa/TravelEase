@@ -85,6 +85,7 @@
             this.ETickets.TabIndex = 14;
             this.ETickets.Text = "E-Tickets";
             this.ETickets.UseVisualStyleBackColor = false;
+            this.ETickets.Click += new System.EventHandler(this.ETickets_Click);
             // 
             // queriesDataGridView
             // 
