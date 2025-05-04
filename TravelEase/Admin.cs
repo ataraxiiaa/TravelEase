@@ -15,9 +15,11 @@ namespace TravelEase
 {
     public partial class Admin : Form
     {
-        public Admin()
+        string adminUsername;
+        public Admin(string username)
         {
             InitializeComponent();
+            adminUsername = username;
         }
         private void LoadView(UserControl view)
         {
@@ -29,13 +31,13 @@ namespace TravelEase
 
         private void Admin_Load(object sender, EventArgs e)
         {
-             LoadView(new A_Dashboard());
+            LoadView(new A_Dashboard(adminUsername));
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
-            string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
+            string query = "SELECT ModID, MUsername FROM Moderator WHERE MUsername = @adminUsername";
             SqlConnection conn = new SqlConnection(connection);
             SqlCommand cmd = new SqlCommand(query, conn);
-
+            cmd.Parameters.AddWithValue("@adminUsername", adminUsername);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
@@ -59,7 +61,7 @@ namespace TravelEase
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new A_Dashboard());
+            LoadView(new A_Dashboard(adminUsername));
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

@@ -43,7 +43,7 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(291, 45);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(238, 37);
             this.Dasboard_lbl.TabIndex = 0;
             this.Dasboard_lbl.Text = "Admin Dashboard";
             this.Dasboard_lbl.Click += new System.EventHandler(this.Dasboard_lbl_Click);
@@ -66,7 +66,7 @@
             this.lblAdminID.ForeColor = System.Drawing.Color.White;
             this.lblAdminID.Location = new System.Drawing.Point(49, 116);
             this.lblAdminID.Name = "lblAdminID";
-            this.lblAdminID.Size = new System.Drawing.Size(130, 29);
+            this.lblAdminID.Size = new System.Drawing.Size(101, 24);
             this.lblAdminID.TabIndex = 4;
             this.lblAdminID.Text = "lblAdminID";
             // 
@@ -77,7 +77,7 @@
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(49, 52);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(104, 29);
+            this.lblName.Size = new System.Drawing.Size(80, 24);
             this.lblName.TabIndex = 3;
             this.lblName.Text = "lblName";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -85,7 +85,7 @@
             // A_Dashboard
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

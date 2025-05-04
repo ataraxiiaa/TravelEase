@@ -14,37 +14,41 @@ namespace TravelEase
 {
     public partial class A_Dashboard : UserControl
     {
-        public A_Dashboard()
+        string adminUsername;
+        public A_Dashboard(string username)
         {
             InitializeComponent();
             this.Load += A_Dashboard_Load;
+            adminUsername = username;
         }
 
         private void A_Dashboard_Load(object sender, EventArgs e)
         {
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
-            // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
-            string query = "SELECT TOP 1 ModID, MUsername FROM Moderator"; // change later
-            SqlConnection conn = new SqlConnection(connection);
-            SqlCommand cmd = new SqlCommand(query, conn);
+            string query = "SELECT ModID, MUsername FROM Moderator WHERE MUsername = @adminUsername";
 
-            conn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
+            using (SqlConnection conn = new SqlConnection(connection))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                string modID = "Admin ID: " + reader["ModID"].ToString();
-                string username = "Name: " + reader["MUsername"].ToString();
-                lblAdminID.Text = modID;
-                lblName.Text = username;
+                cmd.Parameters.AddWithValue("@adminUsername", adminUsername);
+                conn.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        lblAdminID.Text = "Admin ID: " + reader["ModID"].ToString();
+                        lblName.Text = "Name: " + reader["MUsername"].ToString();
+                    }
+                    else
+                    {
+                        lblAdminID.Text = "ERROR: 909";
+                        lblName.Text = "ERROR: 910";
+                    }
+                }
             }
-            else
-            {
-                lblAdminID.Text = "ERROR: 909";
-                lblName.Text = "ERROR: 910";
-            }
-            reader.Close();
-            conn.Close();
         }
+
         private void Dasboard_lbl_Click(object sender, EventArgs e)
         {
 

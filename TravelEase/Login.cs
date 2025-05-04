@@ -97,7 +97,7 @@ namespace TravelEase
                     nextForm = new Touristcs();
                     break;
                 case 1:
-                    nextForm = new Admin();
+                    nextForm = new Admin(username);
                     break;
                 case 2:
                     nextForm = new TourOperator();
@@ -112,10 +112,35 @@ namespace TravelEase
 
             string connString = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             string query = "";
-            if(userType != 1)
-                query = $"SELECT COUNT(*) FROM UserInfo WHERE UName = @username AND UPassword = @password";
-            else
+            if (userType == 1) {
+                
                 query = $"SELECT COUNT(*) FROM Moderator WHERE MUsername = @username AND MPassword = @password";
+                
+            }
+            else if (userType == 0)
+            {
+                query = @"
+                SELECT u.UserID
+                FROM UserInfo u
+                INNER JOIN Tourist r ON u.UserID = r.TouristID
+                WHERE u.UName = @username AND u.UPassword = @password";
+            }
+            else if(userType == 2)
+            {
+                query = @"
+                SELECT u.UserID
+                FROM UserInfo u
+                INNER JOIN TourOperator r ON u.UserID = r.TourOperatorID
+                WHERE u.UName = @username AND u.UPassword = @password";
+            }
+            else if(userType == 3)
+            {
+                query = @"
+                SELECT u.UserID
+                FROM UserInfo u
+                INNER JOIN ServiceProivder r ON u.UserID = r.ServiceProivderID
+                WHERE u.UName = @username AND u.UPassword = @password";
+            }
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -127,9 +152,9 @@ namespace TravelEase
                         cmd.Parameters.AddWithValue("@username", username);
                         cmd.Parameters.AddWithValue("@password", password);
 
-                        int userExists = (int)cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
-                        if (userExists > 0)
+                        if (result != null && int.TryParse(result.ToString(), out int userExists) && userExists > 0)
                         {
                             MessageBox.Show("Login successful!", "Success");
                             this.Hide();
@@ -141,6 +166,7 @@ namespace TravelEase
                         {
                             MessageBox.Show("Invalid credentials.", "Login Failed");
                         }
+
                     }
                 }
                 catch (Exception ex)
@@ -181,11 +207,6 @@ namespace TravelEase
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            Admin adminForm = new Admin();
-            adminForm.StartPosition = FormStartPosition.Manual;
-            adminForm.Location = this.Location;
-            adminForm.Show();
         }
 
 

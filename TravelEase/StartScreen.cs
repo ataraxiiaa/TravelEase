@@ -88,22 +88,22 @@ namespace TravelEase
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
-           OpenLoginForm(0);
+           OpenLoginForm(0); // TOURIST
         }
 
         private void panel5_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenLoginForm(2);
+            OpenLoginForm(2); // TOUR OPERATOR
         }
 
         private void panel4_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenLoginForm(3);
+            OpenLoginForm(3); // SERVICE PROVIDER
         }
 
         private void panel3_MouseClick(object sender, MouseEventArgs e)
         {
-            OpenLoginForm(1);
+            OpenLoginForm(1); // ADMIN
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
