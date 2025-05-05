@@ -100,7 +100,7 @@ namespace TravelEase
                     nextForm = new Admin(username);
                     break;
                 case 2:
-                    nextForm = new TourOperator();
+                    nextForm = new TourOperator(username);
                     break;
                 case 3:
                     nextForm = new Hotel();

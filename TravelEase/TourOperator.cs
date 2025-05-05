@@ -12,9 +12,11 @@ namespace TravelEase
 {
     public partial class TourOperator : Form
     {
-        public TourOperator()
+        private string TourOperatorUsername;
+        public TourOperator(string username)
         {
             InitializeComponent();
+            TourOperatorUsername = username;
         }
         private void LoadView(UserControl view)
         {
