@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.serviceListingHeader = new System.Windows.Forms.Label();
-            this.getDataButton = new System.Windows.Forms.Button();
             this.hotelData = new System.Windows.Forms.DataGridView();
             this.HotelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RoomCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceListingHeader = new System.Windows.Forms.Label();
+            this.getDataButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelData)).BeginInit();
             this.SuspendLayout();
@@ -42,11 +42,40 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.hotelData);
-            this.panel1.Location = new System.Drawing.Point(8, 165);
+            this.panel1.Location = new System.Drawing.Point(8, 108);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1113, 226);
+            this.panel1.Size = new System.Drawing.Size(1113, 332);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // hotelData
+            // 
+            this.hotelData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.hotelData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.hotelData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HotelID,
+            this.RoomCount});
+            this.hotelData.Location = new System.Drawing.Point(81, 39);
+            this.hotelData.Name = "hotelData";
+            this.hotelData.RowHeadersWidth = 51;
+            this.hotelData.RowTemplate.Height = 24;
+            this.hotelData.Size = new System.Drawing.Size(308, 258);
+            this.hotelData.TabIndex = 0;
+            this.hotelData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hotelData_CellContentClick);
+            // 
+            // HotelID
+            // 
+            this.HotelID.HeaderText = "Hotel ID";
+            this.HotelID.MinimumWidth = 6;
+            this.HotelID.Name = "HotelID";
+            this.HotelID.Width = 125;
+            // 
+            // RoomCount
+            // 
+            this.RoomCount.HeaderText = "Rooms";
+            this.RoomCount.MinimumWidth = 6;
+            this.RoomCount.Name = "RoomCount";
+            this.RoomCount.Width = 125;
             // 
             // serviceListingHeader
             // 
@@ -66,41 +95,13 @@
             this.getDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.getDataButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.getDataButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.getDataButton.Location = new System.Drawing.Point(723, 446);
+            this.getDataButton.Location = new System.Drawing.Point(717, 463);
             this.getDataButton.Name = "getDataButton";
-            this.getDataButton.Size = new System.Drawing.Size(127, 38);
+            this.getDataButton.Size = new System.Drawing.Size(128, 52);
             this.getDataButton.TabIndex = 8;
             this.getDataButton.Text = "Get Hotels";
             this.getDataButton.UseVisualStyleBackColor = false;
             this.getDataButton.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // hotelData
-            // 
-            this.hotelData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hotelData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.hotelData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.HotelID,
-            this.RoomCount});
-            this.hotelData.Location = new System.Drawing.Point(81, 39);
-            this.hotelData.Name = "hotelData";
-            this.hotelData.RowHeadersWidth = 51;
-            this.hotelData.RowTemplate.Height = 24;
-            this.hotelData.Size = new System.Drawing.Size(240, 150);
-            this.hotelData.TabIndex = 0;
-            // 
-            // HotelID
-            // 
-            this.HotelID.HeaderText = "Hotel ID";
-            this.HotelID.MinimumWidth = 6;
-            this.HotelID.Name = "HotelID";
-            this.HotelID.Width = 125;
-            // 
-            // RoomCount
-            // 
-            this.RoomCount.HeaderText = "Rooms";
-            this.RoomCount.MinimumWidth = 6;
-            this.RoomCount.Name = "RoomCount";
-            this.RoomCount.Width = 125;
             // 
             // H_serviceListing
             // 

@@ -59,5 +59,10 @@ namespace TravelEase
         {
 
         }
+
+        private void hotelData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
