@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +19,58 @@ namespace TravelEase
             InitializeComponent();
         }
 
+        void LoadAllTrips()
+        {
+            string query = "SELECT * FROM Trip";
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            using(SqlConnection conn = new SqlConnection(connection))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                TripsDataGridView.DataSource = dt;
+            }
+        }
         private void A_ManageTrips_Load(object sender, EventArgs e)
+        {
+            this.filterComboBox.SelectedIndex = 0;
+            LoadAllTrips();
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void searchTextBox_GotFocus(object sender, EventArgs e)
+        {
+            if (searchTextBox.Text == "Search for Trips...")
+            {
+                searchTextBox.Text = "";
+                searchTextBox.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void searchTextBox_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(searchTextBox.Text))
+            {
+                searchTextBox.Text = "Search for Trips...";
+                searchTextBox.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            LoadAllTrips();
+        }
+
+        private void AddTripbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteTripbtn_Click(object sender, EventArgs e)
         {
 
         }

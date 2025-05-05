@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +18,7 @@ namespace TravelEase
         public TourOperator(string username)
         {
             InitializeComponent();
-            TourOperatorUsername = username;
+            this.TourOperatorUsername = username;
         }
         private void LoadView(UserControl view)
         {
@@ -28,6 +30,25 @@ namespace TravelEase
         private void TourOperator_Load(object sender, EventArgs e)
         {
             LoadView(new TO_Dashboard());
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
+            string query = "SELECT UserID, UName FROM UserInfo WHERE UName = @TourOperatorUsername";
+            SqlConnection conn = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@TourOperatorUsername", TourOperatorUsername);
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string username = "Hi, " + reader["UName"].ToString();
+                name_lbl.Text = username;
+            }
+            else
+            {
+                name_lbl.Text = "Name: Not found";
+            }
+            reader.Close();
+            conn.Close();
         }
 
         private void Reviews_btn_Click(object sender, EventArgs e)
@@ -71,6 +92,11 @@ namespace TravelEase
             Hotel hotel = new Hotel();
             hotel.Activate();
             hotel.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

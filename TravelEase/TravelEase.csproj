@@ -313,6 +313,9 @@
     <EmbeddedResource Include="TO_Dashboard.resx">
       <DependentUpon>TO_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TO_ManageTrips.resx">
+      <DependentUpon>TO_ManageTrips.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TO_Queries.resx">
       <DependentUpon>TO_Queries.cs</DependentUpon>
     </EmbeddedResource>
