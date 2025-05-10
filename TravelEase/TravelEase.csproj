@@ -180,6 +180,11 @@
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="tourismDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Touristcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +334,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tourismDatabaseDataSet.xsc">
+      <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet.xss">
+      <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
