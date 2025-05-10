@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.companyname_lbl = new System.Windows.Forms.Label();
             this.name_lbl = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(328, 37);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(403, 45);
             this.Dasboard_lbl.TabIndex = 1;
             this.Dasboard_lbl.Text = "Tour Operator Dashboard";
             // 
@@ -64,7 +65,7 @@
             this.companyname_lbl.ForeColor = System.Drawing.Color.White;
             this.companyname_lbl.Location = new System.Drawing.Point(59, 117);
             this.companyname_lbl.Name = "companyname_lbl";
-            this.companyname_lbl.Size = new System.Drawing.Size(183, 26);
+            this.companyname_lbl.Size = new System.Drawing.Size(232, 32);
             this.companyname_lbl.TabIndex = 1;
             this.companyname_lbl.Text = "Company Name: ";
             // 
@@ -75,18 +76,30 @@
             this.name_lbl.ForeColor = System.Drawing.Color.White;
             this.name_lbl.Location = new System.Drawing.Point(59, 62);
             this.name_lbl.Name = "name_lbl";
-            this.name_lbl.Size = new System.Drawing.Size(83, 26);
+            this.name_lbl.Size = new System.Drawing.Size(104, 32);
             this.name_lbl.TabIndex = 0;
             this.name_lbl.Text = "Name: ";
             this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(334, 521);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 17);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // TO_Dashboard
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Dasboard_lbl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,5 +120,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label companyname_lbl;
         private System.Windows.Forms.Label name_lbl;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
