@@ -1,4 +1,6 @@
-﻿using System;
+﻿// A_TripSearchBook.cs
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,225 +13,142 @@ namespace TravelEase
         public A_TripSearchBook()
         {
             InitializeComponent();
+            this.Load += A_TripSearchBook_Load;
+            button1.Click += button1_Click;
         }
 
         private void A_TripSearchBook_Load(object sender, EventArgs e)
         {
-            // Populate ComboBox with Tour Categories
-            PopulateComboBox();
-        }
-
-        private void PopulateComboBox()
-        {
-            string mainConn = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(mainConn))
+            string connStr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            using (var conn = new SqlConnection(connStr))
             {
-                string sqlQuery = "SELECT TCategoryID, TCName FROM [dbo].[TourCategories]";
-                using (SqlCommand sqlComm = new SqlCommand(sqlQuery, conn))
+                conn.Open();
+
+                // Populate Date dropdown
+                FillCombo(conn,
+                          "SELECT DISTINCT CAST(TDate AS DATE) AS TDate FROM Trip",
+                          comboBoxDate, "TDate", "TDate");
+
+                // Populate Destination dropdown
+                FillCombo(conn,
+                          "SELECT DISTINCT TDestination FROM Trip",
+                          comboBoxDestination, "TDestination", "TDestination");
+
+                // Populate Group Size dropdown
+                FillCombo(conn,
+                          "SELECT DISTINCT TGroupSize FROM Trip",
+                          comboBoxGroupSize, "TGroupSize", "TGroupSize");
+
+                // Populate Duration dropdown
+                FillCombo(conn,
+                          "SELECT DISTINCT TDuration FROM Trip",
+                          comboBoxDuration, "TDuration", "TDuration");
+
+                // Populate Rating dropdown
+                FillCombo(conn,
+                          "SELECT DISTINCT TRating FROM Trip",
+                          comboBoxRating, "TRating", "TRating");
+
+                // Populate Activity Type dropdown (via TourCategories)
+                using (var cmd = new SqlCommand(
+                    "SELECT DISTINCT c.TCName FROM Trip t " +
+                    "JOIN TourCategories c ON t.TCCategoryID = c.TCategoryID", conn))
                 {
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter sdr = new SqlDataAdapter(sqlComm);
-                        DataTable dt = new DataTable();
-                        sdr.Fill(dt);
-
-                        if (dt.Rows.Count == 0)
-                        {
-                            MessageBox.Show("No categories found in TourCategories table.");
-                            return;
-                        }
-
-                        // Add a default "Select a category" option
-                        DataRow defaultRow = dt.NewRow();
-                        defaultRow["TCName"] = "Select a category";
-                        defaultRow["TCategoryID"] = 0;
-                        dt.Rows.InsertAt(defaultRow, 0);
-
-                        comboBox1.DisplayMember = "TCName";
-                        comboBox1.ValueMember = "TCategoryID";
-                        comboBox1.DataSource = dt;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show($"SQL Error loading categories: {ex.Message}\nError Number: {ex.Number}");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error loading categories: {ex.Message}");
-                    }
+                    var dt = new DataTable();
+                    new SqlDataAdapter(cmd).Fill(dt);
+                    comboBoxActivityType.DataSource = dt;
+                    comboBoxActivityType.DisplayMember = "TCName";
+                    comboBoxActivityType.ValueMember = "TCName";
+                    comboBoxActivityType.SelectedIndex = -1;
                 }
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void FillCombo(SqlConnection conn, string sql, ComboBox cb, string disp, string val)
         {
-            if (comboBox1.SelectedValue != null && comboBox1.SelectedValue is int categoryId && categoryId != 0)
+            using (var da = new SqlDataAdapter(sql, conn))
             {
-                PopulateDataGridView(categoryId);
-            }
-            else
-            {
-                usersDataGridView.DataSource = null;
+                var dt = new DataTable();
+                da.Fill(dt);
+                cb.DataSource = dt;
+                cb.DisplayMember = disp;
+                cb.ValueMember = val;
+                cb.SelectedIndex = -1;
             }
         }
 
-        private void PopulateDataGridView(int categoryId)
+        private void button1_Click(object sender, EventArgs e)
         {
-            string mainConn = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(mainConn))
+            string connStr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            string sql =
+                "SELECT t.TripID, t.TDestination, t.TDuration, t.TGroupSize, " +
+                "c.TCName AS ActivityType, t.TRating, t.TDate " +
+                "FROM Trip t " +
+                "JOIN TourCategories c ON t.TCCategoryID = c.TCategoryID " +
+                "WHERE 1=1";
+
+            var parameters = new List<SqlParameter>();
+
+            if (comboBoxDate.SelectedIndex != -1)
             {
-                // Join Trip with TourCategories to get TCName
-                string sqlQuery = "SELECT t.TripID AS [ID], t.TPrice AS [Price], t.TDate AS [Date], t.TGroupSize AS [Group Size], " +
-                                 "t.TDuration AS [duration], t.TRating AS [rating], t.TDestination AS [Destination], " +
-                                 "tc.TCName AS [TripCategory] " +
-                                 "FROM [dbo].[Trip] t " +
-                                 "JOIN [dbo].[TourCategories] tc ON t.TCCategoryID = tc.TCategoryID " +
-                                 "WHERE t.TCCategoryID = @TCCategoryID";
-                using (SqlCommand sqlComm = new SqlCommand(sqlQuery, conn))
+                sql += " AND CAST(t.TDate AS DATE) = CAST(@TDate AS DATE)";
+                parameters.Add(new SqlParameter("@TDate", comboBoxDate.SelectedValue));
+            }
+            if (comboBoxDestination.SelectedIndex != -1)
+            {
+                sql += " AND t.TDestination = @Destination";
+                parameters.Add(new SqlParameter("@Destination", comboBoxDestination.SelectedValue));
+            }
+            if (comboBoxGroupSize.SelectedIndex != -1)
+            {
+                sql += " AND t.TGroupSize = @GroupSize";
+                parameters.Add(new SqlParameter("@GroupSize", comboBoxGroupSize.SelectedValue));
+            }
+            if (comboBoxDuration.SelectedIndex != -1)
+            {
+                sql += " AND t.TDuration = @Duration";
+                parameters.Add(new SqlParameter("@Duration", comboBoxDuration.SelectedValue));
+            }
+            if (comboBoxRating.SelectedIndex != -1)
+            {
+                sql += " AND t.TRating = @Rating";
+                parameters.Add(new SqlParameter("@Rating", comboBoxRating.SelectedValue));
+            }
+            if (comboBoxActivityType.SelectedIndex != -1)
+            {
+                sql += " AND c.TCName = @ActivityType";
+                parameters.Add(new SqlParameter("@ActivityType", comboBoxActivityType.SelectedValue));
+            }
+
+            DataTable results = new DataTable();
+            try
+            {
+                using (var conn = new SqlConnection(connStr))
+                using (var cmd = new SqlCommand(sql, conn))
                 {
-                    sqlComm.Parameters.AddWithValue("@TCCategoryID", categoryId);
-                    try
-                    {
-                        conn.Open();
-                        SqlDataAdapter sdr = new SqlDataAdapter(sqlComm);
-                        DataTable dt = new DataTable();
-                        sdr.Fill(dt);
+                    cmd.Parameters.AddRange(parameters.ToArray());
+                    new SqlDataAdapter(cmd).Fill(results);
+                }
 
-                        if (dt.Rows.Count == 0)
-                        {
-                            MessageBox.Show("No trips found for the selected category.");
-                        }
+                // Bind to DataGridView:
+                dataGridViewResults.DataSource = results;
 
-                        usersDataGridView.DataSource = dt;
-                    }
-                    catch (SqlException ex)
-                    {
-                        MessageBox.Show($"SQL Error loading trips: {ex.Message}\nError Number: {ex.Number}");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error loading trips: {ex.Message}");
-                    }
+                if (results.Rows.Count == 0)
+                {
+                    MessageBox.Show("No matching trips found.", "No Results",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
-
-        private void usersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Ensure a valid cell is clicked (not header row)
-            if (e.RowIndex >= 0)
+            catch (Exception ex)
             {
-                // Get the selected row
-                DataGridViewRow row = usersDataGridView.Rows[e.RowIndex];
-
-                try
-                {
-                    // Helper function to safely get cell value
-                    string GetCellValue(string columnName)
-                    {
-                        // Check if the column exists in the DataGridView
-                        if (!usersDataGridView.Columns.Contains(columnName))
-                            throw new ArgumentException($"Column '{columnName}' not found in DataGridView.");
-                        return row.Cells[columnName].Value?.ToString() ?? "";
-                    }
-
-                    // Populate TextBoxes with trip details using DataGridView column names
-                    PriceText.Text = usersDataGridView.Columns.Contains("Price") && row.Cells["Price"].Value != null
-                        ? Convert.ToDouble(row.Cells["Price"].Value).ToString("C2") // Format as currency
-                        : "";
-                    DateText.Text = usersDataGridView.Columns.Contains("Date") && row.Cells["Date"].Value != null
-                        ? Convert.ToDateTime(row.Cells["Date"].Value).ToString("MM/dd/yyyy") // Format as MM/dd/yyyy
-                        : "";
-                    GroupText.Text = GetCellValue("Group Size"); // Note space in column name
-                    DestText.Text = GetCellValue("Destination");
-
-                    // ActTypeText: Use TripCategory (TCName from TourCategories)
-                    ActTypeText.Text = GetCellValue("TripCategory");
-
-                    // NameEntryText: Use rating (TRating)
-                    NameEntryText.Text = GetCellValue("rating");
-
-                    // Reset clearing flags to allow re-clearing on next focus
-                    hasCleared = false;
-                    hasClearedDest = false;
-                    hasClearedDate = false;
-                    hasClearedGroup = false;
-                    hasClearedPrice = false;
-                    hasClearedNameEntry = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error loading trip details: {ex.Message}");
-                }
+                MessageBox.Show($"Search failed: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // TextBox clearing logic
-        private bool hasCleared = false;
-        private bool hasClearedDest = false;
-        private bool hasClearedDate = false;
-        private bool hasClearedGroup = false;
-        private bool hasClearedPrice = false;
-        private bool hasClearedNameEntry = false;
-
-        private void ActTypeText_Enter(object sender, EventArgs e)
+        private void TripIdBook_TextChanged(object sender, EventArgs e)
         {
-            if (!hasCleared)
-            {
-                ActTypeText.Clear();
-                hasCleared = true;
-            }
-        }
 
-        private void DestText_Enter(object sender, EventArgs e)
-        {
-            if (!hasClearedDest)
-            {
-                DestText.Clear();
-                hasClearedDest = true;
-            }
-        }
-
-        private void DateText_Enter(object sender, EventArgs e)
-        {
-            if (!hasClearedDate)
-            {
-                DateText.Clear();
-                hasClearedDate = true;
-            }
-        }
-
-        private void GroupText_Enter(object sender, EventArgs e)
-        {
-            if (!hasClearedGroup)
-            {
-                GroupText.Clear();
-                hasClearedGroup = true;
-            }
-        }
-
-        private void PriceText_Enter(object sender, EventArgs e)
-        {
-            if (!hasClearedPrice)
-            {
-                PriceText.Clear();
-                hasClearedPrice = true;
-            }
-        }
-
-        private void NameEntryText_Enter(object sender, EventArgs e)
-        {
-            if (!hasClearedNameEntry)
-            {
-                NameEntryText.Clear();
-                hasClearedNameEntry = true;
-            }
-        }
-
-        private void ActTypeText_TextChanged(object sender, EventArgs e)
-        {
-            // Add logic if needed
         }
     }
 }
