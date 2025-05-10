@@ -76,6 +76,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="activeProvidersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activeProvidersForm.Designer.cs">
+      <DependentUpon>activeProvidersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActiveReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActiveReportForm.Designer.cs">
+      <DependentUpon>ActiveReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,9 @@
     <Compile Include="A_TripSearchBook.Designer.cs">
       <DependentUpon>A_TripSearchBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="growthData.cs">
+      <DependentUpon>growthData.xsd</DependentUpon>
+    </Compile>
     <Compile Include="growthData.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -269,6 +284,12 @@
     <Compile Include="TO_Queries.Designer.cs">
       <DependentUpon>TO_Queries.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="activeProvidersForm.resx">
+      <DependentUpon>activeProvidersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActiveReportForm.resx">
+      <DependentUpon>ActiveReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>

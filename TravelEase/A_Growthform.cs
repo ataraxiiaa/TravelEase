@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Drawing;
 
 namespace TravelEase
 {
@@ -26,24 +27,27 @@ namespace TravelEase
             using (SqlConnection conn = new SqlConnection(connStr))
             {
                 string query = @"
-                    SELECT 
-                        FORMAT(URegisterDate, 'yyyy-MM') AS Month,
-                        COUNT(*) AS NewUsers
-                    FROM UserInfo
-                    GROUP BY FORMAT(URegisterDate, 'yyyy-MM')
-                    ORDER BY Month";
+                SELECT 
+                    FORMAT(URegisterDate, 'yyyy-MM') AS Month,
+                    COUNT(*) AS NewUsers
+                FROM UserInfo
+                GROUP BY FORMAT(URegisterDate, 'yyyy-MM')
+                ORDER BY Month";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-
 
                 growthChart.Series.Clear();
                 growthChart.ChartAreas.Clear();
 
                 growthChart.ChartAreas.Add("MainArea");
                 Series series = new Series("New Registrations");
-                series.ChartType = SeriesChartType.Column;
+
+ 
+                series.ChartType = SeriesChartType.Line;
+                series.BorderWidth = 3;
+                series.Color = Color.Blue; 
 
                 foreach (DataRow row in dt.Rows)
                 {
@@ -55,6 +59,7 @@ namespace TravelEase
                 growthChart.ChartAreas["MainArea"].AxisY.Title = "New Users";
             }
         }
+
 
         private void growthChart_Click(object sender, EventArgs e)
         {

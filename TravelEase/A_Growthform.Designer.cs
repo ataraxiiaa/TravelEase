@@ -67,6 +67,7 @@
             // 
             // growthChart
             // 
+            this.growthChart.AllowDrop = true;
             chartArea1.Name = "ChartArea1";
             this.growthChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -74,6 +75,7 @@
             this.growthChart.Location = new System.Drawing.Point(0, 24);
             this.growthChart.Name = "growthChart";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.growthChart.Series.Add(series1);
@@ -93,7 +95,7 @@
             this.Text = "A_Growthform";
             this.Load += new System.EventHandler(this.A_Growthform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.growthData)).EndInit();
+            // ((System.ComponentModel.ISupportInitialize)(this.growthData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthChart)).EndInit();
             this.ResumeLayout(false);
 

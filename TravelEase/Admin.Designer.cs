@@ -32,15 +32,15 @@ namespace TravelEase
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.username_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Reviews_btn = new System.Windows.Forms.Button();
             this.Trips_btn = new System.Windows.Forms.Button();
             this.Users_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.username_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,16 @@ namespace TravelEase
             this.panel2.Size = new System.Drawing.Size(220, 148);
             this.panel2.TabIndex = 3;
             // 
+            // username_lbl
+            // 
+            this.username_lbl.AutoSize = true;
+            this.username_lbl.ForeColor = System.Drawing.Color.White;
+            this.username_lbl.Location = new System.Drawing.Point(88, 125);
+            this.username_lbl.Name = "username_lbl";
+            this.username_lbl.Size = new System.Drawing.Size(79, 17);
+            this.username_lbl.TabIndex = 2;
+            this.username_lbl.Text = "username";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -83,6 +93,15 @@ namespace TravelEase
             this.label1.TabIndex = 1;
             this.label1.Text = "Hi, ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(220, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1221, 693);
+            this.panelMain.TabIndex = 1;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // pictureBox1
             // 
@@ -187,25 +206,6 @@ namespace TravelEase
             this.Dashboard_btn.UseVisualStyleBackColor = true;
             this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
             this.Dashboard_btn.MouseLeave += new System.EventHandler(this.Dashboard_btn_MouseLeave);
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(220, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1221, 693);
-            this.panelMain.TabIndex = 1;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
-            // 
-            // username_lbl
-            // 
-            this.username_lbl.AutoSize = true;
-            this.username_lbl.ForeColor = System.Drawing.Color.White;
-            this.username_lbl.Location = new System.Drawing.Point(88, 125);
-            this.username_lbl.Name = "username_lbl";
-            this.username_lbl.Size = new System.Drawing.Size(79, 17);
-            this.username_lbl.TabIndex = 2;
-            this.username_lbl.Text = "username";
             // 
             // Admin
             // 

@@ -63,5 +63,26 @@ namespace TravelEase
         {
 
         }
+
+        private void usrreports_btn_Click(object sender, EventArgs e)
+        {
+            A_Growthform a_Growthform = new A_Growthform();
+            a_Growthform.Show();
+            a_Growthform.BringToFront();
+        }
+
+        private void activerep_btn_Click(object sender, EventArgs e)
+        {
+            ActiveReportForm activeReportForm = new ActiveReportForm();
+            activeReportForm.Show();
+            activeReportForm.BringToFront();
+        }
+
+        private void patnerrprt_btn_Click(object sender, EventArgs e)
+        {
+            activeProvidersForm activeProvidersForm = new activeProvidersForm();
+            activeProvidersForm.Show();
+            activeProvidersForm.BringToFront();
+        }
     }
 }
