@@ -30,10 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.hotelData = new System.Windows.Forms.DataGridView();
-            this.HotelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceListingHeader = new System.Windows.Forms.Label();
             this.getDataButton = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
+            this.HotelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomsOccupied = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hotelData)).BeginInit();
             this.SuspendLayout();
@@ -54,28 +56,15 @@
             this.hotelData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hotelData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HotelID,
-            this.RoomCount});
+            this.RoomCount,
+            this.RoomsOccupied});
             this.hotelData.Location = new System.Drawing.Point(81, 39);
             this.hotelData.Name = "hotelData";
             this.hotelData.RowHeadersWidth = 51;
             this.hotelData.RowTemplate.Height = 24;
-            this.hotelData.Size = new System.Drawing.Size(308, 258);
+            this.hotelData.Size = new System.Drawing.Size(434, 258);
             this.hotelData.TabIndex = 0;
             this.hotelData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.hotelData_CellContentClick);
-            // 
-            // HotelID
-            // 
-            this.HotelID.HeaderText = "Hotel ID";
-            this.HotelID.MinimumWidth = 6;
-            this.HotelID.Name = "HotelID";
-            this.HotelID.Width = 125;
-            // 
-            // RoomCount
-            // 
-            this.RoomCount.HeaderText = "Rooms";
-            this.RoomCount.MinimumWidth = 6;
-            this.RoomCount.Name = "RoomCount";
-            this.RoomCount.Width = 125;
             // 
             // serviceListingHeader
             // 
@@ -95,13 +84,46 @@
             this.getDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.getDataButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.getDataButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.getDataButton.Location = new System.Drawing.Point(717, 463);
+            this.getDataButton.Location = new System.Drawing.Point(89, 463);
             this.getDataButton.Name = "getDataButton";
             this.getDataButton.Size = new System.Drawing.Size(128, 52);
             this.getDataButton.TabIndex = 8;
             this.getDataButton.Text = "Get Hotels";
             this.getDataButton.UseVisualStyleBackColor = false;
             this.getDataButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // reportButton
+            // 
+            this.reportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.reportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.reportButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reportButton.Location = new System.Drawing.Point(717, 463);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(128, 52);
+            this.reportButton.TabIndex = 9;
+            this.reportButton.Text = "Get Report";
+            this.reportButton.UseVisualStyleBackColor = false;
+            // 
+            // HotelID
+            // 
+            this.HotelID.HeaderText = "Hotel ID";
+            this.HotelID.MinimumWidth = 6;
+            this.HotelID.Name = "HotelID";
+            this.HotelID.Width = 125;
+            // 
+            // RoomCount
+            // 
+            this.RoomCount.HeaderText = "Total Rooms";
+            this.RoomCount.MinimumWidth = 6;
+            this.RoomCount.Name = "RoomCount";
+            this.RoomCount.Width = 125;
+            // 
+            // RoomsOccupied
+            // 
+            this.RoomsOccupied.HeaderText = "Rooms Occupied";
+            this.RoomsOccupied.MinimumWidth = 6;
+            this.RoomsOccupied.Name = "RoomsOccupied";
+            this.RoomsOccupied.Width = 125;
             // 
             // H_serviceListing
             // 
@@ -110,6 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.getDataButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.serviceListingHeader);
@@ -131,7 +154,9 @@
         private System.Windows.Forms.Label serviceListingHeader;
         private System.Windows.Forms.Button getDataButton;
         private System.Windows.Forms.DataGridView hotelData;
+        private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn HotelID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomsOccupied;
     }
 }

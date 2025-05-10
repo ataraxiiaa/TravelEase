@@ -51,7 +51,8 @@ namespace TravelEase
 
             // Rename column headers AFTER binding
             hotelData.Columns["ServiceID"].HeaderText = "Hotel ID";
-            hotelData.Columns["HRoomCount"].HeaderText = "Rooms";
+            hotelData.Columns["HRoomCount"].HeaderText = "Total Rooms";
+            hotelData.Columns["HRoomsOccupied"].HeaderText = "Rooms Occupied";
 
         }
 

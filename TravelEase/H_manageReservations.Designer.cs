@@ -35,6 +35,7 @@
             this.bookingStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.managerReservationsHeader = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
             this.reservationsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsDataViewer)).BeginInit();
             this.SuspendLayout();
@@ -105,13 +106,25 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(717, 463);
+            this.button1.Location = new System.Drawing.Point(89, 463);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 52);
             this.button1.TabIndex = 6;
             this.button1.Text = "Get Data";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // reportButton
+            // 
+            this.reportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.reportButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reportButton.Location = new System.Drawing.Point(717, 463);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(128, 52);
+            this.reportButton.TabIndex = 7;
+            this.reportButton.Text = "Get Report";
+            this.reportButton.UseVisualStyleBackColor = false;
+            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // H_manageReservations
             // 
@@ -120,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reservationsPanel);
             this.Controls.Add(this.managerReservationsHeader);
@@ -144,5 +158,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingStatus;
+        private System.Windows.Forms.Button reportButton;
     }
 }

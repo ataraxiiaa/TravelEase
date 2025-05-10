@@ -38,6 +38,7 @@
             this.tourismDatabaseDataSet = new TravelEase.tourismDatabaseDataSet();
             this.servicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicesTableAdapter = new TravelEase.tourismDatabaseDataSetTableAdapters.ServicesTableAdapter();
+            this.reportButton = new System.Windows.Forms.Button();
             this.analysisPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourismDatabaseDataSet)).BeginInit();
@@ -48,20 +49,20 @@
             // 
             this.analysisPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.analysisPanel.Controls.Add(this.dataGridView1);
-            this.analysisPanel.Location = new System.Drawing.Point(8, 157);
+            this.analysisPanel.Location = new System.Drawing.Point(8, 108);
             this.analysisPanel.Name = "analysisPanel";
-            this.analysisPanel.Size = new System.Drawing.Size(1113, 226);
+            this.analysisPanel.Size = new System.Drawing.Size(1113, 332);
             this.analysisPanel.TabIndex = 9;
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(116, 32);
+            this.dataGridView1.Location = new System.Drawing.Point(81, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 170);
+            this.dataGridView1.Size = new System.Drawing.Size(434, 258);
             this.dataGridView1.TabIndex = 0;
             // 
             // analysisHeader
@@ -81,7 +82,7 @@
             this.getFeedbackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.getFeedbackButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.getFeedbackButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.getFeedbackButton.Location = new System.Drawing.Point(124, 426);
+            this.getFeedbackButton.Location = new System.Drawing.Point(89, 463);
             this.getFeedbackButton.Name = "getFeedbackButton";
             this.getFeedbackButton.Size = new System.Drawing.Size(128, 52);
             this.getFeedbackButton.TabIndex = 10;
@@ -94,7 +95,7 @@
             this.getRevenueButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.getRevenueButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.getRevenueButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.getRevenueButton.Location = new System.Drawing.Point(288, 426);
+            this.getRevenueButton.Location = new System.Drawing.Point(243, 463);
             this.getRevenueButton.Name = "getRevenueButton";
             this.getRevenueButton.Size = new System.Drawing.Size(128, 52);
             this.getRevenueButton.TabIndex = 11;
@@ -107,7 +108,7 @@
             this.getOccupanyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.getOccupanyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.getOccupanyButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.getOccupanyButton.Location = new System.Drawing.Point(452, 426);
+            this.getOccupanyButton.Location = new System.Drawing.Point(395, 463);
             this.getOccupanyButton.Name = "getOccupanyButton";
             this.getOccupanyButton.Size = new System.Drawing.Size(128, 52);
             this.getOccupanyButton.TabIndex = 12;
@@ -129,6 +130,18 @@
             // 
             this.servicesTableAdapter.ClearBeforeFill = true;
             // 
+            // reportButton
+            // 
+            this.reportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.reportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.reportButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.reportButton.Location = new System.Drawing.Point(717, 463);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(128, 52);
+            this.reportButton.TabIndex = 13;
+            this.reportButton.Text = "Get Report";
+            this.reportButton.UseVisualStyleBackColor = false;
+            // 
             // H_analysisView
             // 
             this.AccessibleName = "";
@@ -136,6 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.getOccupanyButton);
             this.Controls.Add(this.getRevenueButton);
             this.Controls.Add(this.getFeedbackButton);
@@ -144,7 +158,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "H_analysisView";
-            this.Size = new System.Drawing.Size(1152, 554);
+            this.Size = new System.Drawing.Size(1375, 693);
             this.Load += new System.EventHandler(this.H_analysisView_Load);
             this.analysisPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -166,5 +180,6 @@
         private System.Windows.Forms.BindingSource servicesBindingSource;
         private tourismDatabaseDataSet tourismDatabaseDataSet;
         private tourismDatabaseDataSetTableAdapters.ServicesTableAdapter servicesTableAdapter;
+        private System.Windows.Forms.Button reportButton;
     }
 }
