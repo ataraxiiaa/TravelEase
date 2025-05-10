@@ -46,7 +46,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(266, 45);
+            this.titleLabel.Size = new System.Drawing.Size(216, 37);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Manage Queries";
             // 
@@ -55,7 +55,7 @@
             this.searchTextbox.ForeColor = System.Drawing.Color.Gray;
             this.searchTextbox.Location = new System.Drawing.Point(29, 106);
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(300, 23);
+            this.searchTextbox.Size = new System.Drawing.Size(300, 20);
             this.searchTextbox.TabIndex = 12;
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             this.searchTextbox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
@@ -77,6 +77,7 @@
             // 
             // queriesDataGridView
             // 
+            this.queriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.queriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queriesDataGridView.Location = new System.Drawing.Point(29, 167);
             this.queriesDataGridView.Name = "queriesDataGridView";
@@ -124,7 +125,7 @@
             // TO_Queries
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

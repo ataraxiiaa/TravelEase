@@ -43,7 +43,7 @@
             this.Dasboard_lbl.ForeColor = System.Drawing.Color.White;
             this.Dasboard_lbl.Location = new System.Drawing.Point(0, 0);
             this.Dasboard_lbl.Name = "Dasboard_lbl";
-            this.Dasboard_lbl.Size = new System.Drawing.Size(403, 45);
+            this.Dasboard_lbl.Size = new System.Drawing.Size(328, 37);
             this.Dasboard_lbl.TabIndex = 1;
             this.Dasboard_lbl.Text = "Tour Operator Dashboard";
             // 
@@ -64,7 +64,7 @@
             this.companyname_lbl.ForeColor = System.Drawing.Color.White;
             this.companyname_lbl.Location = new System.Drawing.Point(59, 117);
             this.companyname_lbl.Name = "companyname_lbl";
-            this.companyname_lbl.Size = new System.Drawing.Size(232, 32);
+            this.companyname_lbl.Size = new System.Drawing.Size(183, 26);
             this.companyname_lbl.TabIndex = 1;
             this.companyname_lbl.Text = "Company Name: ";
             // 
@@ -75,14 +75,15 @@
             this.name_lbl.ForeColor = System.Drawing.Color.White;
             this.name_lbl.Location = new System.Drawing.Point(59, 62);
             this.name_lbl.Name = "name_lbl";
-            this.name_lbl.Size = new System.Drawing.Size(104, 32);
+            this.name_lbl.Size = new System.Drawing.Size(83, 26);
             this.name_lbl.TabIndex = 0;
             this.name_lbl.Text = "Name: ";
+            this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
             // 
             // TO_Dashboard
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

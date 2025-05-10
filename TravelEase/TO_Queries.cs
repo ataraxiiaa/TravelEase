@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ namespace TravelEase
 {
     public partial class TO_Queries : UserControl
     {
+        private int id;
         public TO_Queries()
         {
             InitializeComponent();
@@ -20,6 +23,7 @@ namespace TravelEase
         private void TO_Queries_Load(object sender, EventArgs e)
         {
             searchTextBox_LostFocus(sender, e);
+            LoadQueries();
         }
         private void searchTextBox_GotFocus(object sender, EventArgs e)
         {
@@ -27,6 +31,27 @@ namespace TravelEase
             {
                 searchTextbox.Text = "";
                 searchTextbox.ForeColor = System.Drawing.Color.Black; 
+            }
+        }
+        private void LoadQueries(string filter = "")
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            string query = "SELECT QueryID, TouristID, QDescription, QStatus FROM Queries WHERE TourOperatorID = @toid";
+
+            if (!string.IsNullOrEmpty(filter))
+                query += " AND QueryID = @filterId";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@toid", id);
+                if (!string.IsNullOrEmpty(filter))
+                    cmd.Parameters.AddWithValue("@filterId", filter);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                queriesDataGridView.DataSource = dt;
             }
         }
 
@@ -74,6 +99,15 @@ namespace TravelEase
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            string searchId = searchTextbox.Text.Trim();
+            if (searchId == "Search for Queries by id..." || string.IsNullOrWhiteSpace(searchId))
+            {
+                LoadQueries(); 
+            }
+            else
+            {
+                LoadQueries(searchId);
+            }
 
         }
 
