@@ -15,6 +15,7 @@ namespace TravelEase
     public partial class TourOperator : Form
     {
         private string TourOperatorUsername;
+        private int id;
         public TourOperator(string username)
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace TravelEase
         }
         private void TourOperator_Load(object sender, EventArgs e)
         {
-            LoadView(new TO_Dashboard());
+            LoadView(new TO_Dashboard(this.TourOperatorUsername));
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
             string query = "SELECT UserID, UName FROM UserInfo WHERE UName = @TourOperatorUsername";
@@ -41,6 +42,8 @@ namespace TravelEase
             if (reader.Read())
             {
                 string username = "Hi, " + reader["UName"].ToString();
+                this.TourOperatorUsername = username;
+                this.id = Convert.ToInt32(reader["UserID"]);
                 name_lbl.Text = username;
             }
             else
@@ -58,17 +61,17 @@ namespace TravelEase
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new TO_Dashboard());
+            LoadView(new TO_Dashboard(this.TourOperatorUsername));
         }
 
         private void Users_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new TO_Queries());
+            LoadView(new TO_Queries(this.id));
         }
 
         private void Trips_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new TO_ManageTrips());
+            LoadView(new TO_ManageTrips(this.id));
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

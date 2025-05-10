@@ -15,9 +15,10 @@ namespace TravelEase
     public partial class TO_Queries : UserControl
     {
         private int id;
-        public TO_Queries()
+        public TO_Queries(int id = 1)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void TO_Queries_Load(object sender, EventArgs e)

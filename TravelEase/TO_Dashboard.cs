@@ -17,7 +17,7 @@ namespace TravelEase
         private int id;
         private string username;
 
-        public TO_Dashboard(string username = "")
+        public TO_Dashboard(string username)
         {
             InitializeComponent();
             this.username = username;
@@ -26,30 +26,24 @@ namespace TravelEase
         private void TO_Dashboard_Load(object sender, EventArgs e)
         {
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
-            string query = @"SELECT TO.TourOperatorID, UI.UName
-                     FROM TourOperator TO
-                     INNER JOIN UserInfo UI ON TO.TourOperatorID = UI.UserID
-                     WHERE UI.UName = @username";
-
-            using (SqlConnection conn = new SqlConnection(connection))
+            // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
+            string query = "SELECT UserID, UName FROM UserInfo WHERE UName = @TourOperatorUsername";
+            SqlConnection conn = new SqlConnection(connection);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@TourOperatorUsername", username);
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
             {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", username);
-                conn.Open();
-
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    id = reader.GetInt32(0); // TourOperatorID
-                    name_lbl.Text = "Welcome, " + reader.GetString(1); // UName
-                }
-                else
-                {
-                    name_lbl.Text = "User not found";
-                }
-
-                reader.Close();
+                string username = "Name: " + reader["UName"].ToString();
+                name_lbl.Text = username;
             }
+            else
+            {
+                name_lbl.Text = "Name: Not found";
+            }
+            reader.Close();
+            conn.Close();
         }
 
         private void name_lbl_Click(object sender, EventArgs e)
