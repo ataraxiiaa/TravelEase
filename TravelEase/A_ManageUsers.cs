@@ -323,5 +323,13 @@ namespace TravelEase
             }
             saveBtn.Visible = false;
         }
+
+        private void report_btn_Click(object sender, EventArgs e)
+        {
+           A_Growthform a_Growthform = new A_Growthform();
+           a_Growthform.Show();
+           a_Growthform.BringToFront();
+
+        }
     }
 }
