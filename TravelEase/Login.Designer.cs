@@ -59,7 +59,7 @@ namespace TravelEase
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(17, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(491, 62);
@@ -85,7 +85,7 @@ namespace TravelEase
             // 
             this.Username_Label.AutoSize = true;
             this.Username_Label.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username_Label.ForeColor = System.Drawing.SystemColors.Window;
+            this.Username_Label.ForeColor = System.Drawing.Color.Black;
             this.Username_Label.Location = new System.Drawing.Point(21, 143);
             this.Username_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Username_Label.Name = "Username_Label";
@@ -98,7 +98,7 @@ namespace TravelEase
             // 
             this.Password_Label.AutoSize = true;
             this.Password_Label.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password_Label.ForeColor = System.Drawing.SystemColors.Window;
+            this.Password_Label.ForeColor = System.Drawing.Color.Black;
             this.Password_Label.Location = new System.Drawing.Point(21, 278);
             this.Password_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Password_Label.Name = "Password_Label";
@@ -110,7 +110,7 @@ namespace TravelEase
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowPasswordCheckBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(437, 382);
             this.ShowPasswordCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
@@ -142,7 +142,7 @@ namespace TravelEase
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(193, 542);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -194,7 +194,7 @@ namespace TravelEase
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.UsernameTextBox);
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.linkLabel1);

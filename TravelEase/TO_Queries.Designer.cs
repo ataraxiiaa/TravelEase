@@ -32,7 +32,7 @@
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.queriesDataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.responseTextbox = new System.Windows.Forms.TextBox();
             this.approveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.queriesDataGridView)).BeginInit();
@@ -77,6 +77,7 @@
             // 
             // queriesDataGridView
             // 
+            this.queriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.queriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queriesDataGridView.Location = new System.Drawing.Point(29, 167);
             this.queriesDataGridView.Name = "queriesDataGridView";
@@ -85,14 +86,14 @@
             this.queriesDataGridView.TabIndex = 13;
             this.queriesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridView_CellContentClick);
             // 
-            // textBox1
+            // responseTextbox
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(670, 167);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 298);
-            this.textBox1.TabIndex = 14;
+            this.responseTextbox.ForeColor = System.Drawing.Color.Gray;
+            this.responseTextbox.Location = new System.Drawing.Point(670, 167);
+            this.responseTextbox.Multiline = true;
+            this.responseTextbox.Name = "responseTextbox";
+            this.responseTextbox.Size = new System.Drawing.Size(358, 298);
+            this.responseTextbox.TabIndex = 14;
             // 
             // approveButton
             // 
@@ -130,7 +131,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.approveButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.responseTextbox);
             this.Controls.Add(this.queriesDataGridView);
             this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.searchButton);
@@ -152,7 +153,7 @@
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView queriesDataGridView;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox responseTextbox;
         private System.Windows.Forms.Button approveButton;
         private System.Windows.Forms.Button deleteButton;
     }

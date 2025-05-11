@@ -46,9 +46,9 @@
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(220, 0);
+            this.panelMain.Location = new System.Drawing.Point(237, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1221, 693);
+            this.panelMain.Size = new System.Drawing.Size(1204, 693);
             this.panelMain.TabIndex = 1;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -64,7 +64,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 693);
+            this.panel2.Size = new System.Drawing.Size(237, 693);
             this.panel2.TabIndex = 2;
             // 
             // panel3
@@ -74,7 +74,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 148);
+            this.panel3.Size = new System.Drawing.Size(237, 148);
             this.panel3.TabIndex = 3;
             // 
             // label1
@@ -89,7 +89,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TravelEase.Properties.Resources.icons8_male_user_100;
             this.pictureBox1.Location = new System.Drawing.Point(52, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(104, 101);
@@ -103,7 +102,6 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::TravelEase.Properties.Resources.icons8_settings_30;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(-7, 648);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -120,7 +118,6 @@
             this.manageReservationsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.manageReservationsButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageReservationsButton.ForeColor = System.Drawing.Color.White;
-            this.manageReservationsButton.Image = global::TravelEase.Properties.Resources.icons8_airplane_landing_30;
             this.manageReservationsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.manageReservationsButton.Location = new System.Drawing.Point(4, 154);
             this.manageReservationsButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -138,7 +135,6 @@
             this.serviceListingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.serviceListingButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceListingButton.ForeColor = System.Drawing.Color.White;
-            this.serviceListingButton.Image = global::TravelEase.Properties.Resources.icons8_seo_text_30__1_;
             this.serviceListingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.serviceListingButton.Location = new System.Drawing.Point(0, 202);
             this.serviceListingButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -156,7 +152,6 @@
             this.analysisButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.analysisButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.analysisButton.ForeColor = System.Drawing.Color.White;
-            this.analysisButton.Image = global::TravelEase.Properties.Resources.icons8_home_501;
             this.analysisButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.analysisButton.Location = new System.Drawing.Point(0, 250);
             this.analysisButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

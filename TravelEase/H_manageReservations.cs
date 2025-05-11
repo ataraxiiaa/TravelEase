@@ -109,5 +109,12 @@ namespace TravelEase
             }
         }
 
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            H_manageReservationsReportForm h_ManageReservationsReportForm = new H_manageReservationsReportForm();
+            h_ManageReservationsReportForm.Show();
+
+        }
     }
 }

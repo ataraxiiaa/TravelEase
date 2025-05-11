@@ -1,4 +1,6 @@
-﻿namespace TravelEase
+﻿using System.Windows.Forms;
+
+namespace TravelEase
 {
     partial class TO_ManageTrips
     {
@@ -28,7 +30,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.saveBtn = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.filterComboBox = new System.Windows.Forms.ComboBox();
             this.searchButton = new System.Windows.Forms.Button();
@@ -39,19 +40,6 @@
             this.trips_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.BackColor = System.Drawing.Color.DarkGreen;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(807, 535);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(172, 43);
-            this.saveBtn.TabIndex = 30;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Visible = false;
             // 
             // searchTextBox
             // 
@@ -100,6 +88,7 @@
             this.refreshButton.TabIndex = 26;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // deleteTripbtn
             // 
@@ -112,6 +101,7 @@
             this.deleteTripbtn.TabIndex = 25;
             this.deleteTripbtn.Text = "Delete Trip";
             this.deleteTripbtn.UseVisualStyleBackColor = false;
+            this.deleteTripbtn.Click += new System.EventHandler(this.deleteTripbtn_Click);
             // 
             // AddTripbtn
             // 
@@ -124,11 +114,13 @@
             this.AddTripbtn.TabIndex = 24;
             this.AddTripbtn.Text = "Add Trip";
             this.AddTripbtn.UseVisualStyleBackColor = false;
+            this.AddTripbtn.Click += new System.EventHandler(this.AddTripbtn_Click);
             // 
             // TripsDataGridView
             // 
             this.TripsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TripsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TripsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.TripsDataGridView.Location = new System.Drawing.Point(13, 118);
             this.TripsDataGridView.Name = "TripsDataGridView";
             this.TripsDataGridView.RowHeadersWidth = 51;
@@ -153,7 +145,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.filterComboBox);
             this.Controls.Add(this.searchButton);
@@ -174,8 +165,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.ComboBox filterComboBox;
         private System.Windows.Forms.Button searchButton;
