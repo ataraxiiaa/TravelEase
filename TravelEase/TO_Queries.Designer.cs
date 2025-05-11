@@ -32,7 +32,7 @@
             this.searchTextbox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.queriesDataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.responseTextbox = new System.Windows.Forms.TextBox();
             this.approveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.queriesDataGridView)).BeginInit();
@@ -46,7 +46,7 @@
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(0, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(216, 37);
+            this.titleLabel.Size = new System.Drawing.Size(266, 45);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Manage Queries";
             // 
@@ -55,7 +55,7 @@
             this.searchTextbox.ForeColor = System.Drawing.Color.Gray;
             this.searchTextbox.Location = new System.Drawing.Point(29, 106);
             this.searchTextbox.Name = "searchTextbox";
-            this.searchTextbox.Size = new System.Drawing.Size(300, 20);
+            this.searchTextbox.Size = new System.Drawing.Size(300, 23);
             this.searchTextbox.TabIndex = 12;
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             this.searchTextbox.GotFocus += new System.EventHandler(this.searchTextBox_GotFocus);
@@ -86,14 +86,14 @@
             this.queriesDataGridView.TabIndex = 13;
             this.queriesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDataGridView_CellContentClick);
             // 
-            // textBox1
+            // responseTextbox
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(670, 167);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 298);
-            this.textBox1.TabIndex = 14;
+            this.responseTextbox.ForeColor = System.Drawing.Color.Gray;
+            this.responseTextbox.Location = new System.Drawing.Point(670, 167);
+            this.responseTextbox.Multiline = true;
+            this.responseTextbox.Name = "responseTextbox";
+            this.responseTextbox.Size = new System.Drawing.Size(358, 298);
+            this.responseTextbox.TabIndex = 14;
             // 
             // approveButton
             // 
@@ -125,13 +125,13 @@
             // TO_Queries
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.approveButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.responseTextbox);
             this.Controls.Add(this.queriesDataGridView);
             this.Controls.Add(this.searchTextbox);
             this.Controls.Add(this.searchButton);
@@ -153,7 +153,7 @@
         private System.Windows.Forms.TextBox searchTextbox;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.DataGridView queriesDataGridView;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox responseTextbox;
         private System.Windows.Forms.Button approveButton;
         private System.Windows.Forms.Button deleteButton;
     }
