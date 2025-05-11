@@ -53,5 +53,10 @@ namespace TravelEase
         {
             LoadView(new H_serviceListing());
         }
+
+        private void abandonedButton_Click(object sender, EventArgs e)
+        {
+            LoadView(new S_abandonedBookings());
+        }
     }
 }

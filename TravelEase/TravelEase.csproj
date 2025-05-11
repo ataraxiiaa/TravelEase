@@ -215,6 +215,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>paymentDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="S_abandonedBookings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="S_abandonedBookings.Designer.cs">
+      <DependentUpon>S_abandonedBookings.cs</DependentUpon>
+    </Compile>
     <Compile Include="S_guideReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     </Compile>
     <Compile Include="H_analysisView.Designer.cs">
       <DependentUpon>H_analysisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_lossReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_lossReportForm.Designer.cs">
+      <DependentUpon>S_lossReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="S_manageReservations.cs">
       <SubType>UserControl</SubType>
@@ -256,6 +268,12 @@
     </Compile>
     <Compile Include="S_paymentReportForm.Designer.cs">
       <DependentUpon>S_paymentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_reasonReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_reasonReportForm.Designer.cs">
+      <DependentUpon>S_reasonReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="S_transportReportForm.cs">
       <SubType>Form</SubType>
@@ -297,6 +315,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>tourismDatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="Touristcs.cs">
       <SubType>Form</SubType>
@@ -421,6 +444,9 @@
     <EmbeddedResource Include="Hotel.resx">
       <DependentUpon>Hotel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="S_abandonedBookings.resx">
+      <DependentUpon>S_abandonedBookings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_guideReportForm.resx">
       <DependentUpon>S_guideReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +455,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="H_analysisView.resx">
       <DependentUpon>H_analysisView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_lossReport.rdlc" />
+    <EmbeddedResource Include="S_lossReportForm.resx">
+      <DependentUpon>S_lossReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_manageReservations.resx">
       <DependentUpon>S_manageReservations.cs</DependentUpon>
@@ -462,6 +492,10 @@
     <EmbeddedResource Include="S_paymentReportForm.resx">
       <DependentUpon>S_paymentReportForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="S_reasonReportForm.resx">
+      <DependentUpon>S_reasonReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_reasonsReport.rdlc" />
     <EmbeddedResource Include="S_transportReport.rdlc" />
     <EmbeddedResource Include="S_transportReportForm.resx">
       <DependentUpon>S_transportReportForm.cs</DependentUpon>
@@ -589,6 +623,17 @@
     </None>
     <None Include="tourismDatabaseDataSet6.xss">
       <DependentUpon>tourismDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xsc">
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xss">
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
     </None>
     <None Include="TouristReviewOperator.xsc">
       <DependentUpon>TouristReviewOperator.xsd</DependentUpon>
