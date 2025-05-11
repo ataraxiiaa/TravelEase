@@ -36,10 +36,14 @@ namespace TravelEase
             growthChart.ChartAreas.Add(chartarea);
 
 
-            var series = new Series("Active Providers");
-            series.ChartType = SeriesChartType.Bar;
-            series.XValueType = ChartValueType.String; 
-            series.YValueType = ChartValueType.Int32;
+            var series = new Series(" Providers")
+            {
+                ChartType = SeriesChartType.Line,
+                BorderWidth = 3,
+                Color = Color.SteelBlue,
+                XValueType = ChartValueType.String,
+                YValueType = ChartValueType.Int32
+            };
 
             foreach (DataRow row in data.Rows)
             {
@@ -48,10 +52,10 @@ namespace TravelEase
                 series.Points.AddXY(month, count);
             }
             growthChart.Series.Add(series);
+            growthChart.Titles.Add("Service Provider Growth Chart");
 
-
-            growthChart.Titles.Add("Monthly Active Service Providers");
-
+            chartarea.AxisX.Title = "Month";
+            chartarea.AxisY.Title = "Number of Providers";
 
 
         }

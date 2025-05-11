@@ -98,9 +98,10 @@
             this.name_lbl.ForeColor = System.Drawing.Color.White;
             this.name_lbl.Location = new System.Drawing.Point(64, 125);
             this.name_lbl.Name = "name_lbl";
-            this.name_lbl.Size = new System.Drawing.Size(83, 13);
+            this.name_lbl.Size = new System.Drawing.Size(102, 17);
             this.name_lbl.TabIndex = 1;
             this.name_lbl.Text = "Hi, Welcome!";
+            this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
             // 
             // pictureBox1
             // 
@@ -195,7 +196,7 @@
             // TourOperator
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;

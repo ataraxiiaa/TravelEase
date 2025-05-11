@@ -66,23 +66,30 @@ namespace TravelEase
 
         private void usrreports_btn_Click(object sender, EventArgs e)
         {
-            A_Growthform a_Growthform = new A_Growthform();
-            a_Growthform.Show();
-            a_Growthform.BringToFront();
+            A_Growthform a = new A_Growthform();
+            a.Show();
+            a.BringToFront();
         }
 
         private void activerep_btn_Click(object sender, EventArgs e)
         {
-            ActiveReportForm activeReportForm = new ActiveReportForm();
-            activeReportForm.Show();
-            activeReportForm.BringToFront();
+            ActiveReportForm a = new ActiveReportForm();
+            a.Show();
+            a.BringToFront();
         }
 
         private void patnerrprt_btn_Click(object sender, EventArgs e)
         {
-            activeProvidersForm activeProvidersForm = new activeProvidersForm();
-            activeProvidersForm.Show();
-            activeProvidersForm.BringToFront();
+            activeProvidersForm a = new activeProvidersForm();
+            a.Show();
+            a.BringToFront();
+        }
+
+        private void rgnlExpansion_btn_Click(object sender, EventArgs e)
+        {
+            A_LocationExpansionReport r = new A_LocationExpansionReport();
+            r.Show();
+            r.BringToFront();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

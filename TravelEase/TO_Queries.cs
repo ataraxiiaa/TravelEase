@@ -114,7 +114,51 @@ namespace TravelEase
 
         private void approveButton_Click(object sender, EventArgs e)
         {
+            if (queriesDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a query to respond to.");
+                return;
+            }
 
+            string responseText = responseTextbox.Text.Trim();
+            if (string.IsNullOrWhiteSpace(responseText))
+            {
+                MessageBox.Show("Please enter a response.");
+                return;
+            }
+
+            int queryId = Convert.ToInt32(queriesDataGridView.SelectedRows[0].Cells["QueryID"].Value);
+
+            string connStr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            string updateQuery = @"UPDATE Queries 
+                           SET Response = @response, 
+                               QStatus = 1, 
+                               ResponseTime = @responseTime 
+                           WHERE QueryID = @queryId AND TourOperatorID = @toid";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
+            using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@response", responseText);
+                cmd.Parameters.AddWithValue("@responseTime", DateTime.Now);
+                cmd.Parameters.AddWithValue("@queryId", queryId);
+                cmd.Parameters.AddWithValue("@toid", id);
+
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Response submitted successfully.");
+                    responseTextbox.Clear();
+                    LoadQueries(); // Refresh the grid
+                }
+                else
+                {
+                    MessageBox.Show("Failed to submit response. Please try again.");
+                }
+            }
         }
+
     }
 }

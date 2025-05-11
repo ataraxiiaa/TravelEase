@@ -114,6 +114,7 @@
             this.rgnlExpansion_btn.TabIndex = 1;
             this.rgnlExpansion_btn.Text = "Regional Expansion";
             this.rgnlExpansion_btn.UseVisualStyleBackColor = false;
+            this.rgnlExpansion_btn.Click += new System.EventHandler(this.rgnlExpansion_btn_Click);
             // 
             // patnerrprt_btn
             // 

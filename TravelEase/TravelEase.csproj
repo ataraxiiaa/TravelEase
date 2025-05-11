@@ -112,6 +112,12 @@
     <Compile Include="A_GuideRating.Designer.cs">
       <DependentUpon>A_GuideRating.cs</DependentUpon>
     </Compile>
+    <Compile Include="A_LocationExpansionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="A_LocationExpansionReport.Designer.cs">
+      <DependentUpon>A_LocationExpansionReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="A_Passes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="A_GuideRating.resx">
       <DependentUpon>A_GuideRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_LocationExpansionReport.resx">
+      <DependentUpon>A_LocationExpansionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="A_Passes.resx">
       <DependentUpon>A_Passes.cs</DependentUpon>

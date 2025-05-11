@@ -30,6 +30,7 @@ namespace TravelEase
         }
         private void TourOperator_Load(object sender, EventArgs e)
         {
+            // 
             LoadView(new TO_Dashboard(this.TourOperatorUsername));
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             // string connection = "Data Source = LOQ - 15\\SQLEXPRESS; Initial Catalog = tourismDatabase";
@@ -42,7 +43,7 @@ namespace TravelEase
             if (reader.Read())
             {
                 string username = "Hi, " + reader["UName"].ToString();
-                this.TourOperatorUsername = username;
+                this.TourOperatorUsername = reader["UName"].ToString();
                 this.id = Convert.ToInt32(reader["UserID"]);
                 name_lbl.Text = username;
             }
@@ -98,6 +99,11 @@ namespace TravelEase
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void name_lbl_Click(object sender, EventArgs e)
         {
 
         }
