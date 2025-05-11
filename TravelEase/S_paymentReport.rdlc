@@ -2,41 +2,53 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="transportDataset">
+    <DataSource Name="paymentDataset">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>251cbd0c-5a44-47d6-9255-43a2d1873de0</rd:DataSourceID>
+      <rd:DataSourceID>b27e7429-88d0-485b-baef-a34368df888e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="transportReportDataset">
+    <DataSet Name="paymentReportDataset">
       <Query>
-        <DataSourceName>transportDataset</DataSourceName>
+        <DataSourceName>paymentDataset</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ServiceID">
-          <DataField>ServiceID</DataField>
+        <Field Name="PaymentID">
+          <DataField>PaymentID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="TType">
-          <DataField>TType</DataField>
+        <Field Name="PAmount">
+          <DataField>PAmount</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="PDate">
+          <DataField>PDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PStatus">
+          <DataField>PStatus</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PMethod">
+          <DataField>PMethod</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="OnTime">
-          <DataField>OnTime</DataField>
-          <rd:TypeName>System.Boolean</rd:TypeName>
+        <Field Name="BookingID">
+          <DataField>BookingID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>transportDataset</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Basit Junaid\Source\Repos\TravelEase\TravelEase\transportDataset.xsd</rd:SchemaPath>
-        <rd:TableName>Transport</rd:TableName>
+        <rd:DataSetName>paymentDataset</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Basit Junaid\Source\Repos\TravelEase\TravelEase\paymentDataset.xsd</rd:SchemaPath>
+        <rd:TableName>Payment</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>TransportTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>PaymentTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -44,43 +56,41 @@
     <ReportSection>
       <Body>
         <ReportItems>
-          <Chart Name="Chart2">
+          <Chart Name="Chart1">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart2_CategoryGroup">
+                  <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!OnTime.Value</GroupExpression>
+                      <GroupExpression>=Fields!PStatus.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!OnTime.Value</Value>
+                      <Value>=Fields!PStatus.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!OnTime.Value</Label>
+                  <Label>=Fields!PStatus.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>On Time</Label>
+                  <Label>PStatus</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Series">
+                <ChartSeries Name="PStatus">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!OnTime.Value)</Y>
+                        <Y>=Count(Fields!PStatus.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <UseValueAsLabel>true</UseValueAsLabel>
-                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -390,10 +400,10 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>transportReportDataset</DataSetName>
-            <Left>0.49953cm</Left>
-            <Height>6.07103cm</Height>
-            <Width>13.723cm</Width>
+            <DataSetName>paymentReportDataset</DataSetName>
+            <Left>0.98637cm</Left>
+            <Height>5.5207cm</Height>
+            <Width>11.28883cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -404,7 +414,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.39017in</Height>
+        <Height>2.1735in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>
@@ -427,5 +437,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>099f3594-763c-4de7-9bf4-65511d66af21</rd:ReportID>
+  <rd:ReportID>168c75da-aaa3-40a7-9e72-59677e47aaf7</rd:ReportID>
 </Report>

@@ -210,6 +210,11 @@
     <Compile Include="Hotel.Designer.cs">
       <DependentUpon>Hotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="paymentDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="S_guideReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,23 +233,11 @@
     <Compile Include="H_analysisView.Designer.cs">
       <DependentUpon>H_analysisView.cs</DependentUpon>
     </Compile>
-    <Compile Include="H_manageReservations.cs">
+    <Compile Include="S_manageReservations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="H_manageReservations.Designer.cs">
-      <DependentUpon>H_manageReservations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="H_manageReservationsReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="H_manageReservationsReportForm.Designer.cs">
-      <DependentUpon>H_manageReservationsReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="H_ratingReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="H_ratingReportForm.Designer.cs">
-      <DependentUpon>H_ratingReportForm.cs</DependentUpon>
+    <Compile Include="S_manageReservations.Designer.cs">
+      <DependentUpon>S_manageReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="H_serviceListing.cs">
       <SubType>UserControl</SubType>
@@ -257,6 +250,12 @@
     </Compile>
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_paymentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_paymentReportForm.Designer.cs">
+      <DependentUpon>S_paymentReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="S_transportReportForm.cs">
       <SubType>Form</SubType>
@@ -431,16 +430,8 @@
     <EmbeddedResource Include="H_analysisView.resx">
       <DependentUpon>H_analysisView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="H_manageReservations.resx">
-      <DependentUpon>H_manageReservations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="H_ManageReservationsReport.rdlc" />
-    <EmbeddedResource Include="H_manageReservationsReportForm.resx">
-      <DependentUpon>H_manageReservationsReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="H_ratingReport.rdlc" />
-    <EmbeddedResource Include="H_ratingReportForm.resx">
-      <DependentUpon>H_ratingReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="S_manageReservations.resx">
+      <DependentUpon>S_manageReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="H_serviceListing.resx">
       <DependentUpon>H_serviceListing.cs</DependentUpon>
@@ -467,6 +458,10 @@
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_guideReport.rdlc" />
+    <EmbeddedResource Include="S_paymentReport.rdlc" />
+    <EmbeddedResource Include="S_paymentReportForm.resx">
+      <DependentUpon>S_paymentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_transportReport.rdlc" />
     <EmbeddedResource Include="S_transportReportForm.resx">
       <DependentUpon>S_transportReportForm.cs</DependentUpon>
@@ -498,6 +493,17 @@
       <DependentUpon>growthData.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="paymentDataset.xsc">
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </None>
+    <None Include="paymentDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>paymentDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="paymentDataset.xss">
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

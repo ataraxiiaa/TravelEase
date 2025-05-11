@@ -109,9 +109,6 @@ namespace TravelEase
         private void reportButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            H_ratingReportForm h = new H_ratingReportForm();
-            h.Activate();
-            h.Show();
         }
     }
 }

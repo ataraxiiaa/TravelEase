@@ -1,6 +1,6 @@
 ﻿namespace TravelEase
 {
-    partial class H_manageReservations
+    partial class S_manageReservations
     {
         /// <summary> 
         /// Required designer variable.
@@ -122,11 +122,11 @@
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(128, 52);
             this.reportButton.TabIndex = 7;
-            this.reportButton.Text = "Get Report";
+            this.reportButton.Text = "Get Payment Report";
             this.reportButton.UseVisualStyleBackColor = false;
             this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
-            // H_manageReservations
+            // S_manageReservations
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -139,7 +139,7 @@
             this.Controls.Add(this.managerReservationsHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "H_manageReservations";
+            this.Name = "S_manageReservations";
             this.Size = new System.Drawing.Size(1375, 693);
             this.Load += new System.EventHandler(this.H_manageReservations_Load);
             this.reservationsPanel.ResumeLayout(false);

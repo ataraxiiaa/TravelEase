@@ -35,8 +35,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.torating_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.avgresponse_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -119,6 +120,17 @@
             this.panel2.Size = new System.Drawing.Size(1113, 260);
             this.panel2.TabIndex = 2;
             // 
+            // avgresponse_lbl
+            // 
+            this.avgresponse_lbl.AutoSize = true;
+            this.avgresponse_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgresponse_lbl.ForeColor = System.Drawing.Color.White;
+            this.avgresponse_lbl.Location = new System.Drawing.Point(59, 140);
+            this.avgresponse_lbl.Name = "avgresponse_lbl";
+            this.avgresponse_lbl.Size = new System.Drawing.Size(105, 32);
+            this.avgresponse_lbl.TabIndex = 1;
+            this.avgresponse_lbl.Text = "meow1";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,16 +142,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Performance Analysis";
             // 
-            // avgresponse_lbl
+            // linkLabel2
             // 
-            this.avgresponse_lbl.AutoSize = true;
-            this.avgresponse_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.avgresponse_lbl.ForeColor = System.Drawing.Color.White;
-            this.avgresponse_lbl.Location = new System.Drawing.Point(59, 140);
-            this.avgresponse_lbl.Name = "avgresponse_lbl";
-            this.avgresponse_lbl.Size = new System.Drawing.Size(131, 40);
-            this.avgresponse_lbl.TabIndex = 1;
-            this.avgresponse_lbl.Text = "meow1";
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(916, 65);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(82, 17);
+            this.linkLabel2.TabIndex = 4;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "linkLabel2";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // TO_Dashboard
             // 
@@ -148,6 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label avgresponse_lbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
