@@ -48,6 +48,7 @@
             this.ActivityPasses.TabIndex = 17;
             this.ActivityPasses.Text = "Activity Passes";
             this.ActivityPasses.UseVisualStyleBackColor = false;
+            this.ActivityPasses.Click += new System.EventHandler(this.ActivityPasses_Click);
             // 
             // hotelVoucher
             // 
@@ -61,6 +62,7 @@
             this.hotelVoucher.TabIndex = 15;
             this.hotelVoucher.Text = "Hotel Vouchers";
             this.hotelVoucher.UseVisualStyleBackColor = false;
+            this.hotelVoucher.Click += new System.EventHandler(this.hotelVoucher_Click);
             // 
             // Reviews_lbl
             // 
@@ -93,7 +95,7 @@
             this.queriesDataGridView.Location = new System.Drawing.Point(326, 110);
             this.queriesDataGridView.Name = "queriesDataGridView";
             this.queriesDataGridView.RowHeadersWidth = 51;
-            this.queriesDataGridView.Size = new System.Drawing.Size(545, 357);
+            this.queriesDataGridView.Size = new System.Drawing.Size(666, 367);
             this.queriesDataGridView.TabIndex = 18;
             // 
             // A_Passes
