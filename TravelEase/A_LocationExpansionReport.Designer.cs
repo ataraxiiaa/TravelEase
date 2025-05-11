@@ -31,43 +31,43 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.locationExpansion = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.locationExpansion)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // locationExpansion
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.locationExpansion.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 0);
-            this.chart1.Name = "chart1";
+            this.locationExpansion.Legends.Add(legend1);
+            this.locationExpansion.Location = new System.Drawing.Point(0, 0);
+            this.locationExpansion.Name = "locationExpansion";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(889, 483);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.locationExpansion.Series.Add(series1);
+            this.locationExpansion.Size = new System.Drawing.Size(889, 483);
+            this.locationExpansion.TabIndex = 0;
+            this.locationExpansion.Text = "chart1";
             // 
             // A_LocationExpansionReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 486);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.locationExpansion);
             this.Name = "A_LocationExpansionReport";
             this.Text = "A_LocationExpansionReport";
             this.Load += new System.EventHandler(this.A_LocationExpansionReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationExpansion)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart locationExpansion;
     }
 }
