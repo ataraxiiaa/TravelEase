@@ -6,18 +6,18 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.88806cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.88806cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.88806cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.30908cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -58,7 +58,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>BDate</Value>
+                              <Value>Booking Date</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -88,7 +88,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>BCost</Value>
+                              <Value>Booking Cost</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -112,7 +112,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.30908cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -227,9 +227,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.36737cm</Top>
-        <Left>5.0927cm</Left>
-        <Height>1.2cm</Height>
-        <Width>7.5cm</Width>
+        <Left>3.9497cm</Left>
+        <Height>2.61817cm</Height>
+        <Width>8.66417cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

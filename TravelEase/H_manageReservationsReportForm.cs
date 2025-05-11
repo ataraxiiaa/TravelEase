@@ -19,6 +19,8 @@ namespace TravelEase
 
         private void H_manageReservationsReportForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tourismDatabaseDataSet.Booking' table. You can move, or remove it, as needed.
+            this.bookingTableAdapter.Fill(this.tourismDatabaseDataSet.Booking);
             // TODO: This line of code loads data into the 'tourismDatabaseDataSet.Hotels' table. You can move, or remove it, as needed.
             this.hotelsTableAdapter.Fill(this.tourismDatabaseDataSet.Hotels);
             this.reportViewer1.RefreshReport();

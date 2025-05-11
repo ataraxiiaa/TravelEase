@@ -37,9 +37,11 @@
             this.growthData = new TravelEase.growthData();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.growthChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.growthData1 = new TravelEase.growthData();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.growthData1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataTable1BindingSource
@@ -84,6 +86,11 @@
             this.growthChart.Text = "growthChart";
             this.growthChart.Click += new System.EventHandler(this.growthChart_Click);
             // 
+            // growthData1
+            // 
+            this.growthData1.DataSetName = "growthData";
+            this.growthData1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // A_Growthform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -95,8 +102,9 @@
             this.Text = "A_Growthform";
             this.Load += new System.EventHandler(this.A_Growthform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            // ((System.ComponentModel.ISupportInitialize)(this.growthData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.growthData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.growthData1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +115,6 @@
         private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private growthData growthData;
         private System.Windows.Forms.DataVisualization.Charting.Chart growthChart;
+        private growthData growthData1;
     }
 }
