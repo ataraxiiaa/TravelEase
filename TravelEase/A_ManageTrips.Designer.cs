@@ -56,7 +56,7 @@
             // 
             this.searchTextBox.Location = new System.Drawing.Point(4, 57);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(222, 23);
+            this.searchTextBox.Size = new System.Drawing.Size(222, 20);
             this.searchTextBox.TabIndex = 20;
             this.searchTextBox.Text = "Search for Trips...";
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
@@ -66,7 +66,7 @@
             // filterComboBox
             // 
             this.filterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterComboBox.ItemHeight = 17;
+            this.filterComboBox.ItemHeight = 13;
             this.filterComboBox.Items.AddRange(new object[] {
             "TripID",
             "Group Size",
@@ -75,7 +75,7 @@
             "Duration"});
             this.filterComboBox.Location = new System.Drawing.Point(232, 55);
             this.filterComboBox.Name = "filterComboBox";
-            this.filterComboBox.Size = new System.Drawing.Size(112, 25);
+            this.filterComboBox.Size = new System.Drawing.Size(112, 21);
             this.filterComboBox.TabIndex = 19;
             // 
             // searchButton
@@ -95,7 +95,7 @@
             this.refreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshButton.ForeColor = System.Drawing.Color.White;
-            this.refreshButton.Location = new System.Drawing.Point(996, 175);
+            this.refreshButton.Location = new System.Drawing.Point(996, 171);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(173, 45);
             this.refreshButton.TabIndex = 17;
@@ -134,14 +134,14 @@
             this.trips_lbl.ForeColor = System.Drawing.Color.White;
             this.trips_lbl.Location = new System.Drawing.Point(0, 0);
             this.trips_lbl.Name = "trips_lbl";
-            this.trips_lbl.Size = new System.Drawing.Size(221, 45);
+            this.trips_lbl.Size = new System.Drawing.Size(181, 37);
             this.trips_lbl.TabIndex = 12;
             this.trips_lbl.Text = "Manage Trips";
             // 
             // A_ManageTrips
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.saveBtn);
