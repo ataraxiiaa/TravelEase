@@ -29,6 +29,32 @@ namespace TravelEase
         {
             name_lbl.Text = "Name: " + username;
 
+            string revenue = "";
+
+            string connectionString = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string q = "SELECT sum(BCost) as BCost FROM Booking WHERE TourOperatorID = @id";
+
+                SqlCommand command = new SqlCommand(q, conn);
+                command.Parameters.AddWithValue("@id", 1);
+
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    revenue = reader["BCost"].ToString();
+                }
+
+                reader.Close();
+
+                conn.Close();
+            }
+
+            label2.Text = "Revenue: " + revenue;
+
             string query = @"
             SELECT u.UserID, c.CName 
             FROM UserInfo u
@@ -112,6 +138,11 @@ namespace TravelEase
             this.Hide();
             Hotel hotel = new Hotel();
             hotel.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         //private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

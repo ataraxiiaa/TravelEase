@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.companyname_lbl = new System.Windows.Forms.Label();
             this.name_lbl = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.torating_lbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.avgresponse_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.companyname_lbl);
             this.panel1.Controls.Add(this.name_lbl);
             this.panel1.Location = new System.Drawing.Point(60, 122);
@@ -86,17 +87,6 @@
             this.name_lbl.TabIndex = 0;
             this.name_lbl.Text = "Name: ";
             this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(795, 65);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 17);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // torating_lbl
             // 
@@ -144,10 +134,22 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.Location = new System.Drawing.Point(0, 0);
+            this.linkLabel2.Location = new System.Drawing.Point(-3, 45);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(100, 23);
             this.linkLabel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(60, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Revenue: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TO_Dashboard
             // 
@@ -157,14 +159,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Dasboard_lbl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TO_Dashboard";
-            this.Size = new System.Drawing.Size(1152, 554);
+            this.Size = new System.Drawing.Size(1401, 806);
             this.Load += new System.EventHandler(this.TO_Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -181,11 +182,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label companyname_lbl;
         private System.Windows.Forms.Label name_lbl;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label torating_lbl;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label avgresponse_lbl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label2;
     }
 }
