@@ -138,7 +138,7 @@ namespace TravelEase
                 query = @"
                 SELECT u.UserID
                 FROM UserInfo u
-                INNER JOIN ServiceProivder r ON u.UserID = r.ServiceProivderID
+                INNER JOIN ServiceProvider r ON u.UserID = r.ServiceProviderID
                 WHERE u.UName = @username AND u.UPassword = @password";
             }
 

@@ -1,6 +1,6 @@
 ﻿namespace TravelEase
 {
-    partial class H_analysisView
+    partial class S_analysisView
     {
         /// <summary> 
         /// Required designer variable.
@@ -129,7 +129,7 @@
             // 
             this.servicesTableAdapter.ClearBeforeFill = true;
             // 
-            // H_analysisView
+            // S_analysisView
             // 
             this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -143,7 +143,7 @@
             this.Controls.Add(this.analysisHeader);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "H_analysisView";
+            this.Name = "S_analysisView";
             this.Size = new System.Drawing.Size(1375, 693);
             this.Load += new System.EventHandler(this.H_analysisView_Load);
             this.analysisPanel.ResumeLayout(false);

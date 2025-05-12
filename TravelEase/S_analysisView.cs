@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class H_analysisView : UserControl
+    public partial class S_analysisView : UserControl
     {
-        public H_analysisView()
+        public S_analysisView()
         {
             InitializeComponent();
         }

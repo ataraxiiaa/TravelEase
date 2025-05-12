@@ -233,11 +233,11 @@
     <Compile Include="S_hotelServiceReportForm.Designer.cs">
       <DependentUpon>S_hotelServiceReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="H_analysisView.cs">
+    <Compile Include="S_analysisView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="H_analysisView.Designer.cs">
-      <DependentUpon>H_analysisView.cs</DependentUpon>
+    <Compile Include="S_analysisView.Designer.cs">
+      <DependentUpon>S_analysisView.cs</DependentUpon>
     </Compile>
     <Compile Include="S_lossReportForm.cs">
       <SubType>Form</SubType>
@@ -280,6 +280,11 @@
     </Compile>
     <Compile Include="S_transportReportForm.Designer.cs">
       <DependentUpon>S_transportReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tourCategoriesDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourCategoriesDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="tourismDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -326,6 +331,11 @@
     </Compile>
     <Compile Include="Touristcs.Designer.cs">
       <DependentUpon>Touristcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="touristDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>touristDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="touristDetailsform.cs">
       <SubType>Form</SubType>
@@ -386,6 +396,29 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>transportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tripDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tripDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="T_touristDemoReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_touristDemoReportForm.Designer.cs">
+      <DependentUpon>T_touristDemoReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_tripAnalysisReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_tripAnalysisReportForm.Designer.cs">
+      <DependentUpon>T_tripAnalysisReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_tripBudgetReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_tripBudgetReportForm.Designer.cs">
+      <DependentUpon>T_tripBudgetReportForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="activeProvidersForm.resx">
       <DependentUpon>activeProvidersForm.cs</DependentUpon>
@@ -459,8 +492,8 @@
     <EmbeddedResource Include="S_hotelServiceReportForm.resx">
       <DependentUpon>S_hotelServiceReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="H_analysisView.resx">
-      <DependentUpon>H_analysisView.cs</DependentUpon>
+    <EmbeddedResource Include="S_analysisView.resx">
+      <DependentUpon>S_analysisView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_lossReport.rdlc" />
     <EmbeddedResource Include="S_lossReportForm.resx">
@@ -524,6 +557,20 @@
     <EmbeddedResource Include="TO_Queries.resx">
       <DependentUpon>TO_Queries.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="T_touristAgeReport.rdlc" />
+    <EmbeddedResource Include="T_touristDemoReportForm.resx">
+      <DependentUpon>T_touristDemoReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_touristNationalityReport.rdlc" />
+    <EmbeddedResource Include="T_tripAnalysisReportForm.resx">
+      <DependentUpon>T_tripAnalysisReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_tripBudgetReport.rdlc" />
+    <EmbeddedResource Include="T_tripBudgetReportForm.resx">
+      <DependentUpon>T_tripBudgetReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_tripCategoryReport.rdlc" />
+    <EmbeddedResource Include="T_tripDestinationReport.rdlc" />
     <None Include="growthData.xsc">
       <DependentUpon>growthData.xsd</DependentUpon>
     </None>
@@ -556,6 +603,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tourCategoriesDataset.xsc">
+      <DependentUpon>tourCategoriesDataset.xsd</DependentUpon>
+    </None>
+    <None Include="tourCategoriesDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourCategoriesDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourCategoriesDataset.xss">
+      <DependentUpon>tourCategoriesDataset.xsd</DependentUpon>
+    </None>
     <None Include="tourismDatabaseDataSet.xsc">
       <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
     </None>
@@ -644,6 +702,17 @@
     <None Include="tourismDatabaseDataSet7.xss">
       <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
     </None>
+    <None Include="touristDataset.xsc">
+      <DependentUpon>touristDataset.xsd</DependentUpon>
+    </None>
+    <None Include="touristDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>touristDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="touristDataset.xss">
+      <DependentUpon>touristDataset.xsd</DependentUpon>
+    </None>
     <None Include="TouristReviewOperator.xsc">
       <DependentUpon>TouristReviewOperator.xsd</DependentUpon>
     </None>
@@ -676,6 +745,17 @@
     </None>
     <None Include="transportDataset.xss">
       <DependentUpon>transportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="tripDataset.xsc">
+      <DependentUpon>tripDataset.xsd</DependentUpon>
+    </None>
+    <None Include="tripDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tripDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tripDataset.xss">
+      <DependentUpon>tripDataset.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

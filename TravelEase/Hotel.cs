@@ -31,7 +31,7 @@ namespace TravelEase
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new H_analysisView());
+            LoadView(new S_analysisView());
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
