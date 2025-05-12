@@ -31,6 +31,8 @@ namespace TravelEase
 
             string revenue = "";
 
+            string bookingRate = "";
+
             string connectionString = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -54,6 +56,28 @@ namespace TravelEase
             }
 
             label2.Text = "Revenue: " + revenue;
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                string q = "SELECT ((select count(*) from Booking where TourOperatorID = @id) * 100 / (select count(*) from Booking)) as rate";
+
+                SqlCommand command = new SqlCommand(q, conn);
+                command.Parameters.AddWithValue("@id", 1);
+
+                conn.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    bookingRate = reader["rate"].ToString();
+                }
+
+                reader.Close();
+
+                conn.Close();
+            }
+
+            label3.Text = "Booking Rate: " + bookingRate + "%";
 
             string query = @"
             SELECT u.UserID, c.CName 
