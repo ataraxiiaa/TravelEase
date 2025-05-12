@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.managerReservationsHeader = new System.Windows.Forms.Label();
             this.abDataViewer = new System.Windows.Forms.DataGridView();
+            this.ABID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abReason = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abRefundCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adRefundStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abandonedBookingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tourismDatabaseDataSet = new TravelEase.tourismDatabaseDataSet();
             this.reservationsPanel = new System.Windows.Forms.Panel();
@@ -39,11 +44,6 @@
             this.tourismDatabaseDataSet7 = new TravelEase.tourismDatabaseDataSet7();
             this.abandonedBookingsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.abandonedBookingsTableAdapter1 = new TravelEase.tourismDatabaseDataSet7TableAdapters.AbandonedBookingsTableAdapter();
-            this.ABID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abReason = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abRefundCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adRefundStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookingID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.abDataViewer)).BeginInit();
@@ -86,55 +86,6 @@
             this.abDataViewer.Size = new System.Drawing.Size(735, 258);
             this.abDataViewer.TabIndex = 6;
             // 
-            // abandonedBookingsBindingSource
-            // 
-            this.abandonedBookingsBindingSource.DataMember = "AbandonedBookings";
-            this.abandonedBookingsBindingSource.DataSource = this.tourismDatabaseDataSet;
-            // 
-            // tourismDatabaseDataSet
-            // 
-            this.tourismDatabaseDataSet.DataSetName = "tourismDatabaseDataSet";
-            this.tourismDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reservationsPanel
-            // 
-            this.reservationsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.reservationsPanel.Controls.Add(this.abDataViewer);
-            this.reservationsPanel.Location = new System.Drawing.Point(8, 108);
-            this.reservationsPanel.Name = "reservationsPanel";
-            this.reservationsPanel.Size = new System.Drawing.Size(1113, 332);
-            this.reservationsPanel.TabIndex = 7;
-            // 
-            // abandonedBookingsTableAdapter
-            // 
-            this.abandonedBookingsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(89, 463);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 52);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Get Data";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tourismDatabaseDataSet7
-            // 
-            this.tourismDatabaseDataSet7.DataSetName = "tourismDatabaseDataSet7";
-            this.tourismDatabaseDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // abandonedBookingsBindingSource1
-            // 
-            this.abandonedBookingsBindingSource1.DataMember = "AbandonedBookings";
-            this.abandonedBookingsBindingSource1.DataSource = this.tourismDatabaseDataSet7;
-            // 
-            // abandonedBookingsTableAdapter1
-            // 
-            this.abandonedBookingsTableAdapter1.ClearBeforeFill = true;
-            // 
             // ABID
             // 
             this.ABID.HeaderText = "Abandoned Booking ID";
@@ -171,9 +122,60 @@
             this.bookingID.Name = "bookingID";
             this.bookingID.Width = 125;
             // 
+            // abandonedBookingsBindingSource
+            // 
+            this.abandonedBookingsBindingSource.DataMember = "AbandonedBookings";
+            this.abandonedBookingsBindingSource.DataSource = this.tourismDatabaseDataSet;
+            // 
+            // tourismDatabaseDataSet
+            // 
+            this.tourismDatabaseDataSet.DataSetName = "tourismDatabaseDataSet";
+            this.tourismDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // reservationsPanel
+            // 
+            this.reservationsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.reservationsPanel.Controls.Add(this.abDataViewer);
+            this.reservationsPanel.Location = new System.Drawing.Point(8, 108);
+            this.reservationsPanel.Name = "reservationsPanel";
+            this.reservationsPanel.Size = new System.Drawing.Size(1113, 332);
+            this.reservationsPanel.TabIndex = 7;
+            // 
+            // abandonedBookingsTableAdapter
+            // 
+            this.abandonedBookingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(89, 463);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 52);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Get Data";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tourismDatabaseDataSet7
+            // 
+            this.tourismDatabaseDataSet7.DataSetName = "tourismDatabaseDataSet7";
+            this.tourismDatabaseDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // abandonedBookingsBindingSource1
+            // 
+            this.abandonedBookingsBindingSource1.DataMember = "AbandonedBookings";
+            this.abandonedBookingsBindingSource1.DataSource = this.tourismDatabaseDataSet7;
+            // 
+            // abandonedBookingsTableAdapter1
+            // 
+            this.abandonedBookingsTableAdapter1.ClearBeforeFill = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.Location = new System.Drawing.Point(717, 463);
             this.button2.Name = "button2";
@@ -186,6 +188,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.Location = new System.Drawing.Point(558, 463);
             this.button3.Name = "button3";
@@ -205,6 +208,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reservationsPanel);
             this.Controls.Add(this.managerReservationsHeader);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "S_abandonedBookings";
             this.Size = new System.Drawing.Size(1375, 693);
             this.Load += new System.EventHandler(this.S_abandonedBookings_Load);

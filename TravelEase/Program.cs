@@ -16,7 +16,7 @@ namespace TravelEase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TourOperator("OperatorThree"));
+            Application.Run(new StartScreen());
         }
     }
 }
