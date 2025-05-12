@@ -180,7 +180,7 @@ namespace TravelEase
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Register regForm = new Register();
+            Register regForm = new Register(this.userType);
             regForm.StartPosition = FormStartPosition.Manual;
             regForm.Location = this.Location;
             regForm.Show();

@@ -32,7 +32,7 @@ namespace TravelEase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.emailtxtbox = new System.Windows.Forms.TextBox();
             this.Password_Text_Box = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@ namespace TravelEase
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.emailtxtbox);
             this.groupBox1.Controls.Add(this.Password_Text_Box);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.UsernameTextBox);
@@ -67,18 +67,18 @@ namespace TravelEase
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox1
+            // emailtxtbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 295);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(560, 43);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.emailtxtbox.BackColor = System.Drawing.Color.Gainsboro;
+            this.emailtxtbox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.emailtxtbox.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailtxtbox.Location = new System.Drawing.Point(26, 295);
+            this.emailtxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailtxtbox.Multiline = true;
+            this.emailtxtbox.Name = "emailtxtbox";
+            this.emailtxtbox.Size = new System.Drawing.Size(560, 43);
+            this.emailtxtbox.TabIndex = 16;
+            this.emailtxtbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Password_Text_Box
             // 
@@ -157,6 +157,7 @@ namespace TravelEase
             this.Login_Button.TabIndex = 9;
             this.Login_Button.Text = "REGISTER";
             this.Login_Button.UseVisualStyleBackColor = false;
+            this.Login_Button.Click += new System.EventHandler(this.Registerbtn_click);
             // 
             // ShowPasswordCheckBox
             // 
@@ -218,6 +219,7 @@ namespace TravelEase
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load_1);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Login_Paint);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -238,6 +240,6 @@ namespace TravelEase
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Password_Text_Box;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox emailtxtbox;
     }
 }

@@ -327,6 +327,12 @@
     <Compile Include="Touristcs.Designer.cs">
       <DependentUpon>Touristcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="touristDetailsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="touristDetailsform.Designer.cs">
+      <DependentUpon>touristDetailsform.cs</DependentUpon>
+    </Compile>
     <Compile Include="TouristReviewOperator.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -502,6 +508,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Touristcs.resx">
       <DependentUpon>Touristcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="touristDetailsform.resx">
+      <DependentUpon>touristDetailsform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TourOperator.resx">
       <DependentUpon>TourOperator.cs</DependentUpon>
