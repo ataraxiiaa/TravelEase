@@ -33,9 +33,9 @@
             this.Reviews_lbl = new System.Windows.Forms.Label();
             this.upcomingtrip = new System.Windows.Forms.Button();
             this.queriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.textBoxCancelTrip = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.queriesDataGridView)).BeginInit();
             this.SuspendLayout();
-
             // 
             // canceltrip
             // 
@@ -43,9 +43,9 @@
             this.canceltrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.canceltrip.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.canceltrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.canceltrip.Location = new System.Drawing.Point(28, 293);
+            this.canceltrip.Location = new System.Drawing.Point(28, 394);
             this.canceltrip.Name = "canceltrip";
-            this.canceltrip.Size = new System.Drawing.Size(269, 47);
+            this.canceltrip.Size = new System.Drawing.Size(239, 47);
             this.canceltrip.TabIndex = 17;
             this.canceltrip.Text = "Cancel Trip";
             this.canceltrip.UseVisualStyleBackColor = false;
@@ -59,7 +59,7 @@
             this.bookConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.bookConfirm.Location = new System.Drawing.Point(28, 217);
             this.bookConfirm.Name = "bookConfirm";
-            this.bookConfirm.Size = new System.Drawing.Size(269, 47);
+            this.bookConfirm.Size = new System.Drawing.Size(239, 47);
             this.bookConfirm.TabIndex = 15;
             this.bookConfirm.Text = "Booking Confirmation";
             this.bookConfirm.UseVisualStyleBackColor = false;
@@ -84,7 +84,7 @@
             this.upcomingtrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.upcomingtrip.Location = new System.Drawing.Point(28, 139);
             this.upcomingtrip.Name = "upcomingtrip";
-            this.upcomingtrip.Size = new System.Drawing.Size(269, 47);
+            this.upcomingtrip.Size = new System.Drawing.Size(239, 47);
             this.upcomingtrip.TabIndex = 14;
             this.upcomingtrip.Text = "Upcoming Trip";
             this.upcomingtrip.UseVisualStyleBackColor = false;
@@ -93,17 +93,27 @@
             // queriesDataGridView
             // 
             this.queriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.queriesDataGridView.Location = new System.Drawing.Point(351, 139);
+            this.queriesDataGridView.Location = new System.Drawing.Point(273, 139);
             this.queriesDataGridView.Name = "queriesDataGridView";
             this.queriesDataGridView.RowHeadersWidth = 51;
-            this.queriesDataGridView.Size = new System.Drawing.Size(545, 357);
+            this.queriesDataGridView.Size = new System.Drawing.Size(675, 357);
             this.queriesDataGridView.TabIndex = 19;
+            // 
+            // textBoxCancelTrip
+            // 
+            this.textBoxCancelTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCancelTrip.Location = new System.Drawing.Point(85, 340);
+            this.textBoxCancelTrip.Name = "textBoxCancelTrip";
+            this.textBoxCancelTrip.Size = new System.Drawing.Size(118, 30);
+            this.textBoxCancelTrip.TabIndex = 20;
+            this.textBoxCancelTrip.TextChanged += new System.EventHandler(this.textBoxCancelTrip_TextChanged);
             // 
             // A_TripDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.textBoxCancelTrip);
             this.Controls.Add(this.queriesDataGridView);
             this.Controls.Add(this.canceltrip);
             this.Controls.Add(this.bookConfirm);
@@ -111,6 +121,7 @@
             this.Controls.Add(this.upcomingtrip);
             this.Name = "A_TripDashboard";
             this.Size = new System.Drawing.Size(951, 518);
+            this.Load += new System.EventHandler(this.A_TripDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.queriesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,5 +135,6 @@
         private System.Windows.Forms.Label Reviews_lbl;
         private System.Windows.Forms.Button upcomingtrip;
         private System.Windows.Forms.DataGridView queriesDataGridView;
+        private System.Windows.Forms.TextBox textBoxCancelTrip;
     }
 }

@@ -144,14 +144,10 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(916, 65);
+            this.linkLabel2.Location = new System.Drawing.Point(0, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(82, 17);
-            this.linkLabel2.TabIndex = 4;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "linkLabel2";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabel2.Size = new System.Drawing.Size(100, 23);
+            this.linkLabel2.TabIndex = 0;
             // 
             // TO_Dashboard
             // 

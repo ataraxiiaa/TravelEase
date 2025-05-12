@@ -10,10 +10,12 @@ namespace TravelEase
 {
     public partial class A_TripSearchBook : UserControl
     {
-        public A_TripSearchBook()
+        private int loggedInTouristId;
+        public A_TripSearchBook(int touristId)
         {
             InitializeComponent();
             this.Load += A_TripSearchBook_Load;
+            loggedInTouristId = touristId;
             button1.Click += button1_Click;
         }
 
@@ -147,6 +149,110 @@ namespace TravelEase
         }
 
         private void TripIdBook_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void A_TripSearchBook_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBook_Click(object sender, EventArgs e)
+        {
+
+            if (!int.TryParse(TripIdBook.Text, out int tripId))
+            {
+                MessageBox.Show("Please enter a numeric Trip ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
+            string connStr = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            using (var conn = new SqlConnection(connStr))
+            {
+                conn.Open();
+
+                // First verify the trip exists and has available spots
+                string verifyQuery = @"
+        SELECT TAvailableSpots 
+        FROM Trip 
+        WHERE TripID = @TripId";
+
+                SqlCommand verifyCmd = new SqlCommand(verifyQuery, conn);
+                verifyCmd.Parameters.AddWithValue("@TripId", tripId);
+
+                int availableSpots = (int)verifyCmd.ExecuteScalar();
+
+                if (availableSpots <= 0)
+                {
+                    MessageBox.Show("No available spots left for this trip", "Error",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Start transaction to ensure all operations complete successfully
+                SqlTransaction transaction = conn.BeginTransaction();
+
+                try
+                {
+                    // 1. Create a new booking record
+                    string insertBookingQuery = @"
+            INSERT INTO Booking (BStatus, BDate) 
+            VALUES (1, @BookingDate); 
+            SELECT SCOPE_IDENTITY();"; // Get the new BookingID
+
+                    SqlCommand insertBookingCmd = new SqlCommand(insertBookingQuery, conn, transaction);
+                    insertBookingCmd.Parameters.AddWithValue("@BookingDate", DateTime.Now);
+                    int bookingId = Convert.ToInt32(insertBookingCmd.ExecuteScalar());
+
+                    // 2. Create the tourist booking relationship
+                    string insertTouristBookingQuery = @"
+            INSERT INTO TouristBooking (TouristID, BookingID, TripID)
+            VALUES (@TouristId, @BookingId, @TripId)";
+
+                    SqlCommand insertTouristBookingCmd = new SqlCommand(insertTouristBookingQuery, conn, transaction);
+                    insertTouristBookingCmd.Parameters.AddWithValue("@TouristId", loggedInTouristId);
+                    insertTouristBookingCmd.Parameters.AddWithValue("@BookingId", bookingId);
+                    insertTouristBookingCmd.Parameters.AddWithValue("@TripId", tripId);
+                    insertTouristBookingCmd.ExecuteNonQuery();
+
+                    // 3. Update available spots in the trip
+                    string updateTripQuery = @"
+            UPDATE Trip 
+            SET TAvailableSpots = TAvailableSpots - 1 
+            WHERE TripID = @TripId";
+
+                    SqlCommand updateTripCmd = new SqlCommand(updateTripQuery, conn, transaction);
+                    updateTripCmd.Parameters.AddWithValue("@TripId", tripId);
+                    updateTripCmd.ExecuteNonQuery();
+
+                    // Commit transaction if all operations succeeded
+                    transaction.Commit();
+
+                    MessageBox.Show("Trip booked successfully!", "Success",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresh the upcoming trips view
+                    // upcomingtrip_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    // Roll back if any error occurs
+                    transaction.Rollback();
+                    MessageBox.Show("Booking failed: " + ex.Message, "Error",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void TripIdBook_TextChanged_1(object sender, EventArgs e)
         {
 
         }

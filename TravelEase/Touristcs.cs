@@ -12,9 +12,11 @@ namespace TravelEase
 {
     public partial class Touristcs : Form
     {
-        public Touristcs()
+        int userId = -1;
+        public Touristcs(int id)
         {
             InitializeComponent();
+            userId = id;
         }
         private void LoadView(UserControl view)
         {
@@ -31,7 +33,7 @@ namespace TravelEase
         }
         private void Dashboard_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new A_TripSearchBook());
+            LoadView(new A_TripSearchBook(userId));
         }
 
         private void Users_btn_Click(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace TravelEase
 
         private void Trips_btn_Click(object sender, EventArgs e)
         {
-            LoadView(new A_Review_A_Trip(this));
+            LoadView(new A_Review_A_Trip(this, userId));
         }
 
 
@@ -52,12 +54,12 @@ namespace TravelEase
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoadView(new A_Profile());
+            //LoadView(new A_Profile(userId));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadView(new A_TripDashboard(this));
+            LoadView(new A_TripDashboard(this, userId));
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

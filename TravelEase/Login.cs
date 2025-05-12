@@ -94,7 +94,36 @@ namespace TravelEase
             switch(userType)
             {
                 case 0:
-                    nextForm = new Touristcs();
+                    int userId = -1;
+                    string connectionString = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        string query1 = "SELECT user_id FROM users WHERE username = @Username AND password = @Password";
+
+                        using (SqlCommand command = new SqlCommand(query1, connection))
+                        {
+                            // Parameterized query to prevent SQL injection
+                            command.Parameters.AddWithValue("@Username", username);
+                            command.Parameters.AddWithValue("@Password", password);
+
+                            try
+                            {
+                                connection.Open();
+                                object result = command.ExecuteScalar();
+
+                                if (result != null)
+                                {
+                                    userId = Convert.ToInt32(result);
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"Error: {ex.Message}");
+                            }
+                        }
+
+                    }
+                    nextForm = new Touristcs(userId);
                     break;
                 case 1:
                     nextForm = new Admin(username);

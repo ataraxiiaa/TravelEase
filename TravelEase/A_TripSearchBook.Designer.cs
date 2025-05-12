@@ -140,6 +140,7 @@ namespace TravelEase
             this.dataGridViewResults.RowHeadersWidth = 51;
             this.dataGridViewResults.Size = new System.Drawing.Size(1100, 370);
             this.dataGridViewResults.TabIndex = 12;
+            this.dataGridViewResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewResults_CellContentClick);
             // 
             // TripIdBook
             // 
@@ -150,6 +151,7 @@ namespace TravelEase
             this.TripIdBook.Size = new System.Drawing.Size(150, 27);
             this.TripIdBook.TabIndex = 10;
             this.TripIdBook.Text = "Enter TripId";
+            this.TripIdBook.TextChanged += new System.EventHandler(this.TripIdBook_TextChanged_1);
             // 
             // buttonBook
             // 
@@ -162,6 +164,7 @@ namespace TravelEase
             this.buttonBook.TabIndex = 10;
             this.buttonBook.Text = "Book";
             this.buttonBook.UseVisualStyleBackColor = false;
+            this.buttonBook.Click += new System.EventHandler(this.buttonBook_Click);
             // 
             // A_TripSearchBook
             // 
@@ -181,6 +184,7 @@ namespace TravelEase
             this.Controls.Add(this.dataGridViewResults);
             this.Name = "A_TripSearchBook";
             this.Size = new System.Drawing.Size(1100, 580);
+            this.Load += new System.EventHandler(this.A_TripSearchBook_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

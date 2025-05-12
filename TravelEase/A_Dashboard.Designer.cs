@@ -38,7 +38,6 @@
             this.activerep_btn = new System.Windows.Forms.Button();
             this.usrreports_btn = new System.Windows.Forms.Button();
             this.reports_lbl = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -166,17 +165,6 @@
             this.reports_lbl.TabIndex = 0;
             this.reports_lbl.Text = "Generate Reports";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(795, 108);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 17);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // A_Dashboard
             // 
             this.AccessibleName = "";
@@ -184,7 +172,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Dasboard_lbl);
@@ -214,6 +201,5 @@
         private System.Windows.Forms.Label reports_lbl;
         private System.Windows.Forms.Button rgnlExpansion_btn;
         private System.Windows.Forms.Button patnerrprt_btn;
-        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

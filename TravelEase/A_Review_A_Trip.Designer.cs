@@ -102,7 +102,7 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // A_Book_A_Trip
+            // A_Review_A_Trip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,8 +112,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Reviews_lbl);
             this.Controls.Add(this.searchButton);
-            this.Name = "A_Book_A_Trip";
+            this.Name = "A_Review_A_Trip";
             this.Size = new System.Drawing.Size(1120, 532);
+            this.Load += new System.EventHandler(this.A_Review_A_Trip_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
