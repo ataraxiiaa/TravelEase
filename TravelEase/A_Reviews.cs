@@ -160,9 +160,13 @@ namespace TravelEase
                     using (SqlConnection conn = new SqlConnection(connStr))
                     {
                         SqlCommand cmd = new SqlCommand(query, conn);
+                        query = "DELETE FROM ModeratorTripReviews where TReviewID = @TReviewID";
+                        SqlCommand cmd1 = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@TReviewID", reviewId);
+                        cmd1.Parameters.AddWithValue("@TReviewID", reviewId);
                         conn.Open();
                         cmd.ExecuteNonQuery();
+                        cmd1.ExecuteNonQuery();
                         conn.Close();
                     }
                     MessageBox.Show("Review deleted successfully.");
@@ -184,9 +188,13 @@ namespace TravelEase
                     using (SqlConnection conn = new SqlConnection(connStr))
                     {
                         SqlCommand cmd = new SqlCommand(query, conn);
+                        query = "DELETE FROM ModerateServiceReviews where SReviewID = @SReviewID";
+                        SqlCommand cmd1 = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@SReviewID", reviewId);
+                        cmd1.Parameters.AddWithValue("@SReviewID", reviewId);
                         conn.Open();
                         cmd.ExecuteNonQuery();
+                        cmd1.ExecuteNonQuery();
                         conn.Close();
                     }
                     MessageBox.Show("Review deleted successfully.");
