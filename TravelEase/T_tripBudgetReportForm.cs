@@ -26,7 +26,7 @@ namespace TravelEase
             reportViewer1.ProcessingMode = ProcessingMode.Local;
 
             // Set the report path
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\Basit Junaid\\source\\repos\\TravelEase\\TravelEase\\T_tripBudgetReport.rdlc";
+            reportViewer1.LocalReport.ReportPath = "T_tripBudgetReport.rdlc";
 
             // Create and populate a data source
             ReportDataSource dataSource = new ReportDataSource();

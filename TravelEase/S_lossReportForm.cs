@@ -28,7 +28,7 @@ namespace TravelEase
 
         private void reportViewer1_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\Basit Junaid\\source\\repos\\TravelEase\\TravelEase\\S_lossReport.rdlc";
+            reportViewer1.LocalReport.ReportPath = "S_lossReport.rdlc";
 
             // Create and populate a data source
             ReportDataSource dataSource = new ReportDataSource();

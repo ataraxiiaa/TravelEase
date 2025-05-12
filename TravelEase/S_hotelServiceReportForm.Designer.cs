@@ -33,7 +33,7 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TravelEase.H_hotelServiceReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TravelEase.S_hotelServiceReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(92, 35);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
@@ -41,14 +41,14 @@
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // hotelServiceReportForm
+            // S_hotelServiceReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1357, 646);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "hotelServiceReportForm";
+            this.Name = "S_hotelServiceReportForm";
             this.Text = "hotelServiceReportForm";
             this.Load += new System.EventHandler(this.hotelServiceReportForm_Load);
             this.ResumeLayout(false);

@@ -31,7 +31,7 @@ namespace TravelEase
             reportViewer1.ProcessingMode = ProcessingMode.Local;
 
             // Set the report path
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\Basit Junaid\\Source\\Repos\\TravelEase\\TravelEase\\S_guideReport.rdlc";
+            reportViewer1.LocalReport.ReportPath = "S_guideReport.rdlc";
 
             // Create and populate a data source
             ReportDataSource dataSource = new ReportDataSource();

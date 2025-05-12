@@ -497,7 +497,9 @@
     <EmbeddedResource Include="S_abandonedBookings.resx">
       <DependentUpon>S_abandonedBookings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_disputeReport.rdlc" />
+    <EmbeddedResource Include="S_disputeReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_disputeReportForm.resx">
       <DependentUpon>S_disputeReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,7 +512,9 @@
     <EmbeddedResource Include="S_analysisView.resx">
       <DependentUpon>S_analysisView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_lossReport.rdlc" />
+    <EmbeddedResource Include="S_lossReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_lossReportForm.resx">
       <DependentUpon>S_lossReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,7 +524,9 @@
     <EmbeddedResource Include="H_serviceListing.resx">
       <DependentUpon>H_serviceListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_hotelServiceReport.rdlc" />
+    <EmbeddedResource Include="S_hotelServiceReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -541,16 +547,24 @@
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_guideReport.rdlc" />
-    <EmbeddedResource Include="S_paymentReport.rdlc" />
+    <EmbeddedResource Include="S_guideReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_paymentReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_paymentReportForm.resx">
       <DependentUpon>S_paymentReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="S_reasonReportForm.resx">
       <DependentUpon>S_reasonReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="S_reasonsReport.rdlc" />
-    <EmbeddedResource Include="S_transportReport.rdlc" />
+    <EmbeddedResource Include="S_reasonsReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_transportReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="S_transportReportForm.resx">
       <DependentUpon>S_transportReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -572,20 +586,30 @@
     <EmbeddedResource Include="TO_Queries.resx">
       <DependentUpon>TO_Queries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="T_touristAgeReport.rdlc" />
+    <EmbeddedResource Include="T_touristAgeReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="T_touristDemoReportForm.resx">
       <DependentUpon>T_touristDemoReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="T_touristNationalityReport.rdlc" />
+    <EmbeddedResource Include="T_touristNationalityReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="T_tripAnalysisReportForm.resx">
       <DependentUpon>T_tripAnalysisReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="T_tripBudgetReport.rdlc" />
+    <EmbeddedResource Include="T_tripBudgetReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="T_tripBudgetReportForm.resx">
       <DependentUpon>T_tripBudgetReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="T_tripCategoryReport.rdlc" />
-    <EmbeddedResource Include="T_tripDestinationReport.rdlc" />
+    <EmbeddedResource Include="T_tripCategoryReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_tripDestinationReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="bookingDataset.xsc">
       <DependentUpon>bookingDataset.xsd</DependentUpon>
     </None>
