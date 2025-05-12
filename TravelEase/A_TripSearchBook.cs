@@ -180,22 +180,22 @@ namespace TravelEase
                 conn.Open();
 
                 // First verify the trip exists and has available spots
-                string verifyQuery = @"
-        SELECT TAvailableSpots 
-        FROM Trip 
-        WHERE TripID = @TripId";
+        //        string verifyQuery = @"
+        //SELECT TAvailableSpots 
+        //FROM Trip 
+        //WHERE TripID = @TripId";
 
-                SqlCommand verifyCmd = new SqlCommand(verifyQuery, conn);
-                verifyCmd.Parameters.AddWithValue("@TripId", tripId);
+        //        SqlCommand verifyCmd = new SqlCommand(verifyQuery, conn);
+        //        verifyCmd.Parameters.AddWithValue("@TripId", tripId);
 
-                int availableSpots = (int)verifyCmd.ExecuteScalar();
+        //        int availableSpots = (int)verifyCmd.ExecuteScalar();
 
-                if (availableSpots <= 0)
-                {
-                    MessageBox.Show("No available spots left for this trip", "Error",
-                                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+        //        if (availableSpots <= 0)
+        //        {
+        //            MessageBox.Show("No available spots left for this trip", "Error",
+        //                           MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
 
                 // Start transaction to ensure all operations complete successfully
                 SqlTransaction transaction = conn.BeginTransaction();
@@ -205,7 +205,7 @@ namespace TravelEase
                     // 1. Create a new booking record
                     string insertBookingQuery = @"
             INSERT INTO Booking (BStatus, BDate) 
-            VALUES (1, @BookingDate); 
+            VALUES (0, @BookingDate); 
             SELECT SCOPE_IDENTITY();"; // Get the new BookingID
 
                     SqlCommand insertBookingCmd = new SqlCommand(insertBookingQuery, conn, transaction);
@@ -224,14 +224,14 @@ namespace TravelEase
                     insertTouristBookingCmd.ExecuteNonQuery();
 
                     // 3. Update available spots in the trip
-                    string updateTripQuery = @"
-            UPDATE Trip 
-            SET TAvailableSpots = TAvailableSpots - 1 
-            WHERE TripID = @TripId";
+            //        string updateTripQuery = @"
+            //UPDATE Trip 
+            //SET TAvailableSpots = TAvailableSpots - 1 
+            //WHERE TripID = @TripId";
 
-                    SqlCommand updateTripCmd = new SqlCommand(updateTripQuery, conn, transaction);
-                    updateTripCmd.Parameters.AddWithValue("@TripId", tripId);
-                    updateTripCmd.ExecuteNonQuery();
+                    //SqlCommand updateTripCmd = new SqlCommand(updateTripQuery, conn, transaction);
+                    //updateTripCmd.Parameters.AddWithValue("@TripId", tripId);
+                    //updateTripCmd.ExecuteNonQuery();
 
                     // Commit transaction if all operations succeeded
                     transaction.Commit();
@@ -251,10 +251,11 @@ namespace TravelEase
                 }
             }
         }
-
+        
         private void TripIdBook_TextChanged_1(object sender, EventArgs e)
         {
 
         }
+
     }
 }
