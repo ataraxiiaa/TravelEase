@@ -75,7 +75,7 @@ namespace TravelEase
             this.addUserButton.Name = "addUserButton";
             this.addUserButton.Size = new System.Drawing.Size(172, 42);
             this.addUserButton.TabIndex = 3;
-            this.addUserButton.Text = "Register User";
+            this.addUserButton.Text = "Activate User";
             this.addUserButton.UseVisualStyleBackColor = false;
             this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
             // 

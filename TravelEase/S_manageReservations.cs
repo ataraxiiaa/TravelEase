@@ -111,10 +111,33 @@ namespace TravelEase
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             S_paymentReportForm s = new S_paymentReportForm();
             s.Show();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            T_touristDemoReportForm t = new T_touristDemoReportForm();
+            t.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            T_tripAnalysisReportForm t = new T_tripAnalysisReportForm();
+            t.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            T_tripBudgetReportForm t = new T_tripBudgetReportForm();
+            t.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            S_disputeReportForm s = new S_disputeReportForm();
+            s.Show();
         }
     }
 }

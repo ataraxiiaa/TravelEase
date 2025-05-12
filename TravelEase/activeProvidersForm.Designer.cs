@@ -51,6 +51,7 @@
             this.growthChart.Size = new System.Drawing.Size(784, 436);
             this.growthChart.TabIndex = 0;
             this.growthChart.Text = "chart1";
+            this.growthChart.Click += new System.EventHandler(this.growthChart_Click_1);
             // 
             // activeProvidersForm
             // 

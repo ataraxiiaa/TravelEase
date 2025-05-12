@@ -91,7 +91,7 @@ namespace TravelEase
                     {
                         int avgSeconds = Convert.ToInt32(result);
                         TimeSpan responseTime = TimeSpan.FromSeconds(avgSeconds);
-                        avgresponse_lbl.Text = $"Avg Response Time: {responseTime.Hours}h {responseTime.Minutes}m {responseTime.Seconds}s";
+                        avgresponse_lbl.Text = $"Response Time: {responseTime.Hours}h {responseTime.Minutes}m {responseTime.Seconds}s";
                     }
                     else
                     {

@@ -167,7 +167,7 @@ namespace TravelEase
                 query = @"
                 SELECT u.UserID
                 FROM UserInfo u
-                INNER JOIN ServiceProivder r ON u.UserID = r.ServiceProivderID
+                INNER JOIN ServiceProvider r ON u.UserID = r.ServiceProviderID
                 WHERE u.UName = @username AND u.UPassword = @password";
             }
 
@@ -209,7 +209,7 @@ namespace TravelEase
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Register regForm = new Register();
+            Register regForm = new Register(this.userType);
             regForm.StartPosition = FormStartPosition.Manual;
             regForm.Location = this.Location;
             regForm.Show();

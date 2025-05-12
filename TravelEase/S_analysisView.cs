@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class H_analysisView : UserControl
+    public partial class S_analysisView : UserControl
     {
-        public H_analysisView()
+        public S_analysisView()
         {
             InitializeComponent();
         }
@@ -109,6 +109,18 @@ namespace TravelEase
         private void reportButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            T_touristDemoReportForm t = new T_touristDemoReportForm();
+            t.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            T_tripAnalysisReportForm t = new T_tripAnalysisReportForm();
+            t.Show();
         }
     }
 }

@@ -292,7 +292,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>1.08in</Top>
         <Left>1.005in</Left>
-        <Height>1.04167in</Height>
+        <Height>1.04166in</Height>
         <Width>6.575in</Width>
         <Style>
           <Border>
@@ -345,24 +345,6 @@
         <DataSourceName>growthData</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
-      <Fields>
-        <Field Name="month">
-          <DataField>month</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="touristcount">
-          <DataField>touristcount</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="operatorcount">
-          <DataField>operatorcount</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="serviceprovidercount">
-          <DataField>serviceprovidercount</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>growthData</rd:DataSetName>
         <rd:SchemaPath>C:\Users\pogch\OneDrive\Desktop\DB-Project-Module2\TravelEase\TravelEase\growthData.xsd</rd:SchemaPath>

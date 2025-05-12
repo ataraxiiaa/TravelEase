@@ -64,5 +64,10 @@ namespace TravelEase
         {
 
         }
+
+        private void growthChart_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

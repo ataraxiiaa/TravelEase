@@ -22,7 +22,7 @@ namespace TravelEase
 
         private void S_paymentReportForm_Load(object sender, EventArgs e)
         {
-            reportViewer1.LocalReport.ReportPath = "C:\\Users\\Basit Junaid\\source\\repos\\TravelEase\\TravelEase\\S_paymentReport.rdlc";
+            reportViewer1.LocalReport.ReportPath = "S_paymentReport.rdlc";
 
             // Create and populate a data source
             ReportDataSource dataSource = new ReportDataSource();
