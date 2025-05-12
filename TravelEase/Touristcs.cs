@@ -54,7 +54,7 @@ namespace TravelEase
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //LoadView(new A_Profile(userId));
+            LoadView(new A_Profile(userId));
         }
 
         private void button1_Click(object sender, EventArgs e)
