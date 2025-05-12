@@ -149,7 +149,7 @@ namespace TravelEase
                 }
                 else if (userType == 1) // Admin
                 {
-                    string insertMod = "INSERT INTO Moderator (ModID, MUsername, MPassword) VALUES (@ID, @UName, @UPassword)";
+                    string insertMod = "INSERT INTO Moderator (MUsername, MPassword) VALUES (@UName, @UPassword)";
                     cmd = new SqlCommand(insertMod, conn);
                     cmd.Parameters.AddWithValue("@ID", newUserId);
                     cmd.Parameters.AddWithValue("@UName", username);
