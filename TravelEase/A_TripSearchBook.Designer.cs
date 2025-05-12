@@ -47,6 +47,8 @@ namespace TravelEase
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxPrice = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +180,7 @@ namespace TravelEase
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(936, 47);
+            this.label1.Location = new System.Drawing.Point(833, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 13;
@@ -250,11 +252,34 @@ namespace TravelEase
             this.label7.TabIndex = 19;
             this.label7.Text = "Activity Type";
             // 
+            // comboBoxPrice
+            // 
+            this.comboBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.comboBoxPrice.FormattingEnabled = true;
+            this.comboBoxPrice.Location = new System.Drawing.Point(12, 161);
+            this.comboBoxPrice.Name = "comboBoxPrice";
+            this.comboBoxPrice.Size = new System.Drawing.Size(120, 28);
+            this.comboBoxPrice.TabIndex = 20;
+            this.comboBoxPrice.Text = "Date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(8, 138);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Price";
+            // 
             // A_TripSearchBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBoxPrice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -291,5 +316,7 @@ namespace TravelEase
         private Label label5;
         private Label label6;
         private Label label7;
+        private ComboBox comboBoxPrice;
+        private Label label8;
     }
 }

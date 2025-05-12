@@ -26,6 +26,9 @@ namespace TravelEase
             {
                 conn.Open();
 
+                FillCombo(conn,
+                          "SELECT DISTINCT TPrice FROM Trip order by TPrice DESC",
+                          comboBoxPrice, "TPrice", "TPrice");
                 // Populate Date dropdown
                 FillCombo(conn,
                           "SELECT DISTINCT CAST(TDate AS DATE) AS TDate FROM Trip",
@@ -91,6 +94,11 @@ namespace TravelEase
 
             var parameters = new List<SqlParameter>();
 
+            if (comboBoxDate.SelectedIndex != -1)
+            {
+                sql += " AND t.TPrice = @Price";
+                parameters.Add(new SqlParameter("@TPrice", comboBoxPrice.SelectedValue));
+            }
             if (comboBoxDate.SelectedIndex != -1)
             {
                 sql += " AND CAST(t.TDate AS DATE) = CAST(@TDate AS DATE)";
