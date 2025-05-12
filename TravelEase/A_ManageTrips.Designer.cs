@@ -34,7 +34,6 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.deleteTripbtn = new System.Windows.Forms.Button();
-            this.AddTripbtn = new System.Windows.Forms.Button();
             this.TripsDataGridView = new System.Windows.Forms.DataGridView();
             this.trips_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TripsDataGridView)).BeginInit();
@@ -57,7 +56,7 @@
             // 
             this.searchTextBox.Location = new System.Drawing.Point(4, 57);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(222, 23);
+            this.searchTextBox.Size = new System.Drawing.Size(222, 20);
             this.searchTextBox.TabIndex = 20;
             this.searchTextBox.Text = "Search for Trips...";
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
@@ -67,7 +66,7 @@
             // filterComboBox
             // 
             this.filterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.filterComboBox.ItemHeight = 17;
+            this.filterComboBox.ItemHeight = 13;
             this.filterComboBox.Items.AddRange(new object[] {
             "TripID",
             "Group Size",
@@ -76,7 +75,7 @@
             "Duration"});
             this.filterComboBox.Location = new System.Drawing.Point(232, 55);
             this.filterComboBox.Name = "filterComboBox";
-            this.filterComboBox.Size = new System.Drawing.Size(112, 25);
+            this.filterComboBox.Size = new System.Drawing.Size(112, 21);
             this.filterComboBox.TabIndex = 19;
             // 
             // searchButton
@@ -96,7 +95,7 @@
             this.refreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshButton.ForeColor = System.Drawing.Color.White;
-            this.refreshButton.Location = new System.Drawing.Point(996, 230);
+            this.refreshButton.Location = new System.Drawing.Point(996, 171);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(173, 45);
             this.refreshButton.TabIndex = 17;
@@ -109,26 +108,13 @@
             this.deleteTripbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.deleteTripbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteTripbtn.ForeColor = System.Drawing.Color.White;
-            this.deleteTripbtn.Location = new System.Drawing.Point(996, 168);
+            this.deleteTripbtn.Location = new System.Drawing.Point(996, 107);
             this.deleteTripbtn.Name = "deleteTripbtn";
             this.deleteTripbtn.Size = new System.Drawing.Size(172, 45);
             this.deleteTripbtn.TabIndex = 16;
             this.deleteTripbtn.Text = "Delete Trip";
             this.deleteTripbtn.UseVisualStyleBackColor = false;
             this.deleteTripbtn.Click += new System.EventHandler(this.deleteTripbtn_Click);
-            // 
-            // AddTripbtn
-            // 
-            this.AddTripbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.AddTripbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddTripbtn.ForeColor = System.Drawing.Color.White;
-            this.AddTripbtn.Location = new System.Drawing.Point(996, 107);
-            this.AddTripbtn.Name = "AddTripbtn";
-            this.AddTripbtn.Size = new System.Drawing.Size(172, 43);
-            this.AddTripbtn.TabIndex = 15;
-            this.AddTripbtn.Text = "Add Trip";
-            this.AddTripbtn.UseVisualStyleBackColor = false;
-            this.AddTripbtn.Click += new System.EventHandler(this.AddTripbtn_Click);
             // 
             // TripsDataGridView
             // 
@@ -148,14 +134,14 @@
             this.trips_lbl.ForeColor = System.Drawing.Color.White;
             this.trips_lbl.Location = new System.Drawing.Point(0, 0);
             this.trips_lbl.Name = "trips_lbl";
-            this.trips_lbl.Size = new System.Drawing.Size(221, 45);
+            this.trips_lbl.Size = new System.Drawing.Size(181, 37);
             this.trips_lbl.TabIndex = 12;
             this.trips_lbl.Text = "Manage Trips";
             // 
             // A_ManageTrips
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.Controls.Add(this.saveBtn);
@@ -164,7 +150,6 @@
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.deleteTripbtn);
-            this.Controls.Add(this.AddTripbtn);
             this.Controls.Add(this.TripsDataGridView);
             this.Controls.Add(this.trips_lbl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,7 +171,6 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Button deleteTripbtn;
-        private System.Windows.Forms.Button AddTripbtn;
         private System.Windows.Forms.DataGridView TripsDataGridView;
         private System.Windows.Forms.Label trips_lbl;
     }

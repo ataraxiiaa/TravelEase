@@ -72,7 +72,36 @@ namespace TravelEase
 
         private void deleteTripbtn_Click(object sender, EventArgs e)
         {
+            if (TripsDataGridView.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a trip to delete.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int tripId = Convert.ToInt32(TripsDataGridView.SelectedRows[0].Cells["TripID"].Value);
+            string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
+            string query = "DELETE FROM Trip WHERE TripID = @TripID";
+
+            DialogResult result = MessageBox.Show("Are you sure you want to delete this trip?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result != DialogResult.Yes) return;
+
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+             conn.Open();
+             SqlCommand cmd = new SqlCommand(query, conn);
+             cmd.Parameters.AddWithValue("@TripID", tripId);
+
+             int rowsAffected = cmd.ExecuteNonQuery();
+             if (rowsAffected > 0)
+             {
+                 MessageBox.Show("Trip deleted successfully.");
+                 LoadAllTrips(); // Refresh
+             }
+             else
+             {
+                 MessageBox.Show("Trip not found or couldn't be deleted.");
+             }
+            }
         }
     }
 }

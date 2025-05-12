@@ -16,7 +16,7 @@ namespace TravelEase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Touristcs(2));
+            Application.Run(new Admin("Ali"));
         }
     }
 }
