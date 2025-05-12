@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace TravelEase
 {
-    public partial class H_manageReservations : UserControl
+    public partial class S_manageReservations : UserControl
     {
-        public H_manageReservations()
+        public S_manageReservations()
         {
             InitializeComponent();
             this.Load += H_manageReservations_Load;
@@ -112,8 +112,8 @@ namespace TravelEase
         private void reportButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            H_manageReservationsReportForm h_ManageReservationsReportForm = new H_manageReservationsReportForm();
-            h_ManageReservationsReportForm.Show();
+            S_paymentReportForm s = new S_paymentReportForm();
+            s.Show();
 
         }
     }

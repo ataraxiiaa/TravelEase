@@ -26,7 +26,7 @@ namespace TravelEase
         }
         private void Hotel_Load(object sender, EventArgs e)
         {
-            LoadView(new H_manageReservations());
+            LoadView(new S_manageReservations());
         }
 
         private void Dashboard_btn_Click(object sender, EventArgs e)
@@ -46,12 +46,17 @@ namespace TravelEase
 
         private void manageReservationsButton_Click(object sender, EventArgs e)
         {
-            LoadView(new H_manageReservations());
+            LoadView(new S_manageReservations());
         }
 
         private void serviceListingButton_Click(object sender, EventArgs e)
         {
             LoadView(new H_serviceListing());
+        }
+
+        private void abandonedButton_Click(object sender, EventArgs e)
+        {
+            LoadView(new S_abandonedBookings());
         }
     }
 }

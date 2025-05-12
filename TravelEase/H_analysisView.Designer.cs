@@ -38,7 +38,6 @@
             this.tourismDatabaseDataSet = new TravelEase.tourismDatabaseDataSet();
             this.servicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.servicesTableAdapter = new TravelEase.tourismDatabaseDataSetTableAdapters.ServicesTableAdapter();
-            this.reportButton = new System.Windows.Forms.Button();
             this.analysisPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tourismDatabaseDataSet)).BeginInit();
@@ -130,18 +129,6 @@
             // 
             this.servicesTableAdapter.ClearBeforeFill = true;
             // 
-            // reportButton
-            // 
-            this.reportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.reportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.reportButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reportButton.Location = new System.Drawing.Point(717, 463);
-            this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(128, 52);
-            this.reportButton.TabIndex = 13;
-            this.reportButton.Text = "Get Report";
-            this.reportButton.UseVisualStyleBackColor = false;
-            // 
             // H_analysisView
             // 
             this.AccessibleName = "";
@@ -149,7 +136,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Controls.Add(this.reportButton);
             this.Controls.Add(this.getOccupanyButton);
             this.Controls.Add(this.getRevenueButton);
             this.Controls.Add(this.getFeedbackButton);
@@ -180,6 +166,5 @@
         private System.Windows.Forms.BindingSource servicesBindingSource;
         private tourismDatabaseDataSet tourismDatabaseDataSet;
         private tourismDatabaseDataSetTableAdapters.ServicesTableAdapter servicesTableAdapter;
-        private System.Windows.Forms.Button reportButton;
     }
 }

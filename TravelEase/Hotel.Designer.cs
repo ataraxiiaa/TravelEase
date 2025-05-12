@@ -37,6 +37,7 @@
             this.manageReservationsButton = new System.Windows.Forms.Button();
             this.serviceListingButton = new System.Windows.Forms.Button();
             this.analysisButton = new System.Windows.Forms.Button();
+            this.abandonedButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.abandonedButton);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.manageReservationsButton);
@@ -163,6 +165,23 @@
             this.analysisButton.UseVisualStyleBackColor = true;
             this.analysisButton.Click += new System.EventHandler(this.Dashboard_btn_Click);
             // 
+            // abandonedButton
+            // 
+            this.abandonedButton.FlatAppearance.BorderSize = 0;
+            this.abandonedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abandonedButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abandonedButton.ForeColor = System.Drawing.Color.White;
+            this.abandonedButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.abandonedButton.Location = new System.Drawing.Point(4, 298);
+            this.abandonedButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.abandonedButton.Name = "abandonedButton";
+            this.abandonedButton.Size = new System.Drawing.Size(220, 42);
+            this.abandonedButton.TabIndex = 4;
+            this.abandonedButton.Text = "Abandoned Bookings";
+            this.abandonedButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.abandonedButton.UseVisualStyleBackColor = true;
+            this.abandonedButton.Click += new System.EventHandler(this.abandonedButton_Click);
+            // 
             // Hotel
             // 
             this.AccessibleName = "";
@@ -198,5 +217,6 @@
         private System.Windows.Forms.Button serviceListingButton;
         private System.Windows.Forms.Button analysisButton;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Button abandonedButton;
     }
 }

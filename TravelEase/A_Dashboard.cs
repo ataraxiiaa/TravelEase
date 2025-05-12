@@ -91,5 +91,20 @@ namespace TravelEase
             r.Show();
             r.BringToFront();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide(); ;
+            Hotel hotel = new Hotel();
+            hotel.Activate();
+            hotel.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Touristcs t = new Touristcs();
+            t.Show();
+        }
     }
 }

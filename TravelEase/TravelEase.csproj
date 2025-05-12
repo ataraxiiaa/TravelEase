@@ -210,23 +210,46 @@
     <Compile Include="Hotel.Designer.cs">
       <DependentUpon>Hotel.cs</DependentUpon>
     </Compile>
+    <Compile Include="paymentDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="S_abandonedBookings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="S_abandonedBookings.Designer.cs">
+      <DependentUpon>S_abandonedBookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_guideReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_guideReportForm.Designer.cs">
+      <DependentUpon>S_guideReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_hotelServiceReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_hotelServiceReportForm.Designer.cs">
+      <DependentUpon>S_hotelServiceReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="H_analysisView.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="H_analysisView.Designer.cs">
       <DependentUpon>H_analysisView.cs</DependentUpon>
     </Compile>
-    <Compile Include="H_manageReservations.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="H_manageReservations.Designer.cs">
-      <DependentUpon>H_manageReservations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="H_manageReservationsReportForm.cs">
+    <Compile Include="S_lossReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="H_manageReservationsReportForm.Designer.cs">
-      <DependentUpon>H_manageReservationsReportForm.cs</DependentUpon>
+    <Compile Include="S_lossReportForm.Designer.cs">
+      <DependentUpon>S_lossReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_manageReservations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="S_manageReservations.Designer.cs">
+      <DependentUpon>S_manageReservations.cs</DependentUpon>
     </Compile>
     <Compile Include="H_serviceListing.cs">
       <SubType>UserControl</SubType>
@@ -240,16 +263,79 @@
     <Compile Include="StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="S_paymentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_paymentReportForm.Designer.cs">
+      <DependentUpon>S_paymentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_reasonReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_reasonReportForm.Designer.cs">
+      <DependentUpon>S_reasonReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S_transportReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S_transportReportForm.Designer.cs">
+      <DependentUpon>S_transportReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="tourismDatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tourismDatabaseDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="Touristcs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Touristcs.Designer.cs">
       <DependentUpon>Touristcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TouristReviewOperator.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TouristReviewOperator.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TouristReviewTripDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TouristReviewTripDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TourOperator.cs">
       <SubType>Form</SubType>
@@ -289,6 +375,11 @@
     </Compile>
     <Compile Include="TO_Queries.Designer.cs">
       <DependentUpon>TO_Queries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transportDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transportDataset.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="activeProvidersForm.resx">
       <DependentUpon>activeProvidersForm.cs</DependentUpon>
@@ -353,20 +444,29 @@
     <EmbeddedResource Include="Hotel.resx">
       <DependentUpon>Hotel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="S_abandonedBookings.resx">
+      <DependentUpon>S_abandonedBookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_guideReportForm.resx">
+      <DependentUpon>S_guideReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_hotelServiceReportForm.resx">
+      <DependentUpon>S_hotelServiceReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="H_analysisView.resx">
       <DependentUpon>H_analysisView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="H_manageReservations.resx">
-      <DependentUpon>H_manageReservations.cs</DependentUpon>
+    <EmbeddedResource Include="S_lossReport.rdlc" />
+    <EmbeddedResource Include="S_lossReportForm.resx">
+      <DependentUpon>S_lossReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="H_ManageReservationsReport.rdlc" />
-    <EmbeddedResource Include="H_manageReservationsReportForm.resx">
-      <DependentUpon>H_manageReservationsReportForm.cs</DependentUpon>
+    <EmbeddedResource Include="S_manageReservations.resx">
+      <DependentUpon>S_manageReservations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="H_serviceListing.resx">
       <DependentUpon>H_serviceListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="H_serviceListingReport.rdlc" />
+    <EmbeddedResource Include="S_hotelServiceReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -386,6 +486,19 @@
     <EmbeddedResource Include="A_growthreport.rdlc" />
     <EmbeddedResource Include="StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_guideReport.rdlc" />
+    <EmbeddedResource Include="S_paymentReport.rdlc" />
+    <EmbeddedResource Include="S_paymentReportForm.resx">
+      <DependentUpon>S_paymentReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_reasonReportForm.resx">
+      <DependentUpon>S_reasonReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S_reasonsReport.rdlc" />
+    <EmbeddedResource Include="S_transportReport.rdlc" />
+    <EmbeddedResource Include="S_transportReportForm.resx">
+      <DependentUpon>S_transportReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Touristcs.resx">
       <DependentUpon>Touristcs.cs</DependentUpon>
@@ -414,6 +527,17 @@
       <DependentUpon>growthData.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="paymentDataset.xsc">
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </None>
+    <None Include="paymentDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>paymentDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="paymentDataset.xss">
+      <DependentUpon>paymentDataset.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -433,6 +557,116 @@
     </None>
     <None Include="tourismDatabaseDataSet.xss">
       <DependentUpon>tourismDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet1.xsc">
+      <DependentUpon>tourismDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet1.xss">
+      <DependentUpon>tourismDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet2.xsc">
+      <DependentUpon>tourismDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet2.xss">
+      <DependentUpon>tourismDatabaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet3.xsc">
+      <DependentUpon>tourismDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet3.xss">
+      <DependentUpon>tourismDatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet4.xsc">
+      <DependentUpon>tourismDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet4.xss">
+      <DependentUpon>tourismDatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet5.xsc">
+      <DependentUpon>tourismDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet5.xss">
+      <DependentUpon>tourismDatabaseDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet6.xsc">
+      <DependentUpon>tourismDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet6.xss">
+      <DependentUpon>tourismDatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xsc">
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tourismDatabaseDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tourismDatabaseDataSet7.xss">
+      <DependentUpon>tourismDatabaseDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TouristReviewOperator.xsc">
+      <DependentUpon>TouristReviewOperator.xsd</DependentUpon>
+    </None>
+    <None Include="TouristReviewOperator.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TouristReviewOperator.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TouristReviewOperator.xss">
+      <DependentUpon>TouristReviewOperator.xsd</DependentUpon>
+    </None>
+    <None Include="TouristReviewTripDataSet.xsc">
+      <DependentUpon>TouristReviewTripDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TouristReviewTripDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TouristReviewTripDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TouristReviewTripDataSet.xss">
+      <DependentUpon>TouristReviewTripDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="transportDataset.xsc">
+      <DependentUpon>transportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="transportDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>transportDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="transportDataset.xss">
+      <DependentUpon>transportDataset.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

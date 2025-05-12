@@ -105,5 +105,10 @@ namespace TravelEase
                 }
             }
         }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
