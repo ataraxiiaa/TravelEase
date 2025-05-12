@@ -2,49 +2,53 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="touristDataset">
+    <DataSource Name="bookingDataset">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>5057bfc3-d3ce-4a30-bed7-5e103f953c0a</rd:DataSourceID>
+      <rd:DataSourceID>2dc43ded-0bdc-4b73-bc77-3697ef6220ed</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="touristNationalityDataset">
+    <DataSet Name="disputeDataset">
       <Query>
-        <DataSourceName>touristDataset</DataSourceName>
+        <DataSourceName>bookingDataset</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="TouristID">
-          <DataField>TouristID</DataField>
+        <Field Name="BookingID">
+          <DataField>BookingID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="TAge">
-          <DataField>TAge</DataField>
+        <Field Name="BCost">
+          <DataField>BCost</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="BDate">
+          <DataField>BDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BStatus">
+          <DataField>BStatus</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="TourOperatorID">
+          <DataField>TourOperatorID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="TNationality">
-          <DataField>TNationality</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="TPreferredCategory">
-          <DataField>TPreferredCategory</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DTPID">
-          <DataField>DTPID</DataField>
+        <Field Name="ServiceProviderID">
+          <DataField>ServiceProviderID</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>touristDataset</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Basit Junaid\Source\Repos\TravelEase\TravelEase\touristDataset.xsd</rd:SchemaPath>
-        <rd:TableName>Tourist</rd:TableName>
+        <rd:DataSetName>bookingDataset</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Basit Junaid\Source\Repos\TravelEase\TravelEase\bookingDataset.xsd</rd:SchemaPath>
+        <rd:TableName>Booking</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>TouristTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>BookingTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -58,37 +62,35 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!TNationality.Value</GroupExpression>
+                      <GroupExpression>=Fields!BStatus.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!TNationality.Value</Value>
+                      <Value>=Fields!BStatus.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!TNationality.Value</Label>
+                  <Label>=Fields!BStatus.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>TNationality</Label>
+                  <Label>BStatus</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="TNationality">
+                <ChartSeries Name="BStatus">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Count(Fields!TNationality.Value)</Y>
+                        <Y>=Count(Fields!BStatus.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <UseValueAsLabel>true</UseValueAsLabel>
-                        <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
                       <ChartMarker>
@@ -369,7 +371,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Tourist Nationality</Caption>
+                <Caption>Chart Title</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -398,10 +400,9 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>touristNationalityDataset</DataSetName>
-            <Left>1.36737cm</Left>
-            <Height>10.45253cm</Height>
-            <Width>14.4215cm</Width>
+            <DataSetName>disputeDataset</DataSetName>
+            <Height>7.5527cm</Height>
+            <Width>15.0692cm</Width>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -412,7 +413,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.11517in</Height>
+        <Height>2.9735in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>
@@ -435,5 +436,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>3b2fe385-3f3b-4b2c-9845-380663720a7a</rd:ReportID>
+  <rd:ReportID>effd5e40-0612-4a80-9686-cb674dfbf3de</rd:ReportID>
 </Report>

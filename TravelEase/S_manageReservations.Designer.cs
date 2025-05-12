@@ -36,9 +36,8 @@
             this.managerReservationsHeader = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.reportButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.reservationsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reservationsDataViewer)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +120,7 @@
             // 
             this.reportButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.reportButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.reportButton.Location = new System.Drawing.Point(696, 463);
+            this.reportButton.Location = new System.Drawing.Point(421, 463);
             this.reportButton.Name = "reportButton";
             this.reportButton.Size = new System.Drawing.Size(128, 52);
             this.reportButton.TabIndex = 7;
@@ -129,41 +128,29 @@
             this.reportButton.UseVisualStyleBackColor = false;
             this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(545, 463);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 52);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Get Tourist Report";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(395, 463);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 52);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Get Trip Analysis";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(841, 463);
+            this.button4.Location = new System.Drawing.Point(714, 463);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 52);
             this.button4.TabIndex = 10;
             this.button4.Text = "Get Trip Analysis";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(568, 463);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(128, 52);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Get Dispution Reports";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // S_manageReservations
             // 
@@ -172,9 +159,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.reportButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reservationsPanel);
@@ -201,8 +187,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookingStatus;
         private System.Windows.Forms.Button reportButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -61,14 +61,12 @@ namespace TravelEase
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
             S_reasonReportForm s = new S_reasonReportForm();
             s.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
             S_lossReportForm s = new S_lossReportForm();
             s.Show();
         }

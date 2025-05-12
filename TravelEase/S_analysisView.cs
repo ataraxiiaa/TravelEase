@@ -110,5 +110,17 @@ namespace TravelEase
         {
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            T_touristDemoReportForm t = new T_touristDemoReportForm();
+            t.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            T_tripAnalysisReportForm t = new T_tripAnalysisReportForm();
+            t.Show();
+        }
     }
 }

@@ -70,7 +70,6 @@ namespace TravelEase
 
         private void reportButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
             if (option == 1)
             {
                 S_hotelServiceReportForm h = new S_hotelServiceReportForm();
