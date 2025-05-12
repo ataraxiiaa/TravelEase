@@ -101,7 +101,7 @@ namespace TravelEase
             this.deleteUserButton.Name = "deleteUserButton";
             this.deleteUserButton.Size = new System.Drawing.Size(172, 45);
             this.deleteUserButton.TabIndex = 5;
-            this.deleteUserButton.Text = "Delete User";
+            this.deleteUserButton.Text = "De-activate User";
             this.deleteUserButton.UseVisualStyleBackColor = false;
             this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
             // 

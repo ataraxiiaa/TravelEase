@@ -59,7 +59,7 @@ namespace TravelEase
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 693);
+            this.panel1.Size = new System.Drawing.Size(231, 704);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -70,7 +70,7 @@ namespace TravelEase
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 148);
+            this.panel2.Size = new System.Drawing.Size(231, 148);
             this.panel2.TabIndex = 3;
             // 
             // username_lbl
@@ -97,9 +97,9 @@ namespace TravelEase
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(220, 0);
+            this.panelMain.Location = new System.Drawing.Point(231, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1221, 693);
+            this.panelMain.Size = new System.Drawing.Size(1214, 704);
             this.panelMain.TabIndex = 1;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
@@ -119,14 +119,14 @@ namespace TravelEase
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::TravelEase.Properties.Resources.icons8_settings_30;
+            this.button5.Image = global::TravelEase.Properties.Resources.icons8_logout_30__1_;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(0, 651);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 42);
             this.button5.TabIndex = 2;
-            this.button5.Text = "Settings";
+            this.button5.Text = "Sign Out";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -214,7 +214,7 @@ namespace TravelEase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1441, 693);
+            this.ClientSize = new System.Drawing.Size(1445, 704);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

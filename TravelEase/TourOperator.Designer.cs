@@ -33,17 +33,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.name_lbl = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.Trips_btn = new System.Windows.Forms.Button();
             this.Users_btn = new System.Windows.Forms.Button();
             this.Dashboard_btn = new System.Windows.Forms.Button();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,6 +103,15 @@
             this.name_lbl.Text = "Hi, Welcome!";
             this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
             // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.panel1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1441, 693);
+            this.panelMain.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TravelEase.Properties.Resources.icons8_male_user_100;
@@ -119,16 +128,17 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::TravelEase.Properties.Resources.icons8_settings_30;
+            this.button5.Image = global::TravelEase.Properties.Resources.icons8_logout_30__1_2;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.Location = new System.Drawing.Point(0, 651);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 42);
             this.button5.TabIndex = 2;
-            this.button5.Text = "Settings";
+            this.button5.Text = "Sign Out";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Trips_btn
             // 
@@ -184,15 +194,6 @@
             this.Dashboard_btn.UseVisualStyleBackColor = true;
             this.Dashboard_btn.Click += new System.EventHandler(this.Dashboard_btn_Click);
             // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.panel1);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1441, 693);
-            this.panelMain.TabIndex = 2;
-            // 
             // TourOperator
             // 
             this.AccessibleName = "";
@@ -214,8 +215,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

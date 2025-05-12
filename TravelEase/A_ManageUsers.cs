@@ -59,7 +59,7 @@ namespace TravelEase
             string connection = ConfigurationManager.ConnectionStrings["Myconn"].ConnectionString;
             DataGridViewRow row = usersDataGridView.SelectedRows[0];
             int id = Convert.ToInt32(row.Cells["UserID"].Value);
-            string query = "DELETE FROM UserInfo WHERE UserID = @UserID";
+            string query = "UPDATE userinfo set UAccountStatus = 0 WHERE UserID = @UserID";
 
             using (SqlConnection conn = new SqlConnection(connection))
             {
@@ -72,7 +72,7 @@ namespace TravelEase
                         int n = cmd.ExecuteNonQuery();
                         if (n > 0)
                         {
-                            MessageBox.Show("User deleted successfully.");
+                            MessageBox.Show("User deactivated successfully.");
                             refreshButton.PerformClick();
                         }
                         else

@@ -27,7 +27,7 @@ namespace TravelEase
         private void S_abandonedBookings_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tourismDatabaseDataSet.AbandonedBookings' table. You can move, or remove it, as needed.
-            this.abandonedBookingsTableAdapter.Fill(this.tourismDatabaseDataSet.AbandonedBookings);
+            // this.abandonedBookingsTableAdapter.Fill(this.tourismDatabaseDataSet.AbandonedBookings);
 
         }
 

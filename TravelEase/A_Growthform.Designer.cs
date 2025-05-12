@@ -33,12 +33,12 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            // this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.growthData = new TravelEase.growthData();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.growthChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.growthData1 = new TravelEase.growthData();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            // ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthData1)).BeginInit();
@@ -46,8 +46,8 @@
             // 
             // dataTable1BindingSource
             // 
-            this.dataTable1BindingSource.DataMember = "DataTable1";
-            this.dataTable1BindingSource.DataSource = this.growthData;
+            // this.dataTable1BindingSource.DataMember = "DataTable1";
+            // this.dataTable1BindingSource.DataSource = this.growthData;
             // 
             // growthData
             // 
@@ -58,7 +58,6 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "TravelEase.A_growthreport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -101,7 +100,6 @@
             this.Name = "A_Growthform";
             this.Text = "A_Growthform";
             this.Load += new System.EventHandler(this.A_Growthform_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.growthData1)).EndInit();

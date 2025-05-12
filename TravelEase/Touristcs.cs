@@ -66,5 +66,12 @@ namespace TravelEase
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StartScreen s = new StartScreen();
+            s.Show();
+            this.Close();
+        }
     }
 }

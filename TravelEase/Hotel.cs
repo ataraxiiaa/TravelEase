@@ -58,5 +58,12 @@ namespace TravelEase
         {
             LoadView(new S_abandonedBookings());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            StartScreen s = new StartScreen();
+            s.Show();
+            this.Close();
+        }
     }
 }

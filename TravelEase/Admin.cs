@@ -111,7 +111,10 @@ namespace TravelEase
 
         private void button5_Click(object sender, EventArgs e)
         {
-            LoadView(new A_Settings());
+            // LoadView(new A_Settings());
+            StartScreen s = new StartScreen();
+            s.Show();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
