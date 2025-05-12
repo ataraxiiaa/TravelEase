@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.searchPreference = new System.Windows.Forms.TextBox();
             this.approveButton = new System.Windows.Forms.Button();
             this.history = new System.Windows.Forms.Button();
             this.travelHistory = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BookTrip = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.travelHistory)).BeginInit();
             this.SuspendLayout();
-            // 
-            // searchPreference
-            // 
-            this.searchPreference.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchPreference.ForeColor = System.Drawing.Color.Gray;
-            this.searchPreference.Location = new System.Drawing.Point(260, 62);
-            this.searchPreference.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchPreference.Name = "searchPreference";
-            this.searchPreference.Size = new System.Drawing.Size(300, 34);
-            this.searchPreference.TabIndex = 13;
-            this.searchPreference.Text = "Update Preferences";
-            this.searchPreference.Enter += new System.EventHandler(this.searchPreference_Enter);
             // 
             // approveButton
             // 
@@ -87,18 +76,40 @@
             this.travelHistory.TabIndex = 18;
             this.travelHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.travelHistory_CellContentClick);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(308, 62);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(249, 37);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // BookTrip
+            // 
+            this.BookTrip.AutoSize = true;
+            this.BookTrip.Font = new System.Drawing.Font("Rockwell", 16.2F);
+            this.BookTrip.ForeColor = System.Drawing.Color.White;
+            this.BookTrip.Location = new System.Drawing.Point(302, 19);
+            this.BookTrip.Name = "BookTrip";
+            this.BookTrip.Size = new System.Drawing.Size(258, 31);
+            this.BookTrip.TabIndex = 20;
+            this.BookTrip.Text = "Update Preference";
+            // 
             // A_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.Controls.Add(this.BookTrip);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.travelHistory);
             this.Controls.Add(this.history);
             this.Controls.Add(this.approveButton);
-            this.Controls.Add(this.searchPreference);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "A_Profile";
             this.Size = new System.Drawing.Size(1033, 519);
+            this.Load += new System.EventHandler(this.A_Profile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.travelHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -106,10 +117,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox searchPreference;
         private System.Windows.Forms.Button approveButton;
         private System.Windows.Forms.Button history;
         private System.Windows.Forms.DataGridView travelHistory;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label BookTrip;
     }
 }

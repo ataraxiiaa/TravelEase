@@ -257,5 +257,9 @@ namespace TravelEase
 
         }
 
+        private void comboBoxDate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
