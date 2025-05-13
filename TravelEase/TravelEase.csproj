@@ -413,6 +413,48 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tripDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="T_bookingCityReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_bookingCityReportForm.Designer.cs">
+      <DependentUpon>T_bookingCityReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_bookingPeriodReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_bookingPeriodReportForm.Designer.cs">
+      <DependentUpon>T_bookingPeriodReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_bookingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_bookingReportForm.Designer.cs">
+      <DependentUpon>T_bookingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_ratingDestinationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_ratingDestinationReportForm.Designer.cs">
+      <DependentUpon>T_ratingDestinationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_reports.Designer.cs">
+      <DependentUpon>T_reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_revenueBookReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_revenueBookReportForm.Designer.cs">
+      <DependentUpon>T_revenueBookReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="T_revenueCatReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="T_revenueCatReportForm.Designer.cs">
+      <DependentUpon>T_revenueCatReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="T_touristDemoReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -585,6 +627,43 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TO_Queries.resx">
       <DependentUpon>TO_Queries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingCityReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingCityReportForm.resx">
+      <DependentUpon>T_bookingCityReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingPeriodReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingPeriodReportForm.resx">
+      <DependentUpon>T_bookingPeriodReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_bookingReportForm.resx">
+      <DependentUpon>T_bookingReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_ratingDestinationReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_ratingDestinationReportForm.resx">
+      <DependentUpon>T_ratingDestinationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_reports.resx">
+      <DependentUpon>T_reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_revenueBookReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_revenueBookReportForm.resx">
+      <DependentUpon>T_revenueBookReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="T_revenueCatReport.rdlc" />
+    <EmbeddedResource Include="T_revenueCatReportForm.resx">
+      <DependentUpon>T_revenueCatReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="T_touristAgeReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

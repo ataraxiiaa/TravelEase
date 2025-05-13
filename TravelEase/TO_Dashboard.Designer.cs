@@ -30,6 +30,8 @@
         {
             this.Dasboard_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.companyname_lbl = new System.Windows.Forms.Label();
             this.name_lbl = new System.Windows.Forms.Label();
             this.torating_lbl = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.avgresponse_lbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1113, 260);
             this.panel1.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(60, 211);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Booking Rate:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(60, 167);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Revenue: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // companyname_lbl
             // 
@@ -140,29 +163,6 @@
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(100, 23);
             this.linkLabel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(60, 167);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 32);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Revenue: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(60, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 32);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Booking Rate:";
             // 
             // TO_Dashboard
             // 

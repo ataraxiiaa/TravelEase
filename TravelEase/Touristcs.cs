@@ -73,5 +73,12 @@ namespace TravelEase
             s.Show();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            T_reports t = new T_reports();
+            t.Show();
+            this.Close();
+        }
     }
 }
